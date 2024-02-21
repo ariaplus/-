@@ -19,11 +19,18 @@ import type { ReactElement, ReactNode } from 'react';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
+  const { user } = useAuth();
 
+  const { open, openModal, closeModal } = useModal();
+
+  const userId = user?.id as string;
+  
   return (
     <MainContainer>
       <SEO title='Pay | Aria+' />
       <MainHeader useActionButton title='Pay' action={back}>
+       <p className='text-xs text-light-secondary dark:text-dark-secondary'>
+            @{user?.username}
         <div className=' flex items-right'>
        <CardsButton/>
        <PaymentsButton/>
