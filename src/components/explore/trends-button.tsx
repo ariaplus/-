@@ -29,27 +29,6 @@ export function TrendsButton(): JSX.Element {
 
   return (
     <>
-      <Modal
-        modalClassName='flex flex-col gap-6 max-w-xl bg-main-background w-full p-8 rounded-2xl h-[576px]'
-        open={open}
-        closeModal={cancelUpdateUsername}
-      >
-        <UsernameModal
-          loading={loading}
-          available={available}
-          alreadySet={alreadySet}
-          changeUsername={changeUsername}
-          cancelUpdateUsername={cancelUpdateUsername}
-        >
-          <InputField
-            label='Username'
-            inputId='username'
-            inputValue={inputValue}
-            errorMessage={errorMessage}
-            handleChange={handleChange}
-          />
-        </UsernameModal>
-      </Modal>
      <Link href={'/explore/trending'}>
         <a>
           <Button
