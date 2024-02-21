@@ -22,13 +22,11 @@ const userId = user?.id as string;
           useSkeleton
        />
             </div>
-        <div className='flex p-4 items:end content-end '>
-          <h2 className='text-xl font-semibold mb-1' aria-label='Aria+ Pay Card'>Aria+ Pay Card</h2>
+
           <div className='flex p-4 items:end content-end '>
         <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
           </p>
-          </div>
         </div>
       </a>
     </Link>
