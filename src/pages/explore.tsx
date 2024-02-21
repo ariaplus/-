@@ -15,7 +15,7 @@ import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
-
+import { ForYouButton } from '@components/explore/foryou-button';
 import { NextImage } from '@components/ui/next-image';
 
 export default function Home(): JSX.Element {
@@ -35,7 +35,7 @@ export default function Home(): JSX.Element {
         title='Explore'
         className='flex items-center justify-between'
       >
-        <UpdateUsername />
+        <ForYouButton />
 
       </MainHeader>
       <ExploreNav />
