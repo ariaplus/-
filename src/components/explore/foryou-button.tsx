@@ -113,7 +113,7 @@ export function ForYouButton(): JSX.Element {
           />
         </UsernameModal>
       </Modal>
-     <Link href={`/profile/${username}`}>
+     <Link href={`/explore/foryou`}>
         <a>
           <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
