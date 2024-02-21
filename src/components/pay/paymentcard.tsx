@@ -10,7 +10,7 @@ const userId = user?.id as string;
   return (
     <Link href='/pay/card'>
       <a className='block bg-cover border-solid border-2 border-white bg-center h-64 rounded-lg shadow-md' style={{ backgroundImage: 'url(/path/to/image.jpg)' }}>
-            <div className='flex flex-col items-center p-30'>
+            <div className='flex flex-col items-center pt-12'>
       <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
@@ -22,7 +22,7 @@ const userId = user?.id as string;
           useSkeleton
        />
             </div>
-        <div className='p-4 items:end content-end pt-30'>
+        <div className='p-4 items:end content-end pt-36'>
           <h2 className='text-xl font-semibold mb-1' aria-label='Aria+ Pay Card'>Aria+ Pay Card</h2>
         <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
