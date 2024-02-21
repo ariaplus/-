@@ -11,7 +11,6 @@ const userId = user?.id as string;
     <Link href='/pay/card'>
       <a className='block bg-cover border-solid border-2 border-white bg-center h-64 rounded-lg shadow-md pt-48' style={{ backgroundImage: 'url(/path/to/image.jpg)' }}>
             <div className='flex flex-col items-center gap-6'>
-        <div className='flex flex-col gap-4'>
       <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
