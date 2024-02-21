@@ -19,6 +19,7 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { CardsButton } from '@components/pay/cards-button';
 import { PaymentsButton } from '@components/pay/payments-button';
 import { WalletButton } from '@components/pay/wallet-button';
+import { PaymentCard } from '@components/pay/paymentcard';
 import { PaySettingsButton } from '@components/pay/pay-settings-button';
 import type { ReactElement, ReactNode } from 'react';
 
@@ -45,7 +46,7 @@ export default function Bookmarks(): JSX.Element {
        <PaySettingsButton/>
           </div>
       </MainHeader>
-      <AsideTrends inTrendsPage />
+      <PaymentCard/>
     </MainContainer>
   );
 }
