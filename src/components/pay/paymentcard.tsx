@@ -9,7 +9,7 @@ const userId = user?.id as string;
   return (
     <Link href='/pay/card'>
       <a className='block bg-cover border-solid border-2 border-white bg-center h-64 rounded-lg shadow-md px-8' style={{ backgroundImage: 'url(/path/to/image.jpg)' }}>
-        <div className='p-4 items:end '>
+        <div className='p-4 items:end content-end'>
           <h2 className='text-xl font-semibold mb-1' aria-label='Aria+ Pay Card'>Aria+ Pay Card</h2>
         <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
