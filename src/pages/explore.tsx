@@ -17,6 +17,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
 import { ForYouButton } from '@components/explore/foryou-button';
 import { NewsButton } from '@components/explore/news-button';
+import { TrendsButton } from '@components/explore/trends-button';
 import { NextImage } from '@components/ui/next-image';
 
 export default function Home(): JSX.Element {
@@ -38,6 +39,7 @@ export default function Home(): JSX.Element {
       >
       <div className=' flex items-right'>
         <ForYouButton />
+        <TrendsButton />
         <NewsButton />
         </div>
         
