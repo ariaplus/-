@@ -22,7 +22,7 @@ const userId = user?.id as string;
           useSkeleton
        />
             </div>
-        <div className='p-4 items:end content-end pt-20'>
+        <div className='p-4 items:end content-end pt-16'>
           <h2 className='text-xl font-semibold mb-1' aria-label='Aria+ Pay Card'>Aria+ Pay Card</h2>
         <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
