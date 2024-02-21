@@ -10,7 +10,7 @@ const userId = user?.id as string;
   return (
     <Link href='/pay/card'>
       <a className='block bg-cover border-solid border-2 border-white bg-center h-52 xs:h-64 sm:h-64 rounded-2xl shadow-md' style={{ backgroundImage: 'url(/path/to/image.jpg)' }}>
-            <div className='flex flex-col items-center pt-24'>
+            <div className='flex flex-col items-center pt-20'>
       <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
@@ -24,7 +24,7 @@ const userId = user?.id as string;
             </div>
 
           <div className='flex p-4 items:end content-end '>
-        <p className='text-xs text-light-secondary dark:text-dark-secondary'>
+        <p className='pl-2 text-xl text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
           </p>
         </div>
