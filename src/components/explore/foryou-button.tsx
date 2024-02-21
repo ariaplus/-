@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-
+import Link from 'next/link'
 import { useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import { checkUsernameAvailability, updateUsername } from '@lib/firebase/utils';
