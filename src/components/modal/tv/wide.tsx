@@ -13,6 +13,8 @@ import { ToolTip } from '@components/ui/tooltip';
 import { Modal } from '@components/modal/modal';
 import { UsernameModal } from '@components/modal/tv/wide-modal';
 import type { FormEvent, ChangeEvent } from 'react';
+import { ArplImage } from '@components/ui/ariaplus';
+import { NextImage } from '@components/ui/next-image';
 
 export function WideModal(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
@@ -111,7 +113,15 @@ export function WideModal(): JSX.Element {
                    dark:active:bg-dark-primary/20'
         onClick={openModal}
       >
-        <HeroIcon className='h-5 w-5' iconName='AtSymbolIcon' />
+        <NextImage 
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt='Twitter banner'
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
         <ToolTip tip='Top tweets' />
       </Button>
     </>
