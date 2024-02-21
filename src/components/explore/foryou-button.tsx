@@ -25,9 +25,6 @@ export function ForYouButton(): JSX.Element {
 
   const { user } = useAuth();
   const { open, openModal, closeModal } = useModal();
-  const handleClick = () => {
-    // navigate to the desired page
-    Router.push('/foryou');
 
   useEffect(() => {
     const checkAvailability = async (value: string): Promise<void> => {
@@ -120,7 +117,7 @@ export function ForYouButton(): JSX.Element {
         className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
                    active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
                    dark:active:bg-dark-primary/20'
-        onClick={handleClick}
+        onClick={openModal}
       >
         <HeroIcon className='h-5 w-5' iconName='AtSymbolIcon' />
         <ToolTip tip='Top tweets' />
