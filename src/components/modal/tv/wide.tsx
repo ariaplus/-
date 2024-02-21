@@ -113,14 +113,14 @@ export function WideModal(): JSX.Element {
                    dark:active:bg-dark-primary/20'
         onClick={openModal}
       >
-        <NextImage 
+        <ArplImage 
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
           alt='Twitter banner'
           layout='fill'
-          width='30px'
-          height='30px'
+          width='20px'
+          height='20px'
        />
         <ToolTip tip='4K' />
       </Button>
