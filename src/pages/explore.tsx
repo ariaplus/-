@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
         title='Explore'
         className='flex items-center justify-between'
       >
-        <ForYouButton />
+        <ForYouButton className='flex items-right' />
         <NewsButton />
       </MainHeader>
       <section className='mt-0.5 xs:mt-0'>
