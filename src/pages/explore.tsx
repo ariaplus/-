@@ -36,8 +36,11 @@ export default function Home(): JSX.Element {
         title='Explore'
         className='flex items-center justify-between'
       >
-        <ForYouButton className='flex items-right' />
+      <div className=' flex items-right'>
+        <ForYouButton />
         <NewsButton />
+        </div>
+        
       </MainHeader>
       <section className='mt-0.5 xs:mt-0'>
           <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 w-full rounded-none p-0 transition hover:brightness-75'
