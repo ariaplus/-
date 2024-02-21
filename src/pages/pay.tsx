@@ -46,12 +46,7 @@ export default function Bookmarks(): JSX.Element {
        <PaySettingsButton/>
           </div>
       </MainHeader>
-      <PaymentCard
-          src: string;
-           title: string;
-           amount: string;
-          dueDate: string;
-         />
+      <PaymentCard />
     </MainContainer>
   );
 }
