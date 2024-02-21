@@ -1,8 +1,13 @@
 import { useRouter } from 'next/router';
+import { useAuth } from '@lib/context/auth-context';
 import {
   TrendsLayout,
   ProtectedLayout
 } from '@components/layout/common-layout';
+import {
+  moviesCollection,
+  userBookmarksCollection
+} from '@lib/firebase/collections';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
@@ -19,6 +24,8 @@ import type { ReactElement, ReactNode } from 'react';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
+  
+ const { user } = useAuth();
   const userId = user?.id as string;
   
   return (
