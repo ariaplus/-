@@ -16,6 +16,7 @@ import { Error } from '@components/ui/error';
 import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
 import { ForYouButton } from '@components/explore/foryou-button';
+import { NewsButton } from '@components/explore/news-button';
 import { NextImage } from '@components/ui/next-image';
 
 export default function Home(): JSX.Element {
@@ -36,11 +37,8 @@ export default function Home(): JSX.Element {
         className='flex items-center justify-between'
       >
         <ForYouButton />
-
+        <NewsButton />
       </MainHeader>
-      <ExploreNav />
-
-
       <section className='mt-0.5 xs:mt-0'>
           <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 w-full rounded-none p-0 transition hover:brightness-75'
             useSkeleton
