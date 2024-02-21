@@ -11,6 +11,10 @@ import { AsideTrends } from '@components/aside/aside-trends';
 import { Button } from '@components/ui/button';
 import { ToolTip } from '@components/ui/tooltip';
 import { HeroIcon } from '@components/ui/hero-icon';
+import { CardsButton } from '@components/pay/cards-button';
+import { PaymentsButton } from '@components/pay/payments-button';
+import { WalletButton } from '@components/pay/wallet-button';
+import { PaySettingsButton } from '@components/pay/pay-settings-button';
 import type { ReactElement, ReactNode } from 'react';
 
 export default function Bookmarks(): JSX.Element {
@@ -20,13 +24,12 @@ export default function Bookmarks(): JSX.Element {
     <MainContainer>
       <SEO title='Pay | Aria+' />
       <MainHeader useActionButton title='Pay' action={back}>
-        <Button
-          className='dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
-        >
-          <HeroIcon className='h-5 w-5' iconName='CreditCardIcon' />
-          <ToolTip tip='Cards' />
-        </Button>
+        <div className=' flex items-right'>
+       <CardsButton/>
+       <PaymentsButton/>
+        <WalletButton/>
+       <PaySettingsButton/>
+          </div>
       </MainHeader>
       <AsideTrends inTrendsPage />
     </MainContainer>
