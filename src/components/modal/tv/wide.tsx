@@ -119,8 +119,8 @@ export function WideModal(): JSX.Element {
           src='/assets/ariaplus.svg'
           alt='Twitter banner'
           layout='fill'
-          width='10px'
-          height='10px'
+          width='30px'
+          height='30px'
        />
         <ToolTip tip='4K' />
       </Button>
