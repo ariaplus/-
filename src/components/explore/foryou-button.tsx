@@ -119,7 +119,7 @@ export function ForYouButton(): JSX.Element {
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
                        active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
                        dark:active:bg-dark-primary/20'  >
-            <HeroIcon className='h-5 w-5' iconName='AtSymbolIcon' />
+            <HeroIcon className='h-5 w-5' iconName='MegaphoneIcon' />
             <ToolTip tip='Top tweets' />
           </Button>
         </a>
