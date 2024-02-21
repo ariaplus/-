@@ -19,9 +19,6 @@ import type { ReactElement, ReactNode } from 'react';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
-
-  const { open, openModal, closeModal } = useModal();
-
   const userId = user?.id as string;
   
   return (
