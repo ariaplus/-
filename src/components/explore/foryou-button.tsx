@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Link from 'next/link'
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import { checkUsernameAvailability, updateUsername } from '@lib/firebase/utils';
@@ -113,7 +113,7 @@ export function ForYouButton(): JSX.Element {
           />
         </UsernameModal>
       </Modal>
-     <Link href={`/explore/foryou`}>
+     <Link href={'/explore/foryou'}>
         <a>
           <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
