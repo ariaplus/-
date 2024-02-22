@@ -7,7 +7,7 @@ import { isPlural } from '@lib/utils';
 import { userStatsCollection } from '@lib/firebase/collections';
 import { UserName } from './user-name';
 import type { Variants } from 'framer-motion';
-import { UpdateUsername } from '@components/home/update-username';
+
 export const variants: Variants = {
   initial: { opacity: 0 },
   animate: { opacity: 1, transition: { duration: 0.4 } },
@@ -87,9 +87,7 @@ export function UserHeader(): JSX.Element {
               ? `${totalLikes} Like${isPlural(totalLikes)}`
               : 'No Like'}
           </p>
-          <div className=' flex items-right'>
-            <UpdateUsername/>
-            </div>
+ 
         </motion.div>
       )}
     </AnimatePresence>
