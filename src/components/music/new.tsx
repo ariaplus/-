@@ -8,43 +8,40 @@ interface EpisodeProps {
 }
 
 const Music = ({ title, image, description, href }: EpisodeProps) => {
+  const backgroundImage = `url(${image})`;
+
   return (
       <Link className='w-28 h-28 rounded-lg border-solid border-white bg-opacity-50' href={href}>
-    <div className='bg-cover bg-center p-4 m-2 w-28 h-28 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
+    <div className='bg-cover bg-center p-4 m-2 w-64 h-32 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
         <a className='h-28'>
-          <h2 className='text-sm w-52 font-bold mt-4 opacity-100 '>{title}</h2>
+          <h2 className='text-sm w-28 font-bold mt-4 opacity-100 '>{title}</h2>
           <p className='text-gray-600 text-xs mt-2 opacity-100'>{description}</p>
         </a>
           </div>
       </Link>
+
   );
 };
 
-export function NewMusicSlide() {
+export function StrangeCriminalsSeason1() {
   const songs = [
     {
       title: 'The Wounded Angel',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/tv/strangecriminals/episode/thewoundedangel'
+      href: '/tv/strangecriminals/song/thewoundedangel'
     },
-        {
+     {
       title: 'The Wounded Angel',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/tv/strangecriminals/episode/thewoundedangel'
+      href: '/songs/season1/episode1'
     },
-        {
+    {
       title: 'The Wounded Angel',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/tv/strangecriminals/episode/thewoundedangel'
-    },
-        {
-      title: 'The Wounded Angel',
-      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
-      description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/tv/strangecriminals/episode/thewoundedangel'
+      href: '/songs/season1/episode1'
     },
     {
       title: 'Live And Let Die',
@@ -61,15 +58,15 @@ export function NewMusicSlide() {
     {
       title: 'The Left Hand of God',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
-      description: "Jo's life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation.",
+      description: 'Jo\'s life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation.',
       href: '/songs/season1/episode4'
     }
   ];
 
   return (
     <div className='flex overflow-x-scroll no-scrollbar space-x-4 p-4'>
-      {songs.map((music) => (
-        <Music key={music.href} {...music} />
+      {songs.map((song) => (
+        <Music key={song.href} {...song} />
       ))}
     </div>
   );
