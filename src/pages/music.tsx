@@ -13,6 +13,7 @@ import { ToolTip } from '@components/ui/tooltip';
 import { HeroIcon } from '@components/ui/hero-icon';
 import type { ReactElement, ReactNode } from 'react';
 import { useAuth } from '@lib/context/auth-context';
+import { NewMusicSlide } from '@components/music/new';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
@@ -38,7 +39,7 @@ export default function Bookmarks(): JSX.Element {
           <ToolTip tip='Settings' />
         </Button>
       </MainHeader>
-      <AsideTrends inTrendsPage />
+  <NewMusicSlide/>
     </MainContainer>
   );
 }
