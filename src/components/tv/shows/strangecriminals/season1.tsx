@@ -8,8 +8,10 @@ interface EpisodeProps {
 }
 
 const Episode = ({ title, image, description, href }: EpisodeProps) => {
+  const backgroundImage = `url(${image})`;
+
   return (
-    <div className='bg-cover bg-center p-4 m-2 w-64 h-80' style={{ backgroundImage: 'url({image})' }}>
+    <div className='bg-cover bg-center p-4 m-2 w-64 h-80' style={{ backgroundImage }}>
       <Link href={href}>
         <a>
           <h2 className='text-sm font-bold mt-4'>{title}</h2>
