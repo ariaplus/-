@@ -16,6 +16,7 @@ import { NextImage } from '@components/ui/next-image';
 import Image from 'next/image';
 import { Movie } from '@components/tv/movie';
 import { WideModal } from '@components/modal/tv/wide';
+import { StrangeCriminalsSeason1 } from '@components/tv/shows/strangecrimninals/season1';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
@@ -84,6 +85,7 @@ export default function Bookmarks(): JSX.Element {
       </p>
       <p className='text-gray-700'>X</p>
     </div>
+  <StrangeCriminalsSeason1/>
    <Movie/>
     </MainContainer>
   );
