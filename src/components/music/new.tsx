@@ -14,7 +14,7 @@ const Music = ({ title, image, description, href }: EpisodeProps) => {
     <Link href={href}>
       <a className='w-40 h-80 rounded-lg border-solid border-white bg-opacity-50 overflow-visible'>
         <div className='bg-cover bg-center p-4 m-2 w-40 h-40 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
-          <h2 className='text-sm w-28 font-bold mt-40 opacity-100 '>{title}</h2>
+          <h2 className='text-xs w-28 font-bold mt-40 opacity-100 '>{title}</h2>
         </div>
       </a>
     </Link>
@@ -24,10 +24,10 @@ const Music = ({ title, image, description, href }: EpisodeProps) => {
 export function NewMusicSlide() {
   const songs = [
     {
-      title: 'The Wounded Angel',
-      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
+      title: 'Good For You (Selena Gomez)',
+      image: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/23/33/76/233376bf-d737-9438-e563-12c927c9cb7f/15UMGIM48241.rgb.jpg/316x316bb.webp',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/tv/strangecriminals/song/thewoundedangel'
+      href: '/music/listen/goodforyou'
     },
     {
       title: 'The Wounded Angel',
