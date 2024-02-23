@@ -23,7 +23,7 @@ const Music = ({ title, image, description, href }: EpisodeProps) => {
   );
 };
 
-export function StrangeCriminalsSeason1() {
+export function NewMusicSlide() {
   const songs = [
     {
       title: 'The Wounded Angel',
