@@ -86,7 +86,7 @@ export default function Bookmarks(): JSX.Element {
       <p className='text-gray-700'>X</p>
     </div>
       <div className='mb-0'>
-  <h2 className='text-base font-bold mb-1'>Persuasion</h2>
+  <h2 className='text-base font-bold p-8 mb-1'>Season 1</h2>
   <StrangeCriminalsSeason1/>
 
         </div>
