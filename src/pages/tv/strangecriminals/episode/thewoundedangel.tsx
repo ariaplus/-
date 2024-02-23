@@ -24,7 +24,13 @@ export default function Bookmarks(): JSX.Element {
   return (
     <MainContainer>
       <SEO title='Watch The Wounded Angel | Aria+' />
-      <MainHeader useActionButton title='The Wounded Angel' action={back}>
+      <MainHeader useActionButton action={back}>
+        <div className='-mb-1 flex flex-col'>
+          <h2 className='-mt-1 text-xl font-bold'>tv</h2>
+          <p className='text-xs text-light-secondary dark:text-dark-secondary'>
+            @{user?.username}
+          </p>
+        </div>
         <Button
           className='dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10
                      active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
