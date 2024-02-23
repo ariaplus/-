@@ -9,17 +9,14 @@ interface EpisodeProps {
 
 const Music = ({ title, image, description, href }: EpisodeProps) => {
   return (
-    <Link href={href}>
-      <div className='group relative rounded-lg overflow-visible'>
-        <div className='aspect-w-1 aspect-h-1 group-hover:opacity-75'>
-          <img src={image} alt={title} className='object-cover object-center w-full h-full' />
-        </div>
-        <div className='absolute inset-0 flex flex-col p-4 mt-2'>
-          <h2 className='text-white truncate'>{title}</h2>
-          <p className='text-gray-300 mt-2'>{description}</p>
-        </div>
-      </div>
-    </Link>
+      <Link className='w-28 h-28 rounded-lg border-solid border-white bg-opacity-50' href={href}>
+    <div className='bg-cover bg-center p-4 m-2 w-28 h-28 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
+        <a className='h-28'>
+          <h2 className='text-sm w-52 font-bold mt-4 opacity-100 '>{title}</h2>
+          <p className='text-gray-600 text-xs mt-2 opacity-100'>{description}</p>
+        </a>
+          </div>
+      </Link>
   );
 };
 
