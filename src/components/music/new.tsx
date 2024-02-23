@@ -11,10 +11,10 @@ const Music = ({ title, image, description, href }: EpisodeProps) => {
   const backgroundImage = `url(${image})`;
 
   return (
-      <Link className='w-28 h-28 rounded-lg border-solid border-white bg-opacity-50 overflow-visible' href={href}>
-    <div className='bg-cover bg-center p-4 m-2 w-64 h-40 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
+      <Link className='w-40 h-40 rounded-lg border-solid border-white bg-opacity-50 overflow-visible' href={href}>
+    <div className='bg-cover bg-center p-4 m-2 w-40 h-40 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
         <a className='h-full'>
-          <h2 className='text-sm w-28 font-bold mt-28 opacity-100 '>{title}</h2>
+          <h2 className='text-sm w-28 font-bold mt-40 opacity-100 '>{title}</h2>
         </a>
           </div>
       </Link>
