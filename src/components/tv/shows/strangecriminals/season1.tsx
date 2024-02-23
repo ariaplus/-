@@ -30,6 +30,18 @@ export function StrangeCriminalsSeason1() {
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
       href: '/episodes/season1/episode1'
     },
+     {
+      title: 'The Wounded Angel',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
+      description: 'A disaster on board the International Space Station becomes a fight for survival.',
+      href: '/episodes/season1/episode1'
+    },
+    {
+      title: 'The Wounded Angel',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
+      description: 'A disaster on board the International Space Station becomes a fight for survival.',
+      href: '/episodes/season1/episode1'
+    },
     {
       title: 'Live And Let Die',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
