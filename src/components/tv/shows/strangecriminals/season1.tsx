@@ -17,7 +17,6 @@ const Episode = ({ title, image, description, href }: EpisodeProps) => {
           <p className='text-gray-600 text-xs mt-2'>{description}</p>
         </a>
       </Link>
-    </div>
   );
 };
 
