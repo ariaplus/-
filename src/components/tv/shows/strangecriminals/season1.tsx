@@ -42,7 +42,7 @@ const episodes: Episode[] = [
     runtime: '52 min',
     image: '/episodes/season1/episode4.jpg',
     description: "Jo's life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation."
-  },
+  }
 ];
 
 export default function StrangeCriminalsSeason1() {
