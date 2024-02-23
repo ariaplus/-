@@ -14,10 +14,10 @@ const Music = ({ title, image, description, href }: EpisodeProps) => {
         <div className='aspect-w-1 aspect-h-1 group-hover:opacity-75'>
           <img src={image} alt={title} className='object-cover object-center w-full h-full' />
         </div>
-      </div>
         <div className='absolute inset-0 flex flex-col p-4 mt-2'>
           <h2 className='text-white truncate'>{title}</h2>
           <p className='text-gray-300 mt-2'>{description}</p>
+        </div>
       </div>
     </Link>
   );
@@ -26,6 +26,24 @@ const Music = ({ title, image, description, href }: EpisodeProps) => {
 export function NewMusicSlide() {
   const songs = [
     {
+      title: 'The Wounded Angel',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
+      description: 'A disaster on board the International Space Station becomes a fight for survival.',
+      href: '/tv/strangecriminals/episode/thewoundedangel'
+    },
+        {
+      title: 'The Wounded Angel',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
+      description: 'A disaster on board the International Space Station becomes a fight for survival.',
+      href: '/tv/strangecriminals/episode/thewoundedangel'
+    },
+        {
+      title: 'The Wounded Angel',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
+      description: 'A disaster on board the International Space Station becomes a fight for survival.',
+      href: '/tv/strangecriminals/episode/thewoundedangel'
+    },
+        {
       title: 'The Wounded Angel',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
