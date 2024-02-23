@@ -11,10 +11,10 @@ const Episode = ({ title, image, description, href }: EpisodeProps) => {
   const backgroundImage = `url(${image})`;
 
   return (
-      <Link className='w-48' href={href}>
-    <div className='bg-cover bg-center p-4 m-2 w-64 h-80' style={{ backgroundImage }}>
-        <a>
-          <h2 className='text-sm w-48 font-bold mt-4'>{title}</h2>
+      <Link className='w-48 h-32' href={href}>
+    <div className='bg-cover bg-center p-4 m-2 w-64 h-32' style={{ backgroundImage }}>
+        <a className='h-32'>
+          <h2 className='text-sm w-52 font-bold mt-4'>{title}</h2>
           <p className='text-gray-600 text-xs mt-2'>{description}</p>
         </a>
           </div>
