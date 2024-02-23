@@ -27,9 +27,7 @@ export default function Bookmarks(): JSX.Element {
       <MainHeader useActionButton action={back}>
         <div className='-mb-1 flex flex-col'>
           <h2 className='-mt-1 text-xl font-bold'>tv</h2>
-          <p className='text-xs text-light-secondary dark:text-dark-secondary'>
-            @{user?.username}
-          </p>
+          <p className='text-xs text-light-secondary dark:text-dark-secondary'>Strange Criminals</p>
         </div>
         <Button
           className='dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10
