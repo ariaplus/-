@@ -26,25 +26,25 @@ export function StrangeCriminalsSeason1() {
       title: 'The Wounded Angel',
       image: '/episodes/season1/episode1.jpg',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/episodes/season1/episode1',
+      href: '/episodes/season1/episode1'
     },
     {
       title: 'Live And Let Die',
       image: '/episodes/season1/episode2.jpg',
       description: 'Jo races to find a way back to Earth before her life support runs out. Henry is concerned about his experiment.',
-      href: '/episodes/season1/episode2',
+      href: '/episodes/season1/episode2'
     },
     {
       title: 'Somewhere in Space Hangs My Heart',
       image: '/episodes/season1/episode3.jpg',
       description: 'The space agencies begin their investigation into the ISS collision. Jo struggles to reconnect with Magnus and Alice.',
-      href: '/episodes/season1/episode3',
+      href: '/episodes/season1/episode3'
     },
     {
       title: 'The Left Hand of God',
       image: '/episodes/season1/episode4.jpg',
       description: 'Jo\'s life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation.',
-      href: '/episodes/season1/episode4',
+      href: '/episodes/season1/episode4'
     }
   ];
 
