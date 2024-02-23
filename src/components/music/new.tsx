@@ -1,22 +1,22 @@
 import Link from 'next/link';
 
-interfaceProps {
+interface EpisodeProps {
   title: string;
   image: string;
-  description: string
+  description: string;
   href: string;
 }
 
-const Music = ({ title, image, description, href } EpisodeProps) => {
+const Music = ({ title, image, description, href }: EpisodeProps) => {
   return (
     <Link href={href}>
-      <div className="group relative rounded-lg overflow-hidden">
-        <div className="aspect-w-1 aspect-h-1 group-hover:opacity-75">
-          <img src={image} alt={title} className="object-cover object-center w-full h-full" />
+      <div className='group relative rounded-lg overflow-hidden'>
+        <div className='aspect-w-1 aspect-h-1 group-hover:opacity-75'>
+          <img src={image} alt={title} className='object-cover object-center w-full h-full' />
         </div>
-        <div className="absolute inset-0 flex flex-col p-4">
-          <h2 className="text-white truncate">{title}</h2>
-          <p className="text-gray-300 mt-2">{description}</p>
+        <div className='absolute inset-0 flex flex-col p-4'>
+          <h2 className='text-white truncate'>{title}</h2>
+          <p className='text-gray-300 mt-2'>{description}</p>
         </div>
       </div>
     </Link>
@@ -46,13 +46,13 @@ export function NewMusicSlide() {
     {
       title: 'The Left Hand of God',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
-      description: 'Jo\'s life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation.',
+      description: "Jo's life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation.",
       href: '/songs/season1/episode4'
     }
   ];
 
   return (
-    <div className="flex overflow-x-scroll no-scrollbar space-x-4 p-4">
+    <div className='flex overflow-x-scroll no-scrollbar space-x-4 p-4'>
       {songs.map((music) => (
         <Music key={music.href} {...music} />
       ))}
