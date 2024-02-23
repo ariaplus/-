@@ -11,32 +11,19 @@ const Episode = ({ title, image, description, href }: EpisodeProps) => {
   const backgroundImage = `url(${image})`;
 
   return (
-      <Link className='w-48 h-32 rounded-lg border-solid border-white bg-opacity-50' href={href}>
-    <div className='bg-cover bg-center p-4 m-2 w-64 h-32 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
+    <Link className='w-48 h-32 rounded-lg border-solid border-white bg-opacity-50' href={href}>
+      <div className='bg-cover bg-center p-4 m-2 w-64 h-32 opacity-100 rounded-lg border-solid border-white bg-opacity-50' style={{ backgroundImage }}>
         <a className='h-32'>
           <h2 className='text-sm w-52 font-bold mt-4 opacity-100 '>{title}</h2>
           <p className='text-gray-600 text-xs mt-2 opacity-100'>{description}</p>
         </a>
-          </div>
-      </Link>
-
+      </div>
+    </Link>
   );
 };
 
 export function StrangeCriminalsSeason1() {
   const episodes = [
-    {
-      title: 'The Wounded Angel',
-      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
-      description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/episodes/season1/episode1'
-    },
-     {
-      title: 'The Wounded Angel',
-      image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
-      description: 'A disaster on board the International Space Station becomes a fight for survival.',
-      href: '/episodes/season1/episode1'
-    },
     {
       title: 'The Wounded Angel',
       image: '/assets/tv/movie/data/persuasion/persuasion-cover.jpg',
@@ -65,9 +52,19 @@ export function StrangeCriminalsSeason1() {
 
   return (
     <div className='flex overflow-x-scroll no-scrollbar space-x-4 p-4'>
+      <div className='flex items-center'>
+        <button className='bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l-full'>
+          &lt;
+        </button>
+      </div>
       {episodes.map((episode) => (
         <Episode key={episode.href} {...episode} />
       ))}
+      <div className='flex items-center'>
+        <button className='bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r-full'>
+          &gt;
+        </button>
+      </div>
     </div>
   );
 }
