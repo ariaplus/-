@@ -64,7 +64,7 @@ export function StrangeCriminalsSeason1() {
   ];
 
   return (
-    <div className='flex overflow-x-scroll space-x-4 p-4'>
+    <div className='flex overflow-x-scroll no-scrollbar space-x-4 p-4'>
       {episodes.map((episode) => (
         <Episode key={episode.href} {...episode} />
       ))}
