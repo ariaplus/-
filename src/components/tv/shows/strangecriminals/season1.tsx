@@ -45,7 +45,7 @@ const episodes: Episode[] = [
   }
 ];
 
-export default function StrangeCriminalsSeason1() {
+export function StrangeCriminalsSeason1() {
   return (
     <div className='flex overflow-x-scroll space-x-4 p-4'>
       {episodes.map((episode) => (
