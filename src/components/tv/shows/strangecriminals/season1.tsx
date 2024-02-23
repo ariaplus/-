@@ -26,25 +26,25 @@ export function StrangeCriminalsSeason1() {
   const episodes = [
     {
       title: 'The Wounded Angel',
-      image: '/assets/tv/movie/data/persuasion/persuasion.png',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.png',
       description: 'A disaster on board the International Space Station becomes a fight for survival.',
       href: '/episodes/season1/episode1'
     },
     {
       title: 'Live And Let Die',
-      image: '/assets/tv/movie/data/persuasion/persuasion.png',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.png',
       description: 'Jo races to find a way back to Earth before her life support runs out. Henry is concerned about his experiment.',
       href: '/episodes/season1/episode2'
     },
     {
       title: 'Somewhere in Space Hangs My Heart',
-      image: '/assets/tv/movie/data/persuasion/persuasion.png',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.png',
       description: 'The space agencies begin their investigation into the ISS collision. Jo struggles to reconnect with Magnus and Alice.',
       href: '/episodes/season1/episode3'
     },
     {
       title: 'The Left Hand of God',
-      image: '/assets/tv/movie/data/persuasion/persuasion.png',
+      image: '/assets/tv/movie/data/persuasion/persuasion-cover.png',
       description: 'Jo\'s life back home is not how she remembers it, and growing tension with Magnus adds to her feelings of alienation.',
       href: '/episodes/season1/episode4'
     }
