@@ -16,7 +16,7 @@ import { NextImage } from '@components/ui/next-image';
 import Image from 'next/image';
 import { Movie } from '@components/tv/movie';
 import { WideModal } from '@components/modal/tv/wide';
-import { StrangeCriminalsSeason1 } from '@components/tv/shows/strangecrimninals/season1';
+import { StrangeCriminalsSeason1 } from '@components/tv/shows/strangecriminals/season1';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
