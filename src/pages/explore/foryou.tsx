@@ -17,7 +17,6 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
 import { NextImage } from '@components/ui/next-image';
-import { PoliticsButton } from '@components/explore/foryou/buttons/politics';
 import { FinanceButton } from '@components/explore/foryou/buttons/finance';
 import { TechButton } from '@components/explore/foryou/buttons/tech';
 import { FashionButton } from '@components/explore/foryou/buttons/fashion';
@@ -25,7 +24,6 @@ import { BeautyButton } from '@components/explore/foryou/buttons/beauty';
 import { ArtsAndCultureButton } from '@components/explore/foryou/buttons/artsandculture';
 import { EButton } from '@components/explore/foryou/buttons/entertainment';
 import { FitnessButton } from '@components/explore/foryou/buttons/fitness';
-import { FoodButton } from '@components/explore/foryou/buttons/food';
 import { GamingButton } from '@components/explore/foryou/buttons/gaming';
 import { HomeAndFamilyButton } from '@components/explore/foryou/buttons/homeandfamily';
 
@@ -38,7 +36,7 @@ export default function Bookmarks(): JSX.Element {
       <SEO title='For You | Aria+' />
       <MainHeader useActionButton title='For You' action={back}>
   <div className=' flex items-right'>
-       <PoliticsButton/>
+
       <FinanceButton/>
       <TechButton/>
       <FashionButton/>
@@ -46,7 +44,7 @@ export default function Bookmarks(): JSX.Element {
       <ArtsAndCultureButton/>
       <EButton/>
       <FitnessButton/>
-      <FoodButton/>
+
       <GamingButton/>
       <HomeAndFamilyButton/>
   </div>
