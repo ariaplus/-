@@ -35,12 +35,13 @@ export default function Bookmarks(): JSX.Element {
   return (
     <MainContainer>
       <SEO title='For You | Aria+' />
-      <MainHeader  className='flex items-center justify-between order-first' useActionButton title='For You' action={back}>
+      <MainHeader  className='flex items-center justify-between order-first z-40' useActionButton title='For You' action={back}>
   <div className=' flex items-right'>
       <FinanceButton/>
   </div>
       </MainHeader>
             <section className='mt-0.5 xs:mt-0'>
+   <MainHeader className='z-40 flex items-center justify-between order-first '>
   <div className=' flex items-center justify-between'>
       <FinanceButton/>
       <TechButton/>
@@ -52,6 +53,7 @@ export default function Bookmarks(): JSX.Element {
       <GamingButton/>
       <HomeAndFamilyButton/>
   </div>
+      </MainHeader>
           <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 w-full rounded-none p-0 transition hover:brightness-75'
             useSkeleton
             layout='fill'
