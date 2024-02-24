@@ -1,3 +1,6 @@
+// for you page data of Aria+
+
+
 import { useRouter } from 'next/router';
 import {
   TrendsLayout,
@@ -14,6 +17,18 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
 import { NextImage } from '@components/ui/next-image';
+import { PoliticsButton } from '@components/explore/foryou/buttons/politics';
+import { FinanceButton } from '@components/explore/foryou/buttons/finance';
+import { TechButton } from '@components/explore/foryou/buttons/tech';
+import { FashionButton } from '@components/explore/foryou/buttons/fashion';
+import { BeautyButton } from '@components/explore/foryou/buttons/beauty';
+import { ArtsAndCultureButton } from '@components/explore/foryou/buttons/artsandculture';
+import { EButton } from '@components/explore/foryou/buttons/entertainment';
+import { FitnessButton } from '@components/explore/foryou/buttons/fitness';
+import { FoodButton } from '@components/explore/foryou/buttons/food';
+import { GamingButton } from '@components/explore/foryou/buttons/gaming';
+import { HomeAndFamilyButton } from '@components/explore/foryou/buttons/homeandfamily';
+
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
@@ -22,16 +37,21 @@ export default function Bookmarks(): JSX.Element {
     <MainContainer>
       <SEO title='For You | Aria+' />
       <MainHeader useActionButton title='For You' action={back}>
-        <Button
-          className='dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
-        >
-          <HeroIcon className='h-5 w-5' iconName='Cog8ToothIcon' />
-          <ToolTip tip='Settings' />
-        </Button>
+  <div className=' flex items-right'>
+       <PoliticsButton/>
+      <FinanceButton/>
+      <TechButton/>
+      <FashionButton/>
+      <BeautyButton/>
+      <ArtsAndCultureButton/>
+      <EButton/>
+      <FitnessButton/>
+      <FoodButton/>
+      <GamingButton/>
+      <HomeAndFamilyButton/>
+  </div>
       </MainHeader>
-     <ExploreNav/>
-      <AsideTrends inTrendsPage />
+
     </MainContainer>
   );
 }
