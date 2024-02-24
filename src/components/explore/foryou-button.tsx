@@ -14,6 +14,7 @@ import { Modal } from '@components/modal/modal';
 import { UsernameModal } from '@components/modal/username-modal';
 import { InputField } from '@components/input/input-field';
 import type { FormEvent, ChangeEvent } from 'react';
+import { ArplImage } from '@components/ui/ariaplus';
 
 export function ForYouButton(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
@@ -26,101 +27,25 @@ export function ForYouButton(): JSX.Element {
   const { user } = useAuth();
   const { open, openModal, closeModal } = useModal();
 
-  useEffect(() => {
-    const checkAvailability = async (value: string): Promise<void> => {
-      const empty = await checkUsernameAvailability(value);
-
-      if (empty) setAvailable(true);
-      else {
-        setAvailable(false);
-        setErrorMessage('This username has been taken. Please choose another.');
-      }
-    };
-
-    if (!visited && inputValue.length > 0) setVisited(true);
-
-    if (visited) {
-      if (errorMessage) setErrorMessage('');
-
-      const error = isValidUsername(user?.username as string, inputValue);
-
-      if (error) {
-        setAvailable(false);
-        setErrorMessage(error);
-      } else void checkAvailability(inputValue);
-    }
-  }, [inputValue]);
-
-  useEffect(() => {
-    if (!user?.updatedAt) openModal();
-    else setAlreadySet(true);
-  }, []);
-
-  const changeUsername = async (
-    e: FormEvent<HTMLFormElement>
-  ): Promise<void> => {
-    e.preventDefault();
-
-    if (!available) return;
-
-    setLoading(true);
-
-    await sleep(500);
-
-    await updateUsername(user?.id as string, inputValue);
-
-    closeModal();
-
-    setLoading(false);
-
-    setInputValue('');
-    setVisited(false);
-    setAvailable(false);
-
-    toast.success('Username updated successfully');
-  };
-
-  const cancelUpdateUsername = (): void => {
-    closeModal();
-    if (!alreadySet) void updateUsername(user?.id as string);
-  };
-
-  const handleChange = ({
-    target: { value }
-  }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void =>
-    setInputValue(value);
 
   return (
     <>
-      <Modal
-        modalClassName='flex flex-col gap-6 max-w-xl bg-main-background w-full p-8 rounded-2xl h-[576px]'
-        open={open}
-        closeModal={cancelUpdateUsername}
-      >
-        <UsernameModal
-          loading={loading}
-          available={available}
-          alreadySet={alreadySet}
-          changeUsername={changeUsername}
-          cancelUpdateUsername={cancelUpdateUsername}
-        >
-          <InputField
-            label='Username'
-            inputId='username'
-            inputValue={inputValue}
-            errorMessage={errorMessage}
-            handleChange={handleChange}
-          />
-        </UsernameModal>
-      </Modal>
-     <Link href={'/explore/foryou'}>
+     <Link href={'/explore/feed'}>
         <a>
           <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
                        active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
                        dark:active:bg-dark-primary/20'  >
-            <HeroIcon className='h-5 w-5' iconName='MegaphoneIcon' />
-            <ToolTip tip='Top tweets' />
+        <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/header/primary/feed.svg'
+          alt='For You'
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
+            <ToolTip tip='Feed' />
           </Button>
         </a>
       </Link>
