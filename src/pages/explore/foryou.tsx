@@ -40,8 +40,7 @@ export default function Bookmarks(): JSX.Element {
       <FinanceButton/>
   </div>
       </MainHeader>
-            <section className='mt-0.5 xs:mt-0'>
-  <div className=' flex items-center justify-between px-6 z-0'>
+  <div className=' flex items-center justify-between px-6 z-0 bg-none'>
       <FinanceButton/>
       <TechButton/>
       <FashionButton/>
@@ -52,7 +51,7 @@ export default function Bookmarks(): JSX.Element {
       <GamingButton/>
       <HomeAndFamilyButton/>
   </div>
-
+            <section className='mt-0.5 xs:mt-0'>
           <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 w-full rounded-none p-0 transition hover:brightness-75'
             useSkeleton
             layout='fill'
