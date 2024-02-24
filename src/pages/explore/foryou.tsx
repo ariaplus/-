@@ -36,6 +36,11 @@ export default function Bookmarks(): JSX.Element {
       <SEO title='For You | Aria+' />
       <MainHeader useActionButton title='For You' action={back}>
   <div className=' flex items-right'>
+      <FinanceButton/>
+  </div>
+      </MainHeader>
+      <MainHeader>
+  <div className=' flex items-right'>
 
       <FinanceButton/>
       <TechButton/>
@@ -49,7 +54,6 @@ export default function Bookmarks(): JSX.Element {
       <HomeAndFamilyButton/>
   </div>
       </MainHeader>
-
     </MainContainer>
   );
 }
