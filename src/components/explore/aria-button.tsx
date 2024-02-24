@@ -30,7 +30,7 @@ export function AriaButton(): JSX.Element {
 
   return (
     <>
-     <Link href={'/explore/sports'}>
+     <Link href={'/explore/foryou'}>
         <a>
           <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
@@ -39,13 +39,13 @@ export function AriaButton(): JSX.Element {
         <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
-          src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          src='/main/ui/header/primary/drawer.svg'
+          alt='For You'
           layout='fill'
           width='20px'
           height='20px'
        />
-            <ToolTip tip='Sports' />
+            <ToolTip tip='For You' />
           </Button>
         </a>
       </Link>
