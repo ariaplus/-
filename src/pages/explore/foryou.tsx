@@ -28,6 +28,7 @@ import { GamingButton } from '@components/explore/foryou/buttons/gaming';
 import { HomeAndFamilyButton } from '@components/explore/foryou/buttons/homeandfamily';
 
 
+
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
 
@@ -40,8 +41,7 @@ export default function Bookmarks(): JSX.Element {
   </div>
       </MainHeader>
       <MainHeader>
-  <div className=' flex items-right'>
-
+  <div className=' flex items-center justify-between'>
       <FinanceButton/>
       <TechButton/>
       <FashionButton/>
@@ -49,11 +49,20 @@ export default function Bookmarks(): JSX.Element {
       <ArtsAndCultureButton/>
       <EButton/>
       <FitnessButton/>
-
       <GamingButton/>
       <HomeAndFamilyButton/>
   </div>
       </MainHeader>
+            <section className='mt-0.5 xs:mt-0'>
+          <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 w-full rounded-none p-0 transition hover:brightness-75'
+            useSkeleton
+            layout='fill'
+            imgClassName='object-cover'
+            src='https://hips.hearstapps.com/hmg-prod/images/f1-car-performance-1665774443.jpg?crop=1.00xw:0.769xh;0,0.141xh&resize=1200:*'
+            alt=''
+            key=''
+          />
+      </section>
     </MainContainer>
   );
 }
