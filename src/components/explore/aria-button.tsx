@@ -42,8 +42,8 @@ export function AriaButton(): JSX.Element {
           src='/main/ui/header/primary/drawer.svg'
           alt='For You'
           layout='fill'
-          width='20px'
-          height='20px'
+          width='25px'
+          height='25px'
        />
             <ToolTip tip='For You' />
           </Button>
