@@ -35,7 +35,7 @@ export default function Bookmarks(): JSX.Element {
   return (
     <MainContainer>
       <SEO title='For You | Aria+' />
-      <MainHeader  className='flex items-center justify-between' useActionButton title='For You' action={back}>
+      <MainHeader  className='flex items-center justify-between order-first' useActionButton title='For You' action={back}>
   <div className=' flex items-right'>
       <FinanceButton/>
   </div>
