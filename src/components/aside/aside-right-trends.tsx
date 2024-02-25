@@ -11,7 +11,7 @@ import { ToolTip } from '@components/ui/tooltip';
 import { Loading } from '@components/ui/loading';
 import type { MotionProps } from 'framer-motion';
 import { NextImage } from '@components/ui/next-image';
-import { Input } from '@components/input/input';
+import { Input } from '@components/input/right-input';
 import { useWindow } from '@lib/context/window-context';
 
 export const variants: MotionProps = {
@@ -41,7 +41,7 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
           'hover-animation rounded-2xl bg-main-sidebar-background'
       )}
     >
-      {!isMobile && <Input />}
+      {!isMobile && <RightInputOptions />}
       
       {loading ? (
         <Loading />
