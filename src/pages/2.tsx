@@ -25,9 +25,6 @@ import { NextImage } from '@components/ui/next-image';
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 
-function classNames(classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Home() {
   let [categories] = useState({
