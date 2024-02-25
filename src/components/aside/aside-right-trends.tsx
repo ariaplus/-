@@ -11,6 +11,8 @@ import { ToolTip } from '@components/ui/tooltip';
 import { Loading } from '@components/ui/loading';
 import type { MotionProps } from 'framer-motion';
 import { NextImage } from '@components/ui/next-image';
+import { Input } from '@components/input/input';
+import { useWindow } from '@lib/context/window-context';
 
 export const variants: MotionProps = {
   initial: { opacity: 0 },
@@ -28,6 +30,8 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
   });
 
   const { trends, location } = data ?? {};
+   const { isMobile } = useWindow();
+
 
   return (
     
@@ -37,14 +41,7 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
           'hover-animation rounded-2xl bg-main-sidebar-background'
       )}
     >
-             <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 h-full w-full rounded-none p-0 transition hover:brightness-75'
-            useSkeleton
-            layout='fill'
-            imgClassName='object-cover'
-            src='/assets/blue.jpg'
-            alt=''
-            key=''
-          />
+      {!isMobile && <Input />}
       
       {loading ? (
         <Loading />
