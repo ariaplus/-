@@ -102,8 +102,8 @@ export function TweetActions({
           await push(`/&/${parentId}`, undefined, { scroll: false });
           delayScroll(200)();
           await sleep(50);
-        } else await push('/home');
-      } else await push('/home');
+        } else await push('/explore');
+      } else await push('/explore');
 
     await Promise.all([
       removeTweet(tweetId),
