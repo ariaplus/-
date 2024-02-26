@@ -37,7 +37,8 @@ export default function Home(): JSX.Element {
         className='flex items-center justify-between'
       >
       <div className=' flex items-right'>
-        <DiscoverButton />
+        <DiscoverButton
+           useSkeleton />
 
         </div>
         
