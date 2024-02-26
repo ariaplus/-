@@ -47,7 +47,7 @@ export function SidebarLink({
                 ['Explore', 'Lists'].includes(linkName) &&
                 'stroke-white'
             )}
-            image={image}
+            src={image}
           />
           <p className='hidden xl:block'>{linkName}</p>
         </div>
