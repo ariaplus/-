@@ -15,6 +15,7 @@ import { UsernameModal } from '@components/modal/username-modal';
 import { InputField } from '@components/input/input-field';
 import type { FormEvent, ChangeEvent } from 'react';
 import { ArplImage } from '@components/ui/ariaplus';
+import { Loading } from '@components/ui/loading';
 
 export function CreateButton(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
@@ -32,12 +33,14 @@ export function CreateButton(): JSX.Element {
     <>
      <Link href={'/create'}>
         <a>
-          <Button
+          <Button 
+
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
                        active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
                        dark:active:bg-dark-primary/20'  >
         <ArplImage
-          imgClassName='Create'
+          useSkeleton
+          imgClassName='arplicon'
           blurClassName='none'
           src='/main/ui/header/primary/create.svg'
           alt=''
