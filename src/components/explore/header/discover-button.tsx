@@ -15,6 +15,7 @@ import { UsernameModal } from '@components/modal/username-modal';
 import { InputField } from '@components/input/input-field';
 import type { FormEvent, ChangeEvent } from 'react';
 import { ArplImage } from '@components/ui/ariaplus';
+import { Loading } from '@components/ui/loading';
 
 export function DiscoverButton(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
