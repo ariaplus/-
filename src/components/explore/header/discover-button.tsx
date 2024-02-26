@@ -43,7 +43,7 @@ export function DiscoverButton(): JSX.Element {
           imgClassName='arplicon'
           blurClassName='none'
           src='/main/ui/header/primary/feed.svg'
-          alt='Discover'
+          alt=''
           layout='fill'
           width='25px'
           height='25px'
