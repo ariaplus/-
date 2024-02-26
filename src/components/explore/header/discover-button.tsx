@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { useAuth } from '@hooks/useAuth';
 import { useModal } from '@hooks/useModal';
 import { InputField } from '@components/input/input-field';
