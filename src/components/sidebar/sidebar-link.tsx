@@ -4,7 +4,6 @@ import cn from 'clsx';
 import { preventBubbling } from '@lib/utils';
 import { HeroIcon } from '@components/ui/hero-icon';
 import type { NavLink } from './sidebar';
-import { NextImage } from '@components/ui/next-image';
 
 type SidebarLinkProps = NavLink & {
   username?: string;
@@ -13,7 +12,7 @@ type SidebarLinkProps = NavLink & {
 export function SidebarLink({
   href,
   username,
-  src,
+  iconName,
   linkName,
   disabled,
   canBeHidden
@@ -40,14 +39,15 @@ export function SidebarLink({
             isActive && 'font-bold'
           )}
         >
-          <NextImage
+          <HeroIcon
             className={cn(
               'h-7 w-7',
               isActive &&
                 ['Explore', 'Lists'].includes(linkName) &&
                 'stroke-white'
             )}
-            src={image}
+            iconName={iconName}
+            solid={isActive}
           />
           <p className='hidden xl:block'>{linkName}</p>
         </div>
