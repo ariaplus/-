@@ -16,7 +16,7 @@ import { InputField } from '@components/input/input-field';
 import type { FormEvent, ChangeEvent } from 'react';
 import { ArplImage } from '@components/ui/ariaplus';
 
-export function AriaButton(): JSX.Element {
+export function DiscoverButton(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
   const [available, setAvailable] = useState(false);
   const [loading, setLoading] = useState(false);
