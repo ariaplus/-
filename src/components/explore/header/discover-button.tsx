@@ -38,10 +38,10 @@ export function DiscoverButton(): JSX.Element {
                        active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
                        dark:active:bg-dark-primary/20'  >
         <ArplImage
-                      useSkeleton
+          useSkeleton
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/header/primary/discover.svg'
+          src='/main/ui/header/primary/feed.svg'
           alt='Discover'
           layout='fill'
           width='25px'
