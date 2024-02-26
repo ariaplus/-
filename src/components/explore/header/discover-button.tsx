@@ -14,7 +14,7 @@ import { Modal } from '@components/modal/modal';
 import { UsernameModal } from '@components/modal/username-modal';
 import { InputField } from '@components/input/input-field';
 import type { FormEvent, ChangeEvent } from 'react';
-import { ArplImage } from '@components/ui/ariaplus';
+import { NextImage } from '@components/ui/next-image';
 
 export function DiscoverButton(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
@@ -37,7 +37,7 @@ export function DiscoverButton(): JSX.Element {
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
                        active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
                        dark:active:bg-dark-primary/20'  >
-        <ArplImage
+        <NextImage
           useSkeleton
           imgClassName='arplicon'
           blurClassName='none'
