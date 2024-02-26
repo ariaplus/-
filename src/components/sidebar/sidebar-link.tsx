@@ -13,7 +13,7 @@ type SidebarLinkProps = NavLink & {
 export function SidebarLink({
   href,
   username,
-  image,
+  src,
   linkName,
   disabled,
   canBeHidden
