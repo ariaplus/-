@@ -15,7 +15,7 @@ import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
-import { DiscoverButton } from '@component/explore/header/discover-button';
+import { DiscoverButton } from '@components/explore/header/discover-button';
 
 import { NextImage } from '@components/ui/next-image';
 
