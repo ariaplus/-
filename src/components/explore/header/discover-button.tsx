@@ -1,20 +1,12 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { toast } from 'react-hot-toast';
-import { checkUsernameAvailability, updateUsername } from '@lib/firebase/utils';
-import { useAuth } from '@lib/context/auth-context';
-import { useModal } from '@lib/hooks/useModal';
-import { isValidUsername } from '@lib/validation';
-import { sleep } from '@lib/utils';
-import { Button } from '@components/ui/button';
-import { HeroIcon } from '@components/ui/hero-icon';
-import { ToolTip } from '@components/ui/tooltip';
-import { Modal } from '@components/modal/modal';
-import { UsernameModal } from '@components/modal/username-modal';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@hooks/useAuth';
+import { useModal } from '@hooks/useModal';
 import { InputField } from '@components/input/input-field';
-import type { FormEvent, ChangeEvent } from 'react';
+import { Button } from '@components/ui/button';
 import { ArplImage } from '@components/ui/ariaplus';
+import { ToolTip } from '@components/ui/tooltip';
+import { Skeleton } from '@mui/material/Skeleton';
 
 export function DiscoverButton(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
@@ -27,26 +19,43 @@ export function DiscoverButton(): JSX.Element {
   const { user } = useAuth();
   const { open, openModal, closeModal } = useModal();
 
+  useEffect(() => {
+    // ...
+  }, [/* other dependencies */, loading]);
+
+  const handleSubmit = async (e: FormEvent) => {
+    // ...
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    // ...
+  };
 
   return (
     <>
-     <Link href={'/discover'}>
+      <Link href={'/discover'}>
         <a>
-          <Button 
-            useSkeleton
+          <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
                        active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
-                       dark:active:bg-dark-primary/20'  >
-        <ArplImage
-          imgClassName='arplicon'
-          blurClassName='none'
-          src='/main/ui/header/primary/discover.svg'
-          alt='Discover'
-          layout='fill'
-          width='25px'
-          height='25px'
-       />
-            <ToolTip tip='Discover' />
+                       dark:active:bg-dark-primary/20'
+          >
+            {loading ? (
+              <Skeleton variant="circular" width={40} height={40} />
+            ) : (
+              <>
+                <ArplImage
+                  imgClassName='arplicon'
+                  blurClassName='none'
+                  src='/main/ui/header/primary/discover.svg'
+                  alt='Discover'
+                  layout='fill'
+                  width='25px'
+                  height='25px'
+                />
+                <ToolTip tip='Discover' />
+              </>
+            )}
           </Button>
         </a>
       </Link>
