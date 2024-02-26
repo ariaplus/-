@@ -16,6 +16,7 @@ import { Error } from '@components/ui/error';
 import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
 import { DiscoverButton } from '@components/explore/header/discover-button';
+import { ExploreButton } from '@components/explore/header/explore-button';
 
 import { NextImage } from '@components/ui/next-image';
 
@@ -33,9 +34,11 @@ export default function Home(): JSX.Element {
       <SEO title='Explore | Aria+' />
       <MainHeader
         useMobileSidebar
-        title='Explore'
         className='flex items-center justify-between'
       >
+    <div className=' flex items-left'>
+            <ExploreButton />
+    </div>
       <div className=' flex items-right'>
         <DiscoverButton />
 
