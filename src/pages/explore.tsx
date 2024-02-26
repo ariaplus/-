@@ -38,6 +38,7 @@ export default function Home(): JSX.Element {
       >
     <div className=' flex items-left'>
             <ExploreButton />
+               <p className='text-base'>Explore</p>
     </div>
       <div className=' flex items-right'>
         <DiscoverButton />
