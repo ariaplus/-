@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
       >
     <div className=' flex items-left'>
             <ExploreButton />
-               <p className='mt-1 text-base'>Explore</p>
+               <p className='mt-2 text-base'>Explore</p>
     </div>
       <div className=' flex items-right'>
         <DiscoverButton />
