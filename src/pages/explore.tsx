@@ -17,6 +17,14 @@ import type { ReactElement, ReactNode } from 'react';
 import { ExploreNav } from '@components/explore/explore-nav';
 import { DiscoverButton } from '@components/explore/header/discover-button';
 import { ExploreButton } from '@components/explore/header/explore-button';
+import { CreateButton } from '@components/explore/header/create-button';
+
+import { TrendsButton } from '@components/explore/header/trends-button';
+import { NewsButton } from '@components/explore/header/news-button';
+import { SearchButton } from '@components/explore/header/search-button';
+import { NotificationButton } from '@components/explore/header/notification-button';
+import { MessagesButton } from '@components/explore/header/messages-button';
+
 
 import { NextImage } from '@components/ui/next-image';
 
@@ -42,7 +50,12 @@ export default function Home(): JSX.Element {
     </div>
       <div className=' flex items-right'>
         <DiscoverButton />
-
+        <CreateButton/>
+        <TrendsButton/>
+         <NewsButton/>
+          <MessagesButton/>
+         <NotificationButton/>
+         <SearchButton/>
         </div>
         
       </MainHeader>
