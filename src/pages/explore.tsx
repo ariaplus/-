@@ -50,12 +50,7 @@ export default function Home(): JSX.Element {
     </div>
       <div className=' flex items-right'>
         <DiscoverButton />
-        <CreateButton/>
-        <TrendsButton/>
-         <NewsButton/>
-          <MessagesButton/>
-         <NotificationButton/>
-         <SearchButton/>
+
         </div>
         
       </MainHeader>
