@@ -14,19 +14,6 @@ import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import type { ReactElement, ReactNode } from 'react';
-import { ExploreNav } from '@components/explore/explore-nav';
-import { DiscoverButton } from '@components/explore/header/discover-button';
-import { ExploreButton } from '@components/explore/header/explore-button';
-import { CreateButton } from '@components/explore/header/create-button';
-
-import { TrendsButton } from '@components/explore/header/trends-button';
-import { NewsButton } from '@components/explore/header/news-button';
-import { SearchButton } from '@components/explore/header/search-button';
-import { NotificationButton } from '@components/explore/header/notification-button';
-import { MessagesButton } from '@components/explore/header/messages-button';
-
-
-import { NextImage } from '@components/ui/next-image';
 
 export default function Home(): JSX.Element {
   const { isMobile } = useWindow();
@@ -42,28 +29,13 @@ export default function Home(): JSX.Element {
       <SEO title='Explore | Aria+' />
       <MainHeader
         useMobileSidebar
+        title='Explore'
         className='flex items-center justify-between'
       >
-    <div className=' flex items-left'>
-            <ExploreButton />
-               <p className='mt-2 text-base'>Explore</p>
-    </div>
-      <div className=' flex items-right'>
-        <DiscoverButton />
-
-        </div>
-        
+        <UpdateUsername />
       </MainHeader>
+      {!isMobile && <Input />}
       <section className='mt-0.5 xs:mt-0'>
-          <NextImage className='accent-tab relative mt-0.5 h-36 xs:h-48 sm:h-52 w-full rounded-none p-0 transition hover:brightness-75'
-            useSkeleton
-            layout='fill'
-            imgClassName='object-cover'
-            src='https://hips.hearstapps.com/hmg-prod/images/f1-car-performance-1665774443.jpg?crop=1.00xw:0.769xh;0,0.141xh&resize=1200:*'
-            alt=''
-            key=''
-          />
-
         {loading ? (
           <Loading className='mt-5' />
         ) : !data ? (
@@ -71,7 +43,6 @@ export default function Home(): JSX.Element {
         ) : (
           <>
             <AnimatePresence mode='popLayout'>
-
               {data.map((tweet) => (
                 <Tweet {...tweet} key={tweet.id} />
               ))}
