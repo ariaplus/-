@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
         useMobileSidebar
         title=''
         className='flex items-center justify-between'
-      > <div className='flex itemns-left'>
+      > <div className='flex items-center justify-between'>
         <ExploreButton />
       </div>
         <DiscoverButton />
