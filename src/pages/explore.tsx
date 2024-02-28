@@ -14,6 +14,7 @@ import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { DiscoverButton } from '@components/explore/header/discover-button';
+import { ExploreButton } from '@components/explore/header/explore-button';
 import type { ReactElement, ReactNode } from 'react';
 
 
@@ -31,9 +32,11 @@ export default function Home(): JSX.Element {
       <SEO title='Explore | Aria+' />
       <MainHeader
         useMobileSidebar
-        title='Explore'
+        title=''
         className='flex items-center justify-between'
-      >
+      > <div className='flex itemns-left'>
+        <ExploreButton />
+      </div>
         <DiscoverButton />
       </MainHeader>
       {!isMobile && <Input />}
