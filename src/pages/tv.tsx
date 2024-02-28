@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 import { orderBy, query } from 'firebase/firestore';
@@ -29,6 +30,7 @@ import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
 export default function Bookmarks(): JSX.Element {
+  const { back } = useRouter();
   const { user } = useAuth();
 
   const { open, openModal, closeModal } = useModal();
@@ -61,8 +63,8 @@ export default function Bookmarks(): JSX.Element {
     <MainContainer>
       <SEO title='tv | Aria+' />
       
-      <MainHeader className='flex items-center justify-between'>
-        <div className='-mb-1 flex flex-col'>
+      <MainHeader useActionButton action={back}>
+          <div className='-mb-1 flex flex-col'>
           <h2 className='-mt-1 text-xl font-bold'>tv</h2>
           <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
