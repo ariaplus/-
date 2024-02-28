@@ -13,7 +13,9 @@ import { MainHeader } from '@components/home/main-header';
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
+import { DiscoverButton } from '@components/explore/header/discover-button';
 import type { ReactElement, ReactNode } from 'react';
+
 
 export default function Home(): JSX.Element {
   const { isMobile } = useWindow();
@@ -32,7 +34,7 @@ export default function Home(): JSX.Element {
         title='Explore'
         className='flex items-center justify-between'
       >
-        <UpdateUsername />
+        <DiscoverButton />
       </MainHeader>
       {!isMobile && <Input />}
       <section className='mt-0.5 xs:mt-0'>
