@@ -33,11 +33,13 @@ export default function Home(): JSX.Element {
       <MainHeader
         useMobileSidebar
         title='Explore'
-        className='flex items-center justify-between text-[0px]'
+        className='flex items-center justify-start text-base'
       > <div className='flex justify-start'>
         <ExploreButton />
       </div>
+         <div className='flex items-right'>
         <DiscoverButton />
+      </div>
       </MainHeader>
       {!isMobile && <Input />}
       <section className='mt-0.5 xs:mt-0'>
