@@ -34,8 +34,10 @@ export default function Home(): JSX.Element {
         useMobileSidebar
         title='Explore'
         className='flex items-center justify-between text-[0px]'
-      > <ExploreButton />
+      > <div className='flex items-right' >
+        <ExploreButton />
         <DiscoverButton />
+         </div>
       </MainHeader>
       {!isMobile && <Input />}
       <section className='mt-0.5 xs:mt-0'>
