@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
       <SEO title='Explore | Aria+' />
       <MainHeader
         useMobileSidebar
-        title='Explore'
+        title=''
         className='flex items-center justify-start text-base'
       > <div className='flex justify-start'>
         <ExploreButton />
