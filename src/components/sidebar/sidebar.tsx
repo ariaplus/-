@@ -14,7 +14,7 @@ import { ArplImage } from '@components/ui/ariaplus';
 export type NavLink = {
   href: string;
   linkName: string;
-  src: src;
+  src: string;
   disabled?: boolean;
   canBeHidden?: boolean;
 };
