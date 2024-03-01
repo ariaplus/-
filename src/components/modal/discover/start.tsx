@@ -12,14 +12,6 @@ interface ImageProps {
   href: string;
 }
 
-type UsernameModalProps = {
-  loading: boolean;
-  children: ReactNode;
-  available: boolean;
-  alreadySet: boolean;
-  changeUsername: (e: FormEvent<HTMLFormElement>) => Promise<void>;
-  cancelStart: () => void;
-};
 
 const usernameModalData = [
   {
@@ -35,14 +27,7 @@ const usernameModalData = [
   }
 ] as const;
 
-export function StartModal({
-  loading,
-  children,
-  available,
-  alreadySet,
-  changeUsername,
-  cancelStart
-}: UsernameModalProps): JSX.Element {
+export function StartModal({ }: UsernameModalProps): JSX.Element {
   const { title, description, cancelLabel } = usernameModalData[+alreadySet];
   
   const images: ImageProps[] = [
