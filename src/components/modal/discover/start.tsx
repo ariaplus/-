@@ -32,7 +32,14 @@ export function Start(): JSX.Element {
         open={open}
         closeModal={cancelStart}
       >
-       <StartModal/>
+       <StartModal/>  
+        <Button
+          className='border border-light-line-reply hover:bg-light-primary/10 focus-visible:bg-light-primary/10
+                     active:bg-light-primary/20 dark:border-light-secondary dark:text-light-border 
+                     dark:hover:bg-light-border/10 dark:focus-visible:bg-light-border/10 
+                     dark:active:bg-light-border/20'
+          onClick={cancelStart}
+        >Close</Button>
       </Modal>
       <Button
         className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
