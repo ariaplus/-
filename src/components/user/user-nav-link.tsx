@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import cn from 'clsx';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type UserNavLinkProps = {
-  name: string;
+  src: string;
   path: string;
 };
 
@@ -30,7 +31,16 @@ export function UserNavLink({ name, path }: UserNavLinkProps): JSX.Element {
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
-            {name}
+                      <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src={src}
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+          useSkeleton
+       />
             <i className='h-1 scale-50 rounded-full bg-main-accent opacity-0 transition duration-200' />
           </p>
         </div>
