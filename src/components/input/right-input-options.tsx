@@ -130,7 +130,7 @@ export function RightInputOptions({
           useSkeleton
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/header/primary/feed.svg'
+          src='/assets/ariaplus.svg'
           alt=''
           layout='fill'
           width='25px'
