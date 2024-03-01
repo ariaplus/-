@@ -23,7 +23,7 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/explore',
     linkName: 'Explore',
-    src: '/assets/explore.svg'
+    src: '/main/ui/header/primary/explore.svg'
   },
   {
     href: '/notifications',
