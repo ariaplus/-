@@ -33,7 +33,7 @@ export function Start(): JSX.Element {
         closeModal={cancelStart}
       >
        <StartModal
-         cancelStart 
+         cancelStart: () => void:
          />
       </Modal>
       <Button
