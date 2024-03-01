@@ -28,6 +28,7 @@ const usernameModalData = [
 ] as const;
 
 export function StartModal( ): JSX.Element {
+  const { title, description, cancelLabel } = usernameModalData[+alreadySet];
 
   
   const images: ImageProps[] = [
