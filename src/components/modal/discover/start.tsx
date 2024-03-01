@@ -14,7 +14,7 @@ import { Modal } from '@components/modal/modal';
 import { StartModal } from '@components/modal/discover/start-modal';
 import type { FormEvent, ChangeEvent } from 'react';
 
-export function StartModal(): JSX.Element {
+export function Start(): JSX.Element {
 
 
   const { user } = useAuth();
