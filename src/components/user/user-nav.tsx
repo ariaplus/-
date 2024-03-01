@@ -9,7 +9,9 @@ type UserNavProps = {
 
 const allNavs = [
   [
-    { src: './assets/ariaplus.svg', path: '' }
+    { src: './assets/ariaplus.svg', path: '' },
+    { src: './assets/ariaplus.svg', path: 'replies' },
+    { src: './assets/ariaplus.svg', path: 'media' }
   ],
   [
     { src: 'Following', path: 'following' },
