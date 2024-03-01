@@ -117,6 +117,20 @@ export function Sidebar(): JSX.Element {
               <SidebarLink {...linkData} key={linkData.href} />
             ))}
             <SidebarLink
+              href={`/explore`}
+              linkName='Explore'
+        <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt='Twitter banner'
+          layout='fill'
+          width='40px'
+          height='40px'
+          useSkeleton
+       />
+            />
+            <SidebarLink
               href={`/${username}`}
               username={username}
               linkName='Profile'
