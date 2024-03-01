@@ -211,7 +211,7 @@ export function MobileSidebarModal({
                          dark:hover:bg-dark-primary/10 dark:focus-visible:ring-white'
               onClick={displayOpenModal}
             >
-              <HeroIcon className='h-5 w-5' src='PaintBrushIcon' />
+              <HeroIcon className='h-5 w-5' iconName='PaintBrushIcon' />
               Display
             </Button>
             <Button
@@ -222,7 +222,7 @@ export function MobileSidebarModal({
             >
               <HeroIcon
                 className='h-5 w-5'
-                src='ArrowRightOnRectangleIcon'
+                iconName='ArrowRightOnRectangleIcon'
               />
               Log out
             </Button>
