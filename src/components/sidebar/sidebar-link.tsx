@@ -46,8 +46,8 @@ export function SidebarLink({
           src={src}
           alt=''
           layout='fill'
-          width='40px'
-          height='40px'
+          width='25px'
+          height='25px'
           useSkeleton
        />
           <p className='hidden xl:block'>{linkName}</p>
