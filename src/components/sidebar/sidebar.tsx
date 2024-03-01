@@ -124,22 +124,25 @@ export function Sidebar(): JSX.Element {
             />
             {!isMobile && <MoreSettings />}
           </nav>
-          <Button
-            className='group accent-tab place-self-center self-center justify-self-center justify-center object-center items-center absolute right-4 -translate-y-[72px] bg-main-accent text-lg font-bold text-white
-                       outline-none transition hover:brightness-90 active:brightness-75 xs:static xs:translate-y-0
-                       xs:hover:bg-main-accent/90 xs:active:bg-main-accent/75 xl:w-11/12'
-            onClick={openModal}
-          > 
-        <ArplImage  className='place-self-center self-center justify-self-center justify-center object-center items-center h-6 w-6 '
+        <Button
+          className='accent-tab bg-main-accent px-4 py-1.5 h-10 font-bold text-white
+                     enabled:hover:bg-main-accent/90
+                     enabled:active:bg-main-accent/75'
+
+          
+                       onClick={openModal}
+        >
+      <ArplImage
+          useSkeleton
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          alt=''
           layout='fill'
-          width='15px'
-          height='15px'
-          useSkeleton
-       />    
+          width='20px'
+          height='20px'
+       />
+        </Button>
 
           </Button>
         </section>
