@@ -12,6 +12,7 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { ToolTip } from '@components/ui/tooltip';
 import { Modal } from '@components/modal/modal';
 import { UsernameModal } from '@components/modal/tv/cat-modal';
+import { ArplImage } from '@components/ui/ariaplus';
 import type { FormEvent, ChangeEvent } from 'react';
 
 export function StartModal(): JSX.Element {
@@ -50,7 +51,16 @@ export function StartModal(): JSX.Element {
                    dark:active:bg-dark-primary/20'
         onClick={openModal}
       >
-        <HeroIcon className='h-5 w-5' iconName='RectangleStackIcon' />
+                <ArplImage
+          useSkeleton
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/header/primary/feed.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       /> 
         <ToolTip tip='Top tweets' />
       </Button>
     </>
