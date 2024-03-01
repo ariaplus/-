@@ -27,8 +27,8 @@ const usernameModalData = [
   }
 ] as const;
 
-export function StartModal({ }: UsernameModalProps): JSX.Element {
-  const { title, description, cancelLabel } = usernameModalData[+alreadySet];
+export function StartModal( ): JSX.Element {
+
   
   const images: ImageProps[] = [
    { src: '/assets/tv/movie/m.jpg', href: '/tv/forestwitch' },
