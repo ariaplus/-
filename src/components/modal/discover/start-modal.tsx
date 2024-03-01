@@ -8,7 +8,8 @@ import Link from 'next/link';
 import { NextImage } from '@components/ui/next-image';
 import { Start } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
-import { MainHeader } from '@components/home/main-header';
+import { MainHeader } from '@components/home/main-header';\
+import { useWindow } from '@lib/context/window-context';
 
 interface ImageProps {
   src: string;
@@ -19,6 +20,8 @@ interface ImageProps {
 
 export function StartModal(): JSX.Element {
 
+
+ const { isMobile } = useWindow();
   
   const images: ImageProps[] = [
    { src: '/assets/tv/movie/m.jpg', href: '/tv/forestwitch' },
@@ -46,6 +49,7 @@ export function StartModal(): JSX.Element {
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover'>
       <MainHeader
+        useMobileSidebar
         title='Discover'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
