@@ -12,16 +12,9 @@ interface ImageProps {
   href: string;
 }
 
-type StartModalProps = {
-
-  cancelStart: () => void;
-};
 
 
-
-export function StartModal({
-  cancelStart
-}: StartModalProps): JSX.Element {
+export function StartModal(): JSX.Element {
 
   
   const images: ImageProps[] = [
@@ -77,16 +70,7 @@ export function StartModal({
         </Link>
       ))}
     </div>
-      <div className='flex flex-col gap-3 inner:py-2 inner:font-bold'>
 
-        <Button
-          className='border border-light-line-reply hover:bg-light-primary/10 focus-visible:bg-light-primary/10
-                     active:bg-light-primary/20 dark:border-light-secondary dark:text-light-border 
-                     dark:hover:bg-light-border/10 dark:focus-visible:bg-light-border/10 
-                     dark:active:bg-light-border/20'
-          onClick={cancelStart}
-        >Close</Button>
-      </div>
     </form>
   );
 }
