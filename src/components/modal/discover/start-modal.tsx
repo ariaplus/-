@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { NextImage } from '@components/ui/next-image';
 import { Start } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
+import { MainHeader } from '@components/home/main-header';
 
 interface ImageProps {
   src: string;
@@ -44,12 +45,14 @@ export function StartModal(): JSX.Element {
   return (
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover'>
-    <div className='flex flex-col items-center gap-6'>
-     <div className='flex items-right' >
+      <MainHeader
+        title='Discover'
+        className='flex items-center justify-between text-[0px]'
+      > <div className='flex items-right' >
         <ExploreButton />
         <Start />
          </div>
-      </div>
+      </MainHeader>
      <div className='grid grid-cols-4 gap-4 px-3'>
       {images.map((image, index) => (
         <Link key={index} href={image.href}>
