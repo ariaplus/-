@@ -7,6 +7,7 @@ import { variants } from './input';
 import { ProgressBar } from './progress-bar';
 import type { ChangeEvent, ClipboardEvent } from 'react';
 import type { IconName } from '@components/ui/hero-icon';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type Options = {
   name: string;
@@ -125,7 +126,16 @@ export function RightInputOptions({
                      enabled:active:bg-main-accent/75'
           disabled={!isValidTweet}
         >
-          {reply ? 'Reply' : '+'}
+      <ArplImage
+          useSkeleton
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/header/primary/feed.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
         </Button>
       </div>
     </motion.div>
