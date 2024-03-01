@@ -22,23 +22,23 @@ const topNavLinks: Readonly<MobileNavLink[]> = [
   {
     href: '/trends',
     linkName: 'Topics',
-    iconName: 'ChatBubbleBottomCenterTextIcon'
+    src: 'ChatBubbleBottomCenterTextIcon'
   },
   {
     href: '/bookmarks',
     linkName: 'Bookmarks',
-    iconName: 'BookmarkIcon'
+    src: 'BookmarkIcon'
   },
   {
     href: '/lists',
     linkName: 'Lists',
-    iconName: 'Bars3BottomLeftIcon',
+    src: 'Bars3BottomLeftIcon',
     disabled: true
   },
   {
     href: '/people',
     linkName: 'Twitter Circle',
-    iconName: 'UserGroupIcon'
+    src: 'UserGroupIcon'
   }
 ];
 
@@ -46,13 +46,13 @@ const bottomNavLinks: Readonly<MobileNavLink[]> = [
   {
     href: '/settings',
     linkName: 'Settings and privacy',
-    iconName: 'Cog8ToothIcon',
+    src: 'Cog8ToothIcon',
     disabled: true
   },
   {
     href: '/help-center',
     linkName: 'Help center',
-    iconName: 'QuestionMarkCircleIcon',
+    src: 'QuestionMarkCircleIcon',
     disabled: true
   }
 ];
@@ -131,7 +131,7 @@ export function MobileSidebarModal({
       <MainHeader
         useActionButton
         className='flex flex-row-reverse items-center justify-between'
-        iconName='XMarkIcon'
+        src='XMarkIcon'
         title='Account info'
         tip='Close'
         action={closeModal}
@@ -193,7 +193,7 @@ export function MobileSidebarModal({
           <nav className='flex flex-col'>
             <MobileSidebarLink
               href={`/user/${username}`}
-              iconName='UserIcon'
+              src='UserIcon'
               linkName='Profile'
             />
             {topNavLinks.map((linkData) => (
@@ -211,7 +211,7 @@ export function MobileSidebarModal({
                          dark:hover:bg-dark-primary/10 dark:focus-visible:ring-white'
               onClick={displayOpenModal}
             >
-              <HeroIcon className='h-5 w-5' iconName='PaintBrushIcon' />
+              <HeroIcon className='h-5 w-5' src='PaintBrushIcon' />
               Display
             </Button>
             <Button
@@ -222,7 +222,7 @@ export function MobileSidebarModal({
             >
               <HeroIcon
                 className='h-5 w-5'
-                iconName='ArrowRightOnRectangleIcon'
+                src='ArrowRightOnRectangleIcon'
               />
               Log out
             </Button>
