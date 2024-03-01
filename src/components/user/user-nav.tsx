@@ -9,8 +9,8 @@ type UserNavProps = {
 
 const allNavs = [
   [
-    { name: 'Tweets', path: '' },
-    { name: 'Tweets & replies', path: 'with_replies' },
+    { name: '+', path: '' },
+    { name: 'Replies', path: 'replies' },
     { name: 'Media', path: 'media' },
     { name: 'Likes', path: 'likes' }
   ],
