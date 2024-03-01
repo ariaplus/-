@@ -22,7 +22,6 @@ export function Start(): JSX.Element {
 
   const cancelStart = (): void => {
     closeModal();
-    if (!alreadySet) void updateUsername(user?.id as string);
   };
 
 
