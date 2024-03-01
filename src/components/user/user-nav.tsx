@@ -11,7 +11,9 @@ const allNavs = [
   [
     { src: './assets/ariaplus.svg', path: '' },
     { src: './assets/ariaplus.svg', path: 'replies' },
-    { src: './assets/ariaplus.svg', path: 'media' }
+    { src: './assets/ariaplus.svg', path: 'shorts' },
+    { src: './assets/ariaplus.svg', path: 'media' },
+    { src: './assets/ariaplus.svg', path: 'likes' }
   ],
   [
     { src: 'Following', path: 'following' },
