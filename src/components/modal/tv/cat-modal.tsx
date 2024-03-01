@@ -4,6 +4,9 @@ import { Button } from '@components/ui/button';
 import type { ReactNode, FormEvent } from 'react';
 import { ArplImage } from '@components/ui/ariaplus';
 import { Cat } from '@components/tv/cat';
+import Image from 'next/image';
+import Link from 'next/link';
+import { NextImage } from '@components/ui/next-image';
 
 interface ImageProps {
   src: string;
