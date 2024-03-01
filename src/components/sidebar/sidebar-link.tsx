@@ -12,7 +12,7 @@ type SidebarLinkProps = NavLink & {
 export function SidebarLink({
   href,
   username,
-  iconName,
+  src,
   linkName,
   disabled,
   canBeHidden
@@ -39,16 +39,16 @@ export function SidebarLink({
             isActive && 'font-bold'
           )}
         >
-          <HeroIcon
-            className={cn(
-              'h-7 w-7',
-              isActive &&
-                ['Explore', 'Lists'].includes(linkName) &&
-                'stroke-white'
-            )}
-            iconName={iconName}
-            solid={isActive}
-          />
+        <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src={src}
+          alt=''
+          layout='fill'
+          width='40px'
+          height='40px'
+          useSkeleton
+       />
           <p className='hidden xl:block'>{linkName}</p>
         </div>
       </a>
