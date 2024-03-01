@@ -12,9 +12,16 @@ interface ImageProps {
   href: string;
 }
 
+type StartModalProps = {
+
+  cancelStart: () => void;
+};
 
 
-export function StartModal( ): JSX.Element {
+
+export function StartModal({
+  cancelStart
+}: StartModalProps): JSX.Element {
 
   
   const images: ImageProps[] = [
@@ -33,9 +40,7 @@ export function StartModal( ): JSX.Element {
     // Add more images as needed
   ];
 
-    const cancelStart = (): void => {
-    closeModal();
-  };
+
 
   return (
     <form
