@@ -13,7 +13,7 @@ import { MainHeader } from '@components/home/main-header';
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
-import { DiscoverButton } from '@components/explore/header/discover-button';
+import { StartModal } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
 import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
-        <DiscoverButton />
+        <StartModal />
          </div>
       </MainHeader>
       {!isMobile && <Input />}
