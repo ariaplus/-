@@ -31,7 +31,7 @@ export function MobileSidebarLink({
        <ArplImage  className='place-self-center self-center justify-self-center justify-center object-center items-center h-6 w-6 '
           imgClassName='arplicon'
           blurClassName='none'
-          src={Svg}
+          src={src}
           alt=''
           layout='fill'
           width='20px'
