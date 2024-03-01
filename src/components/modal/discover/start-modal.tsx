@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { NextImage } from '@components/ui/next-image';
 import { Start } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
-import { MainHeader } from '@components/home/main-header';\
+import { MainHeader } from '@components/home/main-header';
 import { useWindow } from '@lib/context/window-context';
 
 interface ImageProps {
