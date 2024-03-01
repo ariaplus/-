@@ -51,7 +51,6 @@ export function StartModal( ): JSX.Element {
           </i>
 
         </div>
-        {children}
       </div>
      <div className='grid grid-cols-4 gap-4 px-3'>
       {images.map((image, index) => (
