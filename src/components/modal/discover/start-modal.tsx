@@ -32,6 +32,11 @@ export function StartModal( ): JSX.Element {
    { src: '/assets/tv/movie/gits.jpeg', href: '/link1' }   
     // Add more images as needed
   ];
+
+    const cancelStart = (): void => {
+    closeModal();
+  };
+
   return (
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover'>
