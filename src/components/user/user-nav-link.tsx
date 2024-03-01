@@ -8,7 +8,7 @@ type UserNavLinkProps = {
   path: string;
 };
 
-export function UserNavLink({ name, path }: UserNavLinkProps): JSX.Element {
+export function UserNavLink({ src, path }: UserNavLinkProps): JSX.Element {
   const {
     asPath,
     query: { id }
