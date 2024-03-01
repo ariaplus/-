@@ -12,36 +12,10 @@ interface ImageProps {
   href: string;
 }
 
-type StartModalProps = {
-  loading: boolean;
-  children: ReactNode;
-  available: boolean;
-  alreadySet: boolean;
-  cancelStart: () => void;
-};
 
-const startModalData = [
-  {
-    title: 'What should we call you?',
-    description: 'Your @username is unique. You can always change it later.',
-    cancelLabel: 'Skip'
-  },
-  {
-    title: 'tv remote',
-    description:
-      'X',
-    cancelLabel: 'Cancel'
-  }
-] as const;
 
-export function StartModal({
-  loading,
-  children,
-  available,
-  alreadySet,
-  cancelStart
-}: StartModalProps): JSX.Element {
-  const { title, description, cancelLabel } = startModalData[+alreadySet];
+export function StartModal( ): JSX.Element {
+
   
   const images: ImageProps[] = [
    { src: '/assets/tv/movie/m.jpg', href: '/tv/forestwitch' },
@@ -75,14 +49,8 @@ export function StartModal({
           useSkeleton
        />
           </i>
-          <div className='flex items-center flex-col gap-2'>
-            <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
-              {title}
-            </Dialog.Title>
 
-          </div>
         </div>
-        {children}
       </div>
      <div className='grid grid-cols-4 gap-4 px-3'>
       {images.map((image, index) => (
