@@ -32,7 +32,9 @@ export function Start(): JSX.Element {
         open={open}
         closeModal={cancelStart}
       >
-       <StartModal/>
+       <StartModal
+         cancelStart 
+         />
       </Modal>
       <Button
         className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
