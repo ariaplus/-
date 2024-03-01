@@ -12,7 +12,7 @@ export function MobileSidebarLink({
   href,
   bottom,
   linkName,
-  iconName,
+  src,
   disabled
 }: MobileSidebarLinkProps): JSX.Element {
   return (
@@ -27,10 +27,15 @@ export function MobileSidebarLink({
         )}
         onClick={disabled ? preventBubbling() : undefined}
       >
-        <HeroIcon
-          className={bottom ? 'h-5 w-5' : 'h-7 w-7'}
-          iconName={iconName}
-        />
+       <ArplImage  className='place-self-center self-center justify-self-center justify-center object-center items-center h-6 w-6 '
+          imgClassName='arplicon'
+          blurClassName='none'
+          src={Svg}
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
         {linkName}
       </a>
     </Link>
