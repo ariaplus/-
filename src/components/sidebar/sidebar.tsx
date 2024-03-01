@@ -9,13 +9,12 @@ import { Button } from '@components/ui/button';
 import { SidebarLink } from './sidebar-link';
 import { MoreSettings } from './more-settings';
 import { SidebarProfile } from './sidebar-profile';
-import type { IconName } from '@components/ui/hero-icon';
 import { ArplImage } from '@components/ui/ariaplus';
 
 export type NavLink = {
   href: string;
   linkName: string;
-  iconName: IconName;
+  src: Svg;
   disabled?: boolean;
   canBeHidden?: boolean;
 };
@@ -24,42 +23,42 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/explore',
     linkName: 'Explore',
-    iconName: 'HashtagIcon'
+    src: '/assets/explore.svg'
   },
   {
     href: '/notifications',
     linkName: 'Notifications',
-    iconName: 'BellIcon',
+    src: 'BellIcon',
     canBeHidden: true
   },
   {
     href: '/messages',
     linkName: 'Messages',
-    iconName: 'EnvelopeIcon',
+    src: 'EnvelopeIcon',
     disabled: true
   },
   {
     href: '/ai',
     linkName: 'Ai',
-    iconName: 'XMarkIcon',
+    src: 'XMarkIcon',
     canBeHidden: true
   },
   {
     href: '/tv',
     linkName: 'tv',
-    iconName: 'TicketIcon',
+    src: 'TicketIcon',
     canBeHidden: true
   },
   {
     href: '/music',
     linkName: 'Music',
-    iconName: 'MusicalNoteIcon',
+    src: 'MusicalNoteIcon',
     canBeHidden: true
   },
  {
     href: '/market',
     linkName: 'Market',
-    iconName: 'ShoppingBagIcon',
+    src: 'ShoppingBagIcon',
     canBeHidden: true
   }
 ];
@@ -116,20 +115,6 @@ export function Sidebar(): JSX.Element {
             {navLinks.map(({ ...linkData }) => (
               <SidebarLink {...linkData} key={linkData.href} />
             ))}
-            <SidebarLink
-              href={`/explore`}
-              linkName='Explore'
-        <ArplImage
-          imgClassName='arplicon'
-          blurClassName='none'
-          src='/assets/ariaplus.svg'
-          alt='Twitter banner'
-          layout='fill'
-          width='40px'
-          height='40px'
-          useSkeleton
-       />
-            />
             <SidebarLink
               href={`/${username}`}
               username={username}
