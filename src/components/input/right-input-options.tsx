@@ -133,8 +133,8 @@ export function RightInputOptions({
           src='/assets/ariaplus.svg'
           alt=''
           layout='fill'
-          width='25px'
-          height='25px'
+          width='20px'
+          height='20px'
        />
         </Button>
       </div>
