@@ -9,14 +9,11 @@ type UserNavProps = {
 
 const allNavs = [
   [
-    { name: '+', path: '' },
-    { name: 'Replies', path: 'replies' },
-    { name: 'Media', path: 'media' },
-    { name: 'Likes', path: 'likes' }
+    { src: './assets/ariaplus.svg', path: '' }
   ],
   [
-    { name: 'Following', path: 'following' },
-    { name: 'Followers', path: 'followers' }
+    { src: 'Following', path: 'following' },
+    { src: 'Followers', path: 'followers' }
   ]
 ] as const;
 
@@ -34,7 +31,9 @@ export function UserNav({ follow }: UserNavProps): JSX.Element {
       exit={undefined}
     >
       {userNav.map(({ name, path }) => (
-        <UserNavLink name={name} path={path} key={name} />
+
+        <UserNavLink src={src} path={path} key={name} />
+      
       ))}
     </motion.nav>
   );
