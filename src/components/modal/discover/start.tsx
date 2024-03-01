@@ -13,22 +13,8 @@ interface ImageProps {
 }
 
 
-const usernameModalData = [
-  {
-    title: 'What should we call you?',
-    description: 'Your @username is unique. You can always change it later.',
-    cancelLabel: 'Skip'
-  },
-  {
-    title: 'tv remote',
-    description:
-      'X',
-    cancelLabel: 'Cancel'
-  }
-] as const;
 
 export function StartModal( ): JSX.Element {
-  const { title, description, cancelLabel } = usernameModalData[+alreadySet];
 
   
   const images: ImageProps[] = [
@@ -63,12 +49,7 @@ export function StartModal( ): JSX.Element {
           useSkeleton
        />
           </i>
-          <div className='flex items-center flex-col gap-2'>
-            <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
-              {title}
-            </Dialog.Title>
 
-          </div>
         </div>
         {children}
       </div>
