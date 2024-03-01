@@ -24,18 +24,21 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/explore',
     linkName: 'Explore',
+    iconName: '',
     src: '/assets/explore.svg'
   },
   {
     href: '/notifications',
     linkName: 'Notifications',
     src: 'BellIcon',
+        iconName: '',
     canBeHidden: true
   },
   {
     href: '/messages',
     linkName: 'Messages',
     src: 'EnvelopeIcon',
+        iconName: '',
     disabled: true
   },
   {
@@ -48,18 +51,21 @@ const navLinks: Readonly<NavLink[]> = [
     href: '/tv',
     linkName: 'tv',
     src: 'TicketIcon',
+        iconName: '',
     canBeHidden: true
   },
   {
     href: '/music',
     linkName: 'Music',
     src: 'MusicalNoteIcon',
+        iconName: '',
     canBeHidden: true
   },
  {
     href: '/market',
     linkName: 'Market',
     src: 'ShoppingBagIcon',
+       iconName: '',
     canBeHidden: true
   }
 ];
