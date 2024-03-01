@@ -30,9 +30,9 @@ export function UserNav({ follow }: UserNavProps): JSX.Element {
       {...variants}
       exit={undefined}
     >
-      {userNav.map(({ name, path }) => (
+      {userNav.map(({ src, path }) => (
 
-        <UserNavLink src={src} path={path} key={name} />
+        <UserNavLink src={src} path={path} key={src} />
       
       ))}
     </motion.nav>
