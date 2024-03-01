@@ -6,6 +6,8 @@ import { ArplImage } from '@components/ui/ariaplus';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextImage } from '@components/ui/next-image';
+import { Start } from '@components/modal/discover/start';
+import { ExploreButton } from '@components/explore/header/explore-button';
 
 interface ImageProps {
   src: string;
@@ -43,21 +45,10 @@ export function StartModal(): JSX.Element {
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover'>
     <div className='flex flex-col items-center gap-6'>
-        <div className='flex flex-col gap-4'>
-          <i className='mx-auto'>
-      <ArplImage
-          imgClassName='arplicon'
-          blurClassName='none'
-          src='/assets/ariaplus.svg'
-          alt=''
-          layout='fill'
-          width='40px'
-          height='40px'
-          useSkeleton
-       />
-          </i>
-
-        </div>
+     <div className='flex items-right' >
+        <ExploreButton />
+        <Start />
+         </div>
       </div>
      <div className='grid grid-cols-4 gap-4 px-3'>
       {images.map((image, index) => (
