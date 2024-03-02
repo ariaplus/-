@@ -39,7 +39,7 @@ export function LoginMain(): JSX.Element {
         <div className='flex max-w-xs flex-col gap-4 font-Helvetica lg:max-w-none'>
           <h1
             className='text-4xl font-medium before:content-["Everything_Here"] 
-                       lg:text-6xl lg:before:content-["Everything"]'
+                       lg:text-4xl lg:before:content-["Everything"]'
           />
           <h2 className='hidden font-medium text-xl lg:block lg:text-3xl'>
             All you need in one place.
@@ -56,11 +56,21 @@ export function LoginMain(): JSX.Element {
               <CustomIcon iconName='GoogleIcon' />
             </Button>
             <Button
-              className='flex cursor-not-allowed justify-center gap-2 border border-light-line-reply font-bold text-light-primary
-                         transition hover:bg-[#e6e6e6] focus-visible:bg-[#e6e6e6] active:bg-[#cccccc] dark:border-0
-                         dark:bg-white dark:hover:brightness-90 dark:focus-visible:brightness-90 dark:active:brightness-75'
+              className='flex justify-center gap-2 border border-light-line-reply font-bold text-light-primary transition
+                         hover:bg-[#e6e6e6] focus-visible:bg-[#e6e6e6] active:bg-[#cccccc] dark:border-0 dark:bg-white
+                         dark:hover:brightness-90 dark:focus-visible:brightness-90 dark:active:brightness-75'
+              onClick={signInWithGoogle}
             >
-              <CustomIcon iconName='AppleIcon' />
+        <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='40px'
+          height='40px'
+          useSkeleton
+       />
             </Button>
             <div className='grid w-full grid-cols-[1fr,auto,1fr] items-center gap-2'>
               <i className='border-b border-light-border dark:border-dark-border' />
