@@ -56,9 +56,8 @@ export function LoginMain(): JSX.Element {
               <CustomIcon iconName='GoogleIcon' />
             </Button>
             <Button
-              className='flex justify-center gap-2 border border-light-line-reply font-bold text-light-primary transition
-                         bg-accent-blue dark:border-0 dark:bg-white
-                         dark:hover:brightness-90 dark:focus-visible:brightness-90 dark:active:brightness-75'
+              className='flex justify-center bg-accent-blue text-white transition hover:brightness-90
+                         focus-visible:!ring-accent-blue/80 focus-visible:brightness-90 active:brightness-7'
               onClick={signInWithGoogle}
             >
         <ArplImage
