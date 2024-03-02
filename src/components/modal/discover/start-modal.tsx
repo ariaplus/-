@@ -70,7 +70,9 @@ export function StartModal(): JSX.Element {
           </a>
         </Link>
       ))}
-        <NextImage className='accent-tab relative mt-0.5 h-16 xs:h-16 sm:h-16 h-16 w-full rounded-none p-0 transition hover:brightness-75'
+     </div>
+        <div className='flex items-center justify-between text-[0px]'>
+                <NextImage className='accent-tab relative mt-0.5 h-16 xs:h-16 sm:h-16 h-16 w-full rounded-none p-0 transition hover:brightness-75'
             useSkeleton
             layout='fill'
             imgClassName='object-cover'
@@ -78,9 +80,8 @@ export function StartModal(): JSX.Element {
             alt=''
             key=''
           />
-     
-     </div>
-
+        
+        </div>
     </form>
   );
 }
