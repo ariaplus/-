@@ -36,7 +36,7 @@ export function LoginMain(): JSX.Element {
           useSkeleton
        />
         </i>
-        <div className='flex max-w-xs flex-col gap-4 font-twitter-chirp-extended lg:max-w-none'>
+        <div className='flex max-w-xs flex-col gap-4 font-Helvetica lg:max-w-none'>
           <h1
             className='text-3xl before:content-["Everything_Here"] 
                        lg:text-6xl lg:before:content-["Everything"]'
