@@ -50,11 +50,10 @@ export function StartModal(): JSX.Element {
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover'>
       <MainHeader
         useMobileSidebar
-        title='Discover'
+        title='Start'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
-        <Start />
          </div>
       </MainHeader>
      <div className='grid grid-cols-4 gap-4 px-3'>
@@ -71,7 +70,16 @@ export function StartModal(): JSX.Element {
           </a>
         </Link>
       ))}
-    </div>
+        <NextImage className='accent-tab relative mt-0.5 h-16 xs:h-16 sm:h-16 h-16 w-full rounded-none p-0 transition hover:brightness-75'
+            useSkeleton
+            layout='fill'
+            imgClassName='object-cover'
+            src='https://images.pexels.com/photos/4577718/pexels-photo-4577718.jpeg'
+            alt=''
+            key=''
+          />
+     
+     </div>
 
     </form>
   );
