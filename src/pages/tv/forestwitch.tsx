@@ -39,7 +39,7 @@ export default function Bookmarks(): JSX.Element {
         alt='4K'
         width={250}
         height={125}
-        className=' mt-60 rounded-lg'
+        className=' mt-60 rounded-lg pt-20'
                />
       <div className='flex'>
        <Button className='dark-bg-tab group relative ml-auto p-2 hover:bg-light-primary/10
