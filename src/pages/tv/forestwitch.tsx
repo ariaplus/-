@@ -32,7 +32,7 @@ export default function Bookmarks(): JSX.Element {
         </Button>
       </MainHeader>
       
-    <div className='flex flex-col items-center p-8 bg-no-repeat bg-top bg-contain' style={{ backgroundImage: 'url(/assets/tv/movie/data/forestwitch/jl.jpg)' }}>
+    <div className='flex flex-col items-center p-8 bg-no-repeat bg-top bg-contain' style={{ backgroundImage: 'url(/assets/tv/movie/data/forestwitch/cover.jpg)' }}>
 
        <NextImage
         src='/assets/tv/movie/data/forestwitch/fw.png' // Update this with the path to your image
@@ -73,7 +73,7 @@ export default function Bookmarks(): JSX.Element {
                />
       </Button>
            </div>
-      <p className='text-gray-600 mt-4 text-center'>Comdey | 2024 | 1hr 40min | 4K</p>
+      <p className='text-gray-600 mt-4 text-center'>Horror | 2024 | 1hr 40min | 4K</p>
       <Button
     className='bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 w-96 rounded-lg'>Play</Button>
       <p className='text-gray-600 mt-4 text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
