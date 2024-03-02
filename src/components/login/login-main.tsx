@@ -57,7 +57,7 @@ export function LoginMain(): JSX.Element {
             </Button>
             <Button
               className='flex justify-center gap-2 border border-light-line-reply font-bold text-light-primary transition
-                         hover:bg-[#e6e6e6] focus-visible:bg-[#e6e6e6] active:bg-[#cccccc] dark:border-0 dark:bg-white
+                         bg-accent-blue dark:border-0 dark:bg-white
                          dark:hover:brightness-90 dark:focus-visible:brightness-90 dark:active:brightness-75'
               onClick={signInWithGoogle}
             >
@@ -67,8 +67,8 @@ export function LoginMain(): JSX.Element {
           src='/assets/ariaplus.svg'
           alt=''
           layout='fill'
-          width='40px'
-          height='40px'
+          width='25px'
+          height='25px'
           useSkeleton
        />
             </Button>
