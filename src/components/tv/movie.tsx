@@ -9,7 +9,7 @@ interface ImageProps {
 
 export function Movie() {
   const images: ImageProps[] = [
-   { src: '/assets/tv/movie/forestwitch.jpg', href: '/tv/forestwitch' },
+   { src: '/assets/tv/movie/data/forestwitch/forestwitch.jpg', href: '/tv/forestwitch' },
    { src: '/assets/tv/movie/n.jpg', href: '/tv/nowhere' },
    { src: '/assets/tv/movie/twtc.jpg', href: '/link1' },
    { src: '/assets/tv/movie/gits.jpeg', href: '/link1' },
@@ -39,7 +39,7 @@ export function Movie() {
               src={image.src}
               layout='fill'
               objectFit='cover'
-              alt={`Grid Image ${index + 1}`}
+              alt={``}
             />
           </a>
         </Link>
