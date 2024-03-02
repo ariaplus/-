@@ -39,7 +39,7 @@ export function Movie() {
               src={image.src}
               layout='fill'
               objectFit='cover'
-              alt={``}
+              alt=''
             />
           </a>
         </Link>
