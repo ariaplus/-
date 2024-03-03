@@ -72,16 +72,7 @@ type MobileSidebarModalProps = Pick<
   closeModal: () => void;
 };
 
-export function RightUserInfo({
-  name,
-  username,
-  verified,
-  photoURL,
-  following,
-  followers,
-  coverPhotoURL,
-  closeModal
-}: MobileSidebarModalProps): JSX.Element {
+export function RightUserInfo({}: MobileSidebarModalProps): JSX.Element {
   const { signOut } = useAuth();
 
   const {
