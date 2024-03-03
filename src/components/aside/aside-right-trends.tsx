@@ -43,16 +43,7 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
       )}
     >
       <RightUserInfo
-        name={name}
-        username={username}
-        verified={verified}
-        photoURL={photoURL}
-        following={following}
-        followers={followers}
-        coverPhotoURL={coverPhotoURL}
-        closeModal={closeModal}
-        
-        />
+  />
       {!isMobile && <RightInput />}
       
       {loading ? (
