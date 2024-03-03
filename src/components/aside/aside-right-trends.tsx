@@ -42,7 +42,17 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
           'hover-animation rounded-2xl bg-main-sidebar-background'
       )}
     >
-      <RightUserInfo/>
+      <RightUserInfo
+        name={name}
+        username={username}
+        verified={verified}
+        photoURL={photoURL}
+        following={following}
+        followers={followers}
+        coverPhotoURL={coverPhotoURL}
+        closeModal={closeModal}
+        
+        />
       {!isMobile && <RightInput />}
       
       {loading ? (
