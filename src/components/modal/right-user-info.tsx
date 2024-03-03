@@ -72,7 +72,7 @@ type MobileSidebarModalProps = Pick<
   closeModal: () => void;
 };
 
-export function MobileSidebarModal({
+export function RightUserInfo({
   name,
   username,
   verified,
