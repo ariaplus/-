@@ -13,6 +13,7 @@ import type { MotionProps } from 'framer-motion';
 import { NextImage } from '@components/ui/next-image';
 import { RightInput } from '@components/input/right-input';
 import { useWindow } from '@lib/context/window-context';
+import { RightUserInfo } from '@components/modal/right-user-info';
 
 export const variants: MotionProps = {
   initial: { opacity: 0 },
@@ -41,6 +42,7 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
           'hover-animation rounded-2xl bg-main-sidebar-background'
       )}
     >
+      <RightUserInfo/>
       {!isMobile && <RightInput />}
       
       {loading ? (
