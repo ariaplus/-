@@ -34,8 +34,7 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/messages',
     linkName: 'Messages',
-    src: 'EnvelopeIcon',
-    disabled: true
+    src: '/assets/ariaplus.svg'
   },
   {
     href: '/ai',
