@@ -67,7 +67,7 @@ export function DisplayModal({ closeModal }: DisplayModalProps): JSX.Element {
         </p>
         <div
           className='hover-animation grid grid-cols-3 grid-rows-2 justify-items-center gap-3 
-                     rounded-2xl bg-main-sidebar-background py-3 xs:grid-cols-6 xs:grid-rows-none'
+                     rounded-2xl bg-main-sidebar-background py-3 xs:grid-cols-8 xs:grid-rows-none'
         >
           {accentsColor.map((accentColor) => (
             <InputAccentRadio type={accentColor} key={accentColor} />
