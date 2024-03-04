@@ -120,6 +120,13 @@ export function Sidebar(): JSX.Element {
               linkName='Profile'
               src='/assets/ariaplus.svg'
             />
+            <SidebarLink
+              href=''
+              username={username}
+              linkName='Profile'
+              src='/assets/ariaplus.svg'
+              onClick={openModal}
+            />
             {!isMobile && <MoreSettings />}
           </nav>
           <Button
