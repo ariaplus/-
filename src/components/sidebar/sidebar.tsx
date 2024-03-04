@@ -135,8 +135,8 @@ export function Sidebar(): JSX.Element {
           src='/assets/ariaplus.svg'
           alt='Create'
           layout='fill'
-          width='30px'
-          height='30px'
+          width='25px'
+          height='25px'
           useSkeleton
        />    
 
