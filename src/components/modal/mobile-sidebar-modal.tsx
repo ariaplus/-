@@ -191,11 +191,7 @@ export function MobileSidebarModal({
           </div>
           <i className='h-0.5 bg-light-line-reply dark:bg-dark-line-reply' />
           <nav className='flex flex-col'>
-            <MobileSidebarLink
-              href={`/user/${username}`}
-              src='UserIcon'
-              linkName='Profile'
-            />
+
             {topNavLinks.map((linkData) => (
               <MobileSidebarLink {...linkData} key={linkData.href} />
             ))}
