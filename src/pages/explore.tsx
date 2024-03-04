@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
          </div>
       </MainHeader>
       {!isMobile && <Input />}
-      <section className='mt-0.5 xs:mt-0'>
+      <section className='mt-0.5 xs:mt-0 no-scrollbar'>
         {loading ? (
           <Loading className='mt-5' />
         ) : !data ? (
