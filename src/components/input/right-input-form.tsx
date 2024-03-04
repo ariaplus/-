@@ -130,12 +130,12 @@ export function RightInputForm({
         {isVisibilityShown && (
           <motion.button
             type='button'
-            className='custom-button accent-tab accent-bg-tab flex cursor-not-allowed items-center gap-1
+            className='custom-button accent-tab accent-bg-tab flex items-center gap-1
                        self-start border border-light-line-reply py-0 px-3 text-main-accent
                        hover:bg-main-accent/10 active:bg-main-accent/20 dark:border-light-secondary'
             {...fromTop}
           >
-            <p className='font-bold'>Everyone</p>
+            <p className='font-bold'>Everywhere</p>
             <HeroIcon className='h-4 w-4' iconName='ChevronDownIcon' />
           </motion.button>
         )}
@@ -146,7 +146,7 @@ export function RightInputForm({
                        placeholder:text-light-secondary dark:placeholder:text-dark-secondary'
             value={inputValue}
             placeholder={
-              reply || replyModal ? '+ your reply' : 'Write on +'
+              reply || replyModal ? '+ your reply' : '+ is here'
             }
             onBlur={handleShowHideNav(true)}
             minRows={loading ? 1 : modal && !isUploadingImages ? 3 : 1}
