@@ -19,7 +19,11 @@ const InputColors: Readonly<InputAccentData> = {
   orange:
     'bg-accent-orange hover:ring-accent-orange/10 active:ring-accent-orange/20',
   green:
-    'bg-accent-green hover:ring-accent-green/10 active:ring-accent-green/20'
+    'bg-accent-green hover:ring-accent-green/10 active:ring-accent-green/20',
+   rose:
+    'bg-accent-rose hover:ring-accent-rose/10 active:ring-accent-rose/20',
+    black:
+    'bg-accent-black hover:ring-accent-black/10 active:ring-accent-black/20'
 };
 
 export function InputAccentRadio({ type }: InputAccentRadioProps): JSX.Element {
