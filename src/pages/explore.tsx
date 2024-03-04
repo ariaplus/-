@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
   );
 
   return (
-    <MainContainer>
+    <MainContainer className='no-scrollbar'>
       <SEO title='Explore | Aria+' />
       <MainHeader
         useMobileSidebar
