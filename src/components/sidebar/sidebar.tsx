@@ -120,17 +120,11 @@ export function Sidebar(): JSX.Element {
               linkName='Profile'
               src='/assets/ariaplus.svg'
             />
-            <SidebarLink
-              href=''
-              username={username}
-              linkName='Profile'
-              src='/assets/ariaplus.svg'
-              onClick={openModal}
-            />
+ 
             {!isMobile && <MoreSettings />}
           </nav>
           <Button
-            className='group accent-tab place-self-center self-center justify-self-center justify-center object-center items-center absolute right-4 -translate-y-[72px] bg-main-accent text-lg font-bold text-white
+            className='flex items-center items-center absolute right-4 -translate-y-[72px] bg-main-accent text-lg font-bold text-white
                        outline-none transition hover:brightness-90 active:brightness-75 xs:static xs:translate-y-0
                        xs:hover:bg-main-accent/90 xs:active:bg-main-accent/75 xl:w-11/12'
             onClick={openModal}
