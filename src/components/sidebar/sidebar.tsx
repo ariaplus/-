@@ -26,19 +26,19 @@ const navLinks: Readonly<NavLink[]> = [
     src: '/main/ui/header/primary/explore.svg'
   },
   {
+    href: '/discover',
+    linkName: 'Discover',
+    src: '/assets/ariaplus.svg'
+
+  },
+  {
     href: '/notifications',
     linkName: 'Notifications',
-    src: 'BellIcon',
-    canBeHidden: true
+    src: '/assets/ariaplus.svg'
   },
   {
     href: '/messages',
     linkName: 'Messages',
-    src: '/assets/ariaplus.svg'
-  },
-  {
-    href: '/ai',
-    linkName: 'Ai',
     src: 'XMarkIcon',
     canBeHidden: true
   },
