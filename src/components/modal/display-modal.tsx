@@ -21,7 +21,9 @@ const accentsColor: Readonly<Accent[]> = [
   'pink',
   'purple',
   'orange',
-  'green'
+  'green',
+  'rose',
+  'black'
 ];
 
 export function DisplayModal({ closeModal }: DisplayModalProps): JSX.Element {
