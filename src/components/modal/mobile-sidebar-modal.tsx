@@ -129,7 +129,7 @@ export function MobileSidebarModal({
         />
       </Modal>
 
-      <section className='mt-0.5 flex flex-col gap-2 mt-5 pl-4 pr-6 pt-[5px]'>
+      <section className='mt-0.5 flex flex-col gap-2 mt-5 pl-4 pr-6 pt-[24px]'>
         <Link href={userLink}>
           <a className='blur-picture relative h-20 rounded-md'>
             {coverPhotoURL ? (
