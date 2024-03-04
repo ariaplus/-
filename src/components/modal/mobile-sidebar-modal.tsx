@@ -128,14 +128,7 @@ export function MobileSidebarModal({
           closeModal={logOutCloseModal}
         />
       </Modal>
-      <MainHeader
-        useActionButton
-        className='flex flex-row-reverse items-center rounded-3xl justify-between'
-        iconName='XMarkIcon'
-        title=''
-        tip='Close'
-        action={closeModal}
-      />
+
       <section className='mt-0.5 flex flex-col gap-2 px-4'>
         <Link href={userLink}>
           <a className='blur-picture relative h-20 rounded-md'>
