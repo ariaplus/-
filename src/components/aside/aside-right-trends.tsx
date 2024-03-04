@@ -39,7 +39,7 @@ export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Elemen
     <section
       className={cn(
         !inTrendsPage &&
-          'hover-animation rounded-2xl bg-main-sidebar-background'
+          'hover-animation rounded-2xl bg-black border-2 border-gray-500'
       )}
     >
 
