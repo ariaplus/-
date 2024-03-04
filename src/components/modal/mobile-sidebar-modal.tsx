@@ -130,9 +130,9 @@ export function MobileSidebarModal({
       </Modal>
       <MainHeader
         useActionButton
-        className='flex flex-row-reverse items-center justify-between'
+        className='flex flex-row-reverse items-center rounded-3xl justify-between'
         iconName='XMarkIcon'
-        title='Account info'
+        title=''
         tip='Close'
         action={closeModal}
       />
