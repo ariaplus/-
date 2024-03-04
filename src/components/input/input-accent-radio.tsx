@@ -21,7 +21,7 @@ const InputColors: Readonly<InputAccentData> = {
   green:
     'bg-accent-green hover:ring-accent-green/10 active:ring-accent-green/20',
    rose:
-    'bg-accent-rose hover:ring-accent-rose/10 active:ring-accent-rose/20',
+    'bg-accent-rose-600 hover:ring-accent-rose-600/10 active:ring-accent-rose-600/20',
     black:
     'bg-accent-black hover:ring-accent-black/10 active:ring-accent-black/20'
 };
