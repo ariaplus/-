@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
         <Start />
          </div>
       </MainHeader>
-     <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-none p-0 transition hover:brightness-75'
+     <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-none p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
             imgClassName='object-cover'
