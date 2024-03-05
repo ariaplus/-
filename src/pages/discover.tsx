@@ -16,6 +16,7 @@ import { Start } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
 import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
+import { DiscoverTrend } from '@components/discover/discover-top-trend';
 
 export default function Home(): JSX.Element {
   const { isMobile } = useWindow();
@@ -46,6 +47,7 @@ export default function Home(): JSX.Element {
             alt=''
             key=''
           />
+      <DiscoverTrend/>
       <section className='mt-0.5 xs:mt-0'>
         {loading ? (
           <Loading className='mt-5' />
