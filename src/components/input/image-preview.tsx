@@ -126,7 +126,7 @@ export function ImagePreview({
             key={id}
           >
             <NextImage
-              className='relative h-full w-full cursor-pointer transition 
+              className='relative h-full w-full object-cover cursor-pointer transition 
                          hover:brightness-75 hover:duration-200'
               imgClassName={cn(
                 isTweet
