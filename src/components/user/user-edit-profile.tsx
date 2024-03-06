@@ -14,6 +14,7 @@ import type { ChangeEvent, KeyboardEvent } from 'react';
 import type { FilesWithId } from '@lib/types/file';
 import type { User, EditableData, EditableUserData } from '@lib/types/user';
 import type { InputFieldProps } from '@components/input/input-field';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type RequiredInputFieldProps = Omit<InputFieldProps, 'handleChange'> & {
   inputId: EditableData;
@@ -257,12 +258,21 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
         </EditProfileModal>
       </Modal>
       <Button
-        className='dark-bg-tab self-start border border-light-line-reply px-4 py-1.5 font-bold
-                   hover:bg-light-primary/10 active:bg-light-primary/20 dark:border-light-secondary
-                   dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
+        className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
+                   active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
+                   dark:active:bg-dark-primary/20'
         onClick={openModal}
       >
-        Edit profile
+        <ArplImage 
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt='Twitter banner'
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
+        <ToolTip tip='4K' />
       </Button>
     </form>
   );
