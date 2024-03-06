@@ -14,6 +14,7 @@ import type {
   ClipboardEvent
 } from 'react';
 import type { Variants } from 'framer-motion';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type InputFormProps = {
   modal?: boolean;
@@ -177,9 +178,17 @@ export function InputForm({
             type='button'
             className='custom-button accent-tab accent-bg-tab flex items-center gap-1 py-0
                        px-3 text-main-accent hover:bg-main-accent/10 active:bg-main-accent/20'
-          >
-            <HeroIcon className='h-4 w-4' iconName='GlobeAmericasIcon' />
-            <p className='font-bold'>Everyone</p>
+          >      <ArplImage
+          useSkeleton
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
+            <p className='font-bold'>Everyone on Aria+</p>
           </button>
         </motion.div>
       )}
