@@ -15,6 +15,7 @@ import type { FilesWithId } from '@lib/types/file';
 import type { User, EditableData, EditableUserData } from '@lib/types/user';
 import type { InputFieldProps } from '@components/input/input-field';
 import { ArplImage } from '@components/ui/ariaplus';
+import { ToolTip } from '@components/ui/tooltip';
 
 type RequiredInputFieldProps = Omit<InputFieldProps, 'handleChange'> & {
   inputId: EditableData;
@@ -267,12 +268,12 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          alt=''
           layout='fill'
           width='20px'
           height='20px'
        />
-        <ToolTip tip='4K' />
+        <ToolTip tip='Edit Profile' />
       </Button>
     </form>
   );
