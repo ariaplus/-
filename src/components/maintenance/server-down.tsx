@@ -8,11 +8,10 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, description, image }) => {
   return (
-    <div className='bg-black rounded-lg shadow-md p-4 w-full mx-auto'>
-      <img src={image} alt={title} className='w-full h-40 object-cover rounded-t-lg' />
+    <div className='bg-black rounded-lg shadow-md p-2.5 w-full mx-auto border'>
       <div className='p-4'>
-        <h2 className='text-xl font-semibold mb-2'>{title}</h2>
-        <p className='text-gray-700 mb-4'>{description}</p>
+        <h2 className='text-xl text-center font-semibold mb-2'>{title}</h2>
+        <p className='text-gray-700 text-center mb-4'>{description}</p>
       </div>
     </div>
   );
@@ -22,9 +21,8 @@ export function ServerDown() {
   return (
     <div className='container mx-auto p-4'>
       <Card
-        title='BBMzansi'
-        description='Entertainment - Trending #BBMzansi 180K posts'
-        image='https://example.com/path/to/image.jpg'
+        title='Aria+ Will Be Back Soon'
+        description='Aria+ is down for required maintenance right now but you should be able to get back on within a few minuites In the meantime read more about why you're seeing this message Thanks for your patience as we improve the platform '
       />
     </div>
   );
