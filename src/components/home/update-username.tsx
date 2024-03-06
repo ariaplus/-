@@ -14,6 +14,8 @@ import { Modal } from '@components/modal/modal';
 import { UsernameModal } from '@components/modal/username-modal';
 import { InputField } from '@components/input/input-field';
 import type { FormEvent, ChangeEvent } from 'react';
+import { ArplImage } from '@components/ui/ariaplus';
+
 
 export function UpdateUsername(): JSX.Element {
   const [alreadySet, setAlreadySet] = useState(false);
@@ -119,8 +121,16 @@ export function UpdateUsername(): JSX.Element {
                    dark:active:bg-dark-primary/20'
         onClick={openModal}
       >
-        <HeroIcon className='h-5 w-5' iconName='AtSymbolIcon' />
-        <ToolTip tip='Top tweets' />
+        <ArplImage 
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
+        <ToolTip tip='Update Username' />
       </Button>
     </>
   );
