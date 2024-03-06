@@ -70,18 +70,16 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
             <div className='relative flex flex-col gap-3 px-4 py-3'>
               <div className='flex justify-between'>
                 <UserHomeAvatar profileData={profileData} />
-
-                  <div className='flex gap-2 self-start'>
-                    <UserShare username={userData.username} />
-                                    {isOwner ? (
+                                                    {isOwner ? (
                   <>
-                    <UserEditProfile />
-                    <UpdateUsername />
                     <UserEditProfile />
                      <UpdateUsername />     {/* Add UpdateUsername component here */}
                   </>
                 ) : (
-                <div className='flex gap-2 self-start'>
+
+                  <div className='flex gap-2 self-start'>
+                    <UserShare username={userData.username} />
+
                     <Button
                       className='dark-bg-tab group relative cursor-not-allowed border border-light-line-reply p-2
                                  hover:bg-light-primary/10 active:bg-light-primary/20 dark:border-light-secondary 
