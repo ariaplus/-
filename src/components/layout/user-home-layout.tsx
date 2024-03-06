@@ -71,7 +71,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
               <div className='flex items-start'>
                 <UserHomeAvatar profileData={profileData} />
 
-              <div className='flex items-end'
+              <div className='flex items-end'>
                 {...isOwner ? (
                   <>
                     <UserEditProfile />
