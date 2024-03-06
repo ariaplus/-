@@ -15,6 +15,7 @@ import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { DiscoverButton } from '@components/explore/header/discover-button';
 import { ExploreButton } from '@components/explore/header/explore-button';
+import { ServerDown } from '@components/maintenance/server-down';
 import type { ReactElement, ReactNode } from 'react';
 
 
@@ -40,6 +41,7 @@ export default function Home(): JSX.Element {
          </div>
       </MainHeader>
       {!isMobile && <Input />}
+      <ServerDown/>
       <section className='mt-0.5 xs:mt-0 no-scrollbar'>
         {loading ? (
           <Loading className='mt-5' />
