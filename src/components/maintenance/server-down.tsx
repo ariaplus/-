@@ -5,7 +5,7 @@ interface CardProps {
   description: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, image }) => {
+const Card: React.FC<CardProps> = ({ title, description }) => {
   return (
     <div className='bg-black rounded-lg shadow-md p-2.5 w-full mx-auto border'>
       <div className='p-4'>
