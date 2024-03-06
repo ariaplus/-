@@ -45,14 +45,7 @@ export function LoginMain(): JSX.Element {
         </div>
         <div className='flex max-w-xs flex-col gap-6 [&_button]:py-2'>
           <div className='grid gap-3 font-bold'>
-            <Button
-              className='flex justify-center gap-2 border border-light-line-reply font-bold text-light-primary transition
-                         hover:bg-[#e6e6e6] focus-visible:bg-[#e6e6e6] active:bg-[#cccccc] dark:border-0 dark:bg-white
-                         dark:hover:brightness-90 dark:focus-visible:brightness-90 dark:active:brightness-75'
-              onClick={signInWithGoogle}
-            >
-              <CustomIcon iconName='GoogleIcon' />
-            </Button>
+
             <Button
               className='flex justify-center bg-accent-blue text-white transition hover:brightness-90
                          focus-visible:!ring-accent-blue/80 focus-visible:brightness-90 active:brightness-7'
@@ -75,8 +68,9 @@ export function LoginMain(): JSX.Element {
               <i className='border-b border-light-border dark:border-dark-border' />
             </div>
             <Button
-              className='cursor-not-allowed bg-accent-blue font-Helvetica text-white transition hover:brightness-90
-                         focus-visible:!ring-accent-blue/80 focus-visible:brightness-90 active:brightness-75'
+              className='border border-light-line-reply font-bold text-accent-blue hover:bg-accent-blue/10
+                         focus-visible:bg-accent-blue/10 focus-visible:!ring-accent-blue/80 active:bg-accent-blue/20
+                         dark:border-light-secondary'
             >
               Sign up with phone or email
             </Button>
@@ -86,7 +80,7 @@ export function LoginMain(): JSX.Element {
             >
               By signing up, you agree to the{' '}
               <a
-                href='https://twitter.com/tos'
+                href='https://www.ariaplus.net/tos'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -94,7 +88,7 @@ export function LoginMain(): JSX.Element {
               </a>{' '}
               and{' '}
               <a
-                href='https://twitter.com/privacy'
+                href='https://www.ariaplus.net/privacy'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -102,7 +96,7 @@ export function LoginMain(): JSX.Element {
               </a>
               , including{' '}
               <a
-                href='https://help.twitter.com/rules-and-policies/twitter-cookies'
+                href='https://www.ariaplus.net/cookies'
                 target='_blank'
                 rel='noreferrer'
               >
