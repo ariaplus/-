@@ -146,7 +146,7 @@ export function InputForm({
                        placeholder:text-light-secondary dark:placeholder:text-dark-secondary'
             value={inputValue}
             placeholder={
-              reply || replyModal ? '+ your reply' : "+ is here"
+              reply || replyModal ? '+ your reply' : '+ is here'
             }
             onBlur={handleShowHideNav(true)}
             minRows={loading ? 1 : modal && !isUploadingImages ? 3 : 1}
