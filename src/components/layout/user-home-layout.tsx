@@ -73,7 +73,9 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                 {isOwner ? (
                   <>
                     <UserEditProfile />
-                    <UpdateUsername /> {/* Add UpdateUsername component here */}
+                    <UpdateUsername />
+                    <UserEditProfile />
+                     <UpdateUsername />     {/* Add UpdateUsername component here */}
                   </>
                 ) : (
                   <div className='flex gap-2 self-start'>
