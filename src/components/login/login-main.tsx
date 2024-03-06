@@ -15,7 +15,7 @@ export function LoginMain(): JSX.Element {
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/cover.jpg'
-          alt='Twitter banner'
+          alt=''
           layout='fill'
           width='735px'
           height='624px'
@@ -29,7 +29,7 @@ export function LoginMain(): JSX.Element {
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          alt=''
           layout='fill'
           width='60px'
           height='60px'
@@ -38,12 +38,10 @@ export function LoginMain(): JSX.Element {
         </i>
         <div className='flex max-w-xs flex-col gap-4 font-Helvetica lg:max-w-none'>
           <h1
-            className='text-4xl font-medium before:content-["Everything_Here"] 
-                       lg:text-4xl lg:before:content-["Everything"]'
+            className='text-4xl font-bold before:content-["hello."] 
+                       lg:text-4xl font-bold lg:before:content-["hello."]'
           />
-          <h2 className='hidden font-medium text-xl lg:block lg:text-3xl'>
-            All you need in one place.
-          </h2>
+          <h2 className='hidden font-medium text-[20px] lg:block lg:text-3xl'>Join + today</h2>
         </div>
         <div className='flex max-w-xs flex-col gap-6 [&_button]:py-2'>
           <div className='grid gap-3 font-bold'>
@@ -77,13 +75,13 @@ export function LoginMain(): JSX.Element {
               <i className='border-b border-light-border dark:border-dark-border' />
             </div>
             <Button
-              className='cursor-not-allowed bg-accent-blue text-white transition hover:brightness-90
+              className='cursor-not-allowed bg-accent-blue font-Helvetica text-white transition hover:brightness-90
                          focus-visible:!ring-accent-blue/80 focus-visible:brightness-90 active:brightness-75'
             >
               Sign up with phone or email
             </Button>
             <p
-              className='inner:custom-underline inner:custom-underline text-center text-xs
+              className='inner:custom-underline font-Helvetica inner:custom-underline text-center text-xs
                          text-light-secondary font-Helvetica inner:text-accent-blue dark:text-dark-secondary'
             >
               By signing up, you agree to the{' '}
