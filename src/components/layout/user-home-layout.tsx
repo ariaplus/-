@@ -16,6 +16,7 @@ import { variants } from '@components/user/user-header';
 import { UserEditProfile } from '@components/user/user-edit-profile';
 import { UserShare } from '@components/user/user-share';
 import type { LayoutProps } from './common-layout';
+import { UpdateUsername } from '@components/home/update-username';
 
 export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
   const { user, isAdmin } = useAuth();
@@ -70,6 +71,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
               <div className='flex justify-between'>
                 <UserHomeAvatar profileData={profileData} />
                 {isOwner ? (
+                  <UpdateUsername/>
                   <UserEditProfile />
                 ) : (
                   <div className='flex gap-2 self-start'>
