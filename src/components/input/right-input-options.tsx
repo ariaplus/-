@@ -113,7 +113,7 @@ export function RightInputOptions({
         </motion.div>
         <Button
           type='submit'
-          className='accent-tab bg-main-accent px-4 py-1.5 h-10 font-bold text-white
+          className='accent-tab bg-main-accent px-4 py-1.5 h-10 w-10 font-bold text-white
                      enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75'
           disabled={!isValidTweet}
