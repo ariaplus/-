@@ -80,6 +80,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                      <UpdateUsername />     {/* Add UpdateUsername component here */}
                   </>
                 ) : (
+            </div>
                   <div className='flex gap-2 self-start'>
                     <UserShare username={userData.username} />
                     <Button
