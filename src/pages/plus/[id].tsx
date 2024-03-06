@@ -17,6 +17,7 @@ import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { ViewParentTweet } from '@components/view/view-parent-tweet';
 import type { ReactElement, ReactNode } from 'react';
+import { ArplImage } from '@components/ui/ariaplus';
 
 export default function TweetId(): JSX.Element {
   const {
@@ -55,7 +56,16 @@ export default function TweetId(): JSX.Element {
     <MainContainer className='!pb-[1280px]'>
       <MainHeader
         useActionButton
-        title={parentId ? 'Thread' : '&'}
+              <ArplImage
+          useSkeleton
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
         action={back}
       />
       <section>
