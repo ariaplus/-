@@ -70,6 +70,8 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
             <div className='relative flex flex-col gap-3 px-4 py-3'>
               <div className='flex justify-between'>
                 <UserHomeAvatar profileData={profileData} />
+            <div className='flex gap-2 self-start'>
+                <UserShare username={userData.username} />
                 {isOwner ? (
                   <>
                     <UserEditProfile />
