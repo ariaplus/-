@@ -71,8 +71,10 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
               <div className='flex justify-between'>
                 <UserHomeAvatar profileData={profileData} />
                 {isOwner ? (
-                  <UpdateUsername/>
                   <UserEditProfile />
+                ) : (
+                {isOwner ? (
+                  <UpdateUsername/>
                 ) : (
                   <div className='flex gap-2 self-start'>
                     <UserShare username={userData.username} />
