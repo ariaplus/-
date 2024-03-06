@@ -56,7 +56,8 @@ export default function TweetId(): JSX.Element {
     <MainContainer className='!pb-[1280px]'>
       <MainHeader
         useActionButton
-              <ArplImage
+        action={back}
+          <ArplImage
           useSkeleton
           imgClassName='arplicon'
           blurClassName='none'
@@ -66,7 +67,6 @@ export default function TweetId(): JSX.Element {
           width='20px'
           height='20px'
        />
-        action={back}
       />
       <section>
         {tweetLoading ? (
