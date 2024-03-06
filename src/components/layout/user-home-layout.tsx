@@ -72,7 +72,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                 <UserHomeAvatar profileData={profileData} />
 
               <div className='flex items-end'
-                {isOwner ? (
+                {...isOwner ? (
                   <>
                     <UserEditProfile />
                     <UpdateUsername /> {/* Add UpdateUsername component here */}
