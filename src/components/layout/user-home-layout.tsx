@@ -70,15 +70,12 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
             <div className='relative flex flex-col gap-3 px-4 py-3'>
               <div className='flex items-start'>
                 <UserHomeAvatar profileData={profileData} />
-
-              <div className='flex items-end'>
-                {...isOwner ? (
+                {isOwner ? (
                   <>
                     <UserEditProfile />
                     <UpdateUsername /> {/* Add UpdateUsername component here */}
                   </>
                 ) : (
-                  </div>
                   <div className='flex gap-2 self-start'>
                     <UserShare username={userData.username} />
                     <Button
