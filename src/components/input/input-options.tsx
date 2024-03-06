@@ -7,6 +7,7 @@ import { variants } from './input';
 import { ProgressBar } from './progress-bar';
 import type { ChangeEvent, ClipboardEvent } from 'react';
 import type { IconName } from '@components/ui/hero-icon';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type Options = {
   name: string;
@@ -143,14 +144,23 @@ export function InputOptions({
             </>
           )}
         </motion.div>
-        <Button
+  <Button
           type='submit'
-          className='accent-tab bg-main-accent px-4 py-1.5 font-bold text-white
+          className='accent-tab bg-main-accent px-4 py-1.5 h-10 font-bold text-white
                      enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75'
           disabled={!isValidTweet}
         >
-          {reply ? 'Reply' : '+'}
+      <ArplImage
+          useSkeleton
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
         </Button>
       </div>
     </motion.div>
