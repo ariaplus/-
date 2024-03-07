@@ -47,7 +47,7 @@ export function UsernameModal({
   const { title, description, cancelLabel } = usernameModalData[+alreadySet];
   
   const images: ImageProps[] = [
-   { src: '/assets/tv/movie/m.jpg', href: '/tv/forestwitch' },
+   { src: '/assets/ariaplus.svg', href: '/tv/forestwitch' },
    { src: '/assets/tv/movie/n.jpg', href: '/tv/nowhere' },
    { src: '/assets/tv/movie/n.jpg', href: '/tv/nowhere' },
    { src: '/assets/tv/movie/twtc.jpg', href: '/link1' },
