@@ -75,6 +75,12 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                     <div className='flex items-end'> {/* Added items-end class name here */}
                       <UserEditProfile />
                    </div>
+                    <div className='flex items-end'> {/* Added items-end class name here */}
+                      <UserEditProfile />
+                   </div>
+                        <div className='flex items-end'> {/* Added items-end class name here */}
+                      <UserEditProfile />
+                   </div>
                      <div className='flex items-end'>{/* Added items-end class name here */}
                       <UpdateUsername />
                     </div>
