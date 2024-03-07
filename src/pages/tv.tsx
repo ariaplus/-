@@ -28,7 +28,7 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function Bookmarks(): JSX.Element {
+export default function tv(): JSX.Element {
   const { back } = useRouter();
   const { user } = useAuth();
 
@@ -36,27 +36,6 @@ export default function Bookmarks(): JSX.Element {
 
   const userId = user?.id as string;
 
-  const { data: bookmarksRef, loading: bookmarksRefLoading } = useCollection(
-    query(userBookmarksCollection(userId), orderBy('createdAt', 'desc')),
-    { allowNull: true }
-  );
-
-  const movieIds = useMemo(
-    () => bookmarksRef?.map(({ id }) => id) ?? [],
-    [bookmarksRef]
-  );
-
-  const { data: moviesData, loading: moviesLoading } = useArrayDocument(
-    movieIds,
-    moviesCollection,
-    { includeUser: true }
-  );
-
-  const handleClear = async (): Promise<void> => {
-    await clearAllBookmarks(userId);
-    closeModal();
-    toast.success('Successfully cleared all your Downloads');
-  };
 
   return (
     <MainContainer>
@@ -70,7 +49,7 @@ export default function Bookmarks(): JSX.Element {
           </p>
         </div>
         
-        <div className=' flex items-right'>
+        <div className=' flex items-end'>
        <TvPassModal/>
           </div>
         
@@ -80,7 +59,7 @@ export default function Bookmarks(): JSX.Element {
   );
 }
 
-Bookmarks.getLayout = (page: ReactElement): ReactNode => (
+tv.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
