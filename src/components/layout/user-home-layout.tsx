@@ -52,7 +52,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
           <>
             <UserHomeCover />
             <div className='flex flex-col gap-8'>
-              <div className='relative flex flex-col gap-3 px-4 py-3'>
+              <div className='relative flex gap-3 px-4 py-3'>
                 <UserHomeAvatar />
                 <p className='text-xl font-bold'>@{id}</p>
               </div>
