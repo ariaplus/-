@@ -15,6 +15,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import Image from 'next/image';
 import { Movie } from '@components/tv/movie';
+import { ArplImage } from '@components/ui/ariaplus';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
@@ -43,9 +44,28 @@ export default function Bookmarks(): JSX.Element {
                />
       <p className='text-gray-600 mt-4 text-center'>Horror 2024 | 1hr 40min | 4K</p>
       <p className='text-yellow-600 text-center'>Comming to Aria+ at a Later Date</p>
+      <div className='flex'>
       <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 w-80 rounded-lg'>Play</Button>
+             <Button
+        className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
+                   active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
+                   dark:active:bg-dark-primary/20'
+      >
+        <ArplImage 
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
+        <ToolTip tip='Update Username' />
+      </Button>
+        </div>
+        
       <p className='text-gray-600 mt-4 text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
      </div>
      <div className='border-solid border-2 border-white mx-3.5 mb-5 shadow-md rounded-md p-8'>
