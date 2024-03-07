@@ -60,7 +60,7 @@ export function UsernameModal({
               {title}
             </Dialog.Title>
             <p className='text-2xl font-bold xs:text-3xl sm:text-4xl'>Aria+ Movie Pass</p>
-            <Dialog.Description className='text-light-secondary w-[380px] dark:text-dark-secondary'>
+            <Dialog.Description className='text-light-secondary w-[380px] md:w-[320px] dark:text-dark-secondary'>
               {description}
             </Dialog.Description>
           </div>
