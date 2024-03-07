@@ -84,8 +84,8 @@ export function UsernameModal({
               layout='fill'
               objectFit='cover'
               alt=''
-              width='20px'
-              height='20px'
+              width='80px'
+              height='80px'
             />
           </a>
         </Link>
