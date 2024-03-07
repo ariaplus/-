@@ -16,10 +16,14 @@ type UsernameModalProps = {
 
 const usernameModalData = [
   {
-    title: 'Introducing',
-    subtitle: 'Aria+ Movie Pass',
+    title: 'What should we call you?',
+    description: 'Your @username is unique. You can always change it later.',
+    cancelLabel: 'Skip'
+  },
+  {
+    title: 'Introducting',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi',
     cancelLabel: 'Cancel'
   }
 ] as const;
@@ -32,12 +36,12 @@ export function UsernameModal({
   changeUsername,
   cancelUpdateUsername
 }: UsernameModalProps): JSX.Element {
-  const { title, subtitle, description, cancelLabel } = usernameModalData[+alreadySet];
+  const { title, description, cancelLabel } = usernameModalData[+alreadySet];
 
   return (
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover' style={{ backgroundImage: 'url(/assets/tv/movie/data/nowhere/nowhere-cover.jpg)' }}>
-    <div className='flex flex-col items-left gap-6'>
+    <div className='flex flex-col items-start gap-6'>
         <div className='flex flex-col gap-4'>
           <i className='mx-auto'>
       <ArplImage
@@ -55,9 +59,7 @@ export function UsernameModal({
             <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
               {title}
             </Dialog.Title>
-            <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
-              {subtitle}
-            </Dialog.Title>
+            <p className='text-2xl font-bold xs:text-3xl sm:text-4xl'>Aria+ Movie Pass</p>
             <Dialog.Description className='text-light-secondary dark:text-dark-secondary'>
               {description}
             </Dialog.Description>
