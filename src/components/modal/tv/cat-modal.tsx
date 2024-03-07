@@ -58,6 +58,10 @@ export function UsernameModal({
    { src: '/assets/tv/movie/m.jpg', href: '/tv/forestwitch' },
    { src: '/assets/tv/movie/n.jpg', href: '/tv/nowhere' },
    { src: '/assets/tv/movie/twtc.jpg', href: '/link1' },
+  { src: '/assets/tv/movie/twtc.jpg', href: '/link1' },
+   { src: '/assets/tv/movie/m.jpg', href: '/tv/forestwitch' },
+   { src: '/assets/tv/movie/n.jpg', href: '/tv/nowhere' },
+   { src: '/assets/tv/movie/twtc.jpg', href: '/link1' },   
    { src: '/assets/tv/movie/gits.jpeg', href: '/link1' }   
     // Add more images as needed
   ];
@@ -85,17 +89,7 @@ export function UsernameModal({
         </Link>
       ))}
      </div>
-        <div className='flex items-center justify-between text-[0px]'>
-                <NextImage className='accent-tab relative mt-0.5 h-16 xs:h-16 sm:h-16 h-16 w-full rounded-none p-0 transition hover:brightness-75'
-            useSkeleton
-            layout='fill'
-            imgClassName='object-cover'
-            src='https://images.pexels.com/photos/4577718/pexels-photo-4577718.jpeg'
-            alt=''
-            key=''
-          />
-        
-        </div>
+
     </form>
   );
 }
