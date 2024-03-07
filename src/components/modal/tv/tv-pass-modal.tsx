@@ -23,7 +23,7 @@ const usernameModalData = [
   {
     title: 'Introducting',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi',
+      'Your Aria+ Movie Pass to dozens of awesome movies and shows. completely free of ads and in-app purchases. All for one low montly price.',
     cancelLabel: 'Cancel'
   }
 ] as const;
@@ -42,25 +42,25 @@ export function UsernameModal({
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover' style={{ backgroundImage: 'url(/assets/tv/movie/data/nowhere/nowhere-cover.jpg)' }}>
     <div className='flex flex-col items-start gap-6'>
-        <div className='flex flex-col gap-4'>
-          <i className='mx-auto'>
+        <div className='flex flex-col mt-[100px] gap-4'>
+          <i className='flex items-start'>
       <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
           alt='Twitter banner'
           layout='fill'
-          width='40px'
-          height='40px'
+          width='100px'
+          height='100px'
           useSkeleton
        />
           </i>
-          <div className='flex items-center flex-col gap-2'>
+          <div className='flex items-start flex-col gap-2'>
             <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
               {title}
             </Dialog.Title>
             <p className='text-2xl font-bold xs:text-3xl sm:text-4xl'>Aria+ Movie Pass</p>
-            <Dialog.Description className='text-light-secondary dark:text-dark-secondary'>
+            <Dialog.Description className='text-light-secondary w-[380px] dark:text-dark-secondary'>
               {description}
             </Dialog.Description>
           </div>
