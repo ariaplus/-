@@ -50,8 +50,8 @@ export function UsernameModal({
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Google_Play_Pass_logo.svg/168px-Google_Play_Pass_logo.svg.png'
           alt=''
           layout='fill'
-          width='512px'
-          height='731px'
+          width='84px'
+          height='120px'
           useSkeleton
        />
           </i>
