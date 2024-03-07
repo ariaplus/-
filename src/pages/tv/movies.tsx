@@ -17,7 +17,6 @@ import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
 import { MainContainer } from '@components/home/main-container';
 import { Modal } from '@components/modal/modal';
-import { CatModal } from '@components/modal/tv/cat';
 import { TvPassModal } from '@components/modal/tv/tv-pass';
 import { ActionModal } from '@components/modal/action-modal';
 import { Movie } from '@components/tv/movie';
@@ -28,34 +27,13 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function Bookmarks(): JSX.Element {
+export default function Movies(): JSX.Element {
   const { user } = useAuth();
 
   const { open, openModal, closeModal } = useModal();
 
   const userId = user?.id as string;
 
-  const { data: bookmarksRef, loading: bookmarksRefLoading } = useCollection(
-    query(userBookmarksCollection(userId), orderBy('createdAt', 'desc')),
-    { allowNull: true }
-  );
-
-  const movieIds = useMemo(
-    () => bookmarksRef?.map(({ id }) => id) ?? [],
-    [bookmarksRef]
-  );
-
-  const { data: moviesData, loading: moviesLoading } = useArrayDocument(
-    movieIds,
-    moviesCollection,
-    { includeUser: true }
-  );
-
-  const handleClear = async (): Promise<void> => {
-    await clearAllBookmarks(userId);
-    closeModal();
-    toast.success('Successfully cleared all your Downloads');
-  };
 
   return (
     <MainContainer>
@@ -70,7 +48,7 @@ export default function Bookmarks(): JSX.Element {
         </div>
         
         <div className=' flex items-right'>
-       <CatModal/>
+
        <TvPassModal/>
           </div>
         
