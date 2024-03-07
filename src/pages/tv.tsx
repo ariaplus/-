@@ -28,7 +28,7 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function tv(): JSX.Element {
+export default function TV(): JSX.Element {
   const { back } = useRouter();
   const { user } = useAuth();
 
@@ -59,7 +59,7 @@ export default function tv(): JSX.Element {
   );
 }
 
-tv.getLayout = (page: ReactElement): ReactNode => (
+TV.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
