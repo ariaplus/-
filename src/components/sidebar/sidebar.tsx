@@ -23,12 +23,12 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/explore',
     linkName: 'Explore',
-    src: '/main/ui/header/primary/explore.svg'
+    src: '/main/ui/primary/explore.svg'
   },
   {
     href: '/discover',
     linkName: 'Discover',
-    src: '/assets/ariaplus.svg'
+    src: '/main/ui/primary/discover.svg'
 
   },
   {
