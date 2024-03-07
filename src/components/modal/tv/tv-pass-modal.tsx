@@ -16,14 +16,10 @@ type UsernameModalProps = {
 
 const usernameModalData = [
   {
-    title: 'What should we call you?',
-    description: 'Your @username is unique. You can always change it later.',
-    cancelLabel: 'Skip'
-  },
-  {
-    title: 'Aria+ Wide',
+    title: 'Introducing',
+    subtitle: 'Aria+ Movie Pass',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales.',
     cancelLabel: 'Cancel'
   }
 ] as const;
@@ -36,12 +32,12 @@ export function UsernameModal({
   changeUsername,
   cancelUpdateUsername
 }: UsernameModalProps): JSX.Element {
-  const { title, description, cancelLabel } = usernameModalData[+alreadySet];
+  const { title, subtitle, description, cancelLabel } = usernameModalData[+alreadySet];
 
   return (
     <form
       className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover' style={{ backgroundImage: 'url(/assets/tv/movie/data/nowhere/nowhere-cover.jpg)' }}>
-    <div className='flex flex-col items-center gap-6'>
+    <div className='flex flex-col items-left gap-6'>
         <div className='flex flex-col gap-4'>
           <i className='mx-auto'>
       <ArplImage
@@ -58,6 +54,9 @@ export function UsernameModal({
           <div className='flex items-center flex-col gap-2'>
             <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
               {title}
+            </Dialog.Title>
+            <Dialog.Title className='text-2xl font-bold xs:text-3xl sm:text-4xl'>
+              {subtitle}
             </Dialog.Title>
             <Dialog.Description className='text-light-secondary dark:text-dark-secondary'>
               {description}
