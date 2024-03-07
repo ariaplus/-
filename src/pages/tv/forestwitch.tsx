@@ -39,41 +39,10 @@ export default function Bookmarks(): JSX.Element {
         alt='4K'
         width={250}
         height={125}
-        className=' mt-60 rounded-lg pt-20'
+        className=' mt-56 rounded-lg pt-20'
                />
-      <div className='flex'>
-       <Button className='dark-bg-tab group relative ml-auto p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'>
-             <Image
-        src='/assets/tv/ui/wide.png' // Update this with the path to your image
-        alt='4K'
-        width={50}
-        height={20}
-        className='rounded-lg'
-               />
-      </Button>
-       <Button className='dark-bg-tab group relative ml-auto p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'>
-             <Image
-        src='/assets/ariaplus.svg' // Update this with the path to your image
-        alt='4K'
-        width={20}
-        height={20}
-        className='rounded-lg'
-               />
-      </Button>
-      <Button className='dark-bg-tab group relative ml-auto p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'>
-             <Image
-        src='/assets/ariaplus.svg' // Update this with the path to your image
-        alt='4K'
-        width={20}
-        height={20}
-        className='rounded-lg'
-               />
-      </Button>
-           </div>
-      <p className='text-gray-600 mt-4 text-center'>Horror | 2024 | 1hr 40min | 4K</p>
+      <p className='text-yellow-600 mt-4 text-center'>Comming to Aria+ at a Later Date</p>
+      <p className='text-gray-600 mt-4 text-center'>Horror 2024 | 1hr 40min | 4K</p>
       <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 w-80 rounded-lg'>Play</Button>
