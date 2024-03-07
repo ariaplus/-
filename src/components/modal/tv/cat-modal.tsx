@@ -78,12 +78,14 @@ export function UsernameModal({
       {images.map((image, index) => (
         <Link key={index} href={image.href}>
           <a className='relative h-16 md:h-16 sm:h-16 overflow-hidden hover-animation transition rounded-lg'>
-            <NextImage
+            <ArplImage
               useSkeleton
               src={image.src}
               layout='fill'
               objectFit='cover'
-              alt={`Grid Image ${index + 1}`}
+              alt=''
+              width='20px'
+              height='20px'
             />
           </a>
         </Link>
