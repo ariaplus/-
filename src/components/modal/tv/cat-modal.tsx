@@ -82,10 +82,10 @@ export function UsernameModal({
               useSkeleton
               src={image.src}
               layout='fill'
-              objectFit='cover'
+              objectFit='contain'
               alt=''
-              width='80px'
-              height='80px'
+              width='50px'
+              height='50px'
             />
           </a>
         </Link>
