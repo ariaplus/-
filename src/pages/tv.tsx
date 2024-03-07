@@ -41,18 +41,15 @@ export default function TV(): JSX.Element {
     <MainContainer>
       <SEO title='tv | Aria+' />
       
-          <MainHeader useActionButton action={back} className='flex items-center '>
-        <div className='-mb-1 justify-between flex flex-col'>
+      <MainHeader useActionButton action={back}>
+          <div className='-mb-1 flex flex-col'>
           <h2 className='-mt-1 text-xl font-bold'>tv</h2>
           <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             @{user?.username}
           </p>
         </div>
-        
-        <div className=' flex items-right'>
-
-       <TvPassModal/>
-          </div>
+          <TvPassModal/>
+      </MainHeader>
         
       </MainHeader>
       <Movie/>
