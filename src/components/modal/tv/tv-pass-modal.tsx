@@ -40,18 +40,18 @@ export function UsernameModal({
 
   return (
     <form
-      className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover' style={{ backgroundImage: 'url(/assets/tv/movie/data/nowhere/nowhere-cover.jpg)' }}>
+      className='flex h-full flex-col justify-between bg-no-repeat bg-top bg-cover'>
     <div className='flex flex-col items-start gap-6'>
         <div className='flex flex-col mt-[100px] gap-4'>
           <i className='flex items-start'>
       <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
-          src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Google_Play_Pass_logo.svg/168px-Google_Play_Pass_logo.svg.png'
+          alt=''
           layout='fill'
-          width='100px'
-          height='100px'
+          width='512px'
+          height='731px'
           useSkeleton
        />
           </i>
