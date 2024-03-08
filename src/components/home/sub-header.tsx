@@ -32,7 +32,7 @@ export function SubHeader({
   return (
     <header
       className={cn(
-        'hover-animation even z-[9] bg-main-background/60 px-4 py-2 backdrop-blur-md',
+        'hover-animation even z-[9] h-[45px] bg-main-background/60 px-4 py-2 backdrop-blur-md',
         !disableSticky && 'sticky top-0',
         className ?? 'flex items-center gap-6'
       )}
