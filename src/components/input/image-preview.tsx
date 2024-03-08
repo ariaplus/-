@@ -113,7 +113,7 @@ export function ImagePreview({
               'accent-tab relative transition-shadow',
               isTweet
                 ? postImageBorderRadius[previewCount][index]
-                : 'rounded-2xl',
+                : 'rounded-2xl object-cover',
               {
                 'col-span-2 row-span-2': previewCount === 1,
                 'row-span-2':
@@ -131,7 +131,7 @@ export function ImagePreview({
               imgClassName={cn(
                 isTweet
                   ? postImageBorderRadius[previewCount][index]
-                  : 'rounded-2xl'
+                  : 'rounded-2xl object-cover'
               )}
               previewCount={previewCount}
               layout='fill'
