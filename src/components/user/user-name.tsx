@@ -1,6 +1,7 @@
 import cn from 'clsx';
 import Link from 'next/link';
 import { HeroIcon } from '@components/ui/hero-icon';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type UserNameProps = {
   tag?: keyof JSX.IntrinsicElements;
@@ -22,7 +23,7 @@ export function UserName({
   const CustomTag = tag ? tag : 'p';
 
   return (
-    <Link href={username ? `/user/${username}` : '#'}>
+    <Link href={username ? `/${username}` : '#'}>
       <a
         className={cn(
           'flex items-center gap-1 truncate font-bold',
@@ -34,11 +35,16 @@ export function UserName({
         <CustomTag className='truncate'>{name}</CustomTag>
         {verified && (
           <i>
-            <HeroIcon
-              className={cn('fill-yellow-400', iconClassName ?? 'h-5 w-5')}
-              iconName='CheckBadgeIcon'
-              solid
-            />
+ 
+                    <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/primary/verified.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
           </i>
         )}
       </a>
