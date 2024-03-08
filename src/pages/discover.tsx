@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
         <Start />
          </div>
       </MainHeader>
-       <MainHeader>
+       <MainHeader className='flex items-center justify-between z-[9] ' >
               <div className='flex items-center' >
         <NewsButton />
          </div>
