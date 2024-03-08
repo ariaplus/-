@@ -14,6 +14,7 @@ import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { Start } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
+import { NewsButton } from '@components/explore/header/news-button';
 import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
@@ -37,6 +38,11 @@ export default function Home(): JSX.Element {
       > <div className='flex items-right' >
         <ExploreButton />
         <Start />
+         </div>
+      </MainHeader>
+       <MainHeader>
+              <div className='flex items-center' >
+        <NewsButton />
          </div>
       </MainHeader>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
