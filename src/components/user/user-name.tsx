@@ -39,7 +39,7 @@ export function UserName({
                     <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/primary/verified.svg'
+          src='/main/ui/primary/verified.png'
           alt=''
           layout='fill'
           width='20px'
