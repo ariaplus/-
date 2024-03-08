@@ -24,6 +24,7 @@ import type { Variants } from 'framer-motion';
 import type { User } from '@lib/types/user';
 import type { Tweet } from '@lib/types/tweet';
 import type { FilesWithId, ImagesPreview, ImageData } from '@lib/types/file';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type InputProps = {
   modal?: boolean;
@@ -114,9 +115,18 @@ export function Input({
     toast.success(
       () => (
         <span className='flex gap-2'>
-          Your Tweet was sent
-          <Link href={`/tweet/${tweetId}`}>
-            <a className='custom-underline font-bold'>View</a>
+                  <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/primary/explore.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
+          
+          <Link href={`/plus/${tweetId}`}>
+            <a className='custom-underline font-bold'>VIEW</a>
           </Link>
         </span>
       ),
