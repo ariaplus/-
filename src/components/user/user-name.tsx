@@ -2,6 +2,7 @@ import cn from 'clsx';
 import Link from 'next/link';
 import { HeroIcon } from '@components/ui/hero-icon';
 import { ArplImage } from '@components/ui/ariaplus';
+import { ToolTip } from '@components/ui/tooltip';
 
 type UserNameProps = {
   tag?: keyof JSX.IntrinsicElements;
@@ -45,6 +46,7 @@ export function UserName({
           width='20px'
           height='20px'
        />
+       <ToolTip tip='This is an Aria+ Verified Account' />
           </i>
         )}
       </a>
