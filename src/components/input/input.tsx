@@ -118,7 +118,7 @@ export function Input({
                   <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/primary/explore.svg'
+          src='/assets/ariaplus.svg'
           alt=''
           layout='fill'
           width='25px'
