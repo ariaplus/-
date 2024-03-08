@@ -45,7 +45,7 @@ export function ViewTweet(tweet: ViewTweetProps): JSX.Element {
 
   const { open, openModal, closeModal } = useModal();
 
-  const tweetLink = `/+/${tweetId}`;
+  const tweetLink = `/plus/${tweetId}`;
 
   const userId = user?.id as string;
 
