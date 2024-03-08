@@ -9,6 +9,8 @@ import { SEO } from '@components/common/seo';
 import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
+import { SubHeader } from '@components/home/sub-header';
+
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
@@ -40,11 +42,11 @@ export default function Home(): JSX.Element {
         <Start />
          </div>
       </MainHeader>
-       <MainHeader className='flex items-center justify-between z-[9] ' >
+       <SubHeader className='flex items-center justify-between ' >
               <div className='flex items-center' >
         <NewsButton />
          </div>
-      </MainHeader>
+      </SubHeader>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
