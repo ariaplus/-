@@ -100,12 +100,6 @@ export default function Bookmarks(): JSX.Element {
             imageData={{ src: '/main/ui/secondary/graphics/messages.svg', alt: '' }}
           />
 
-          <AnimatePresence mode='popLayout'>
-            {tweetData?.map((tweet) => (
-              <Tweet {...tweet} key={tweet.id} />
-            ))}
-          </AnimatePresence>
-        )}
       </section>
     </MainContainer>
   );
