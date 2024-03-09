@@ -40,7 +40,7 @@ export function ExploreButton(): JSX.Element {
         <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/primary/explore.svg'
+          src='/assets/explore.svg'
           alt=''
           layout='fill'
           width='25px'
