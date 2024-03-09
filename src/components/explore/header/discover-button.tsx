@@ -42,7 +42,7 @@ export function DiscoverButton(): JSX.Element {
           useSkeleton
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/header/primary/feed.svg'
+          src='/assets/discover.svg'
           alt=''
           layout='fill'
           width='25px'
