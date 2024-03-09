@@ -20,7 +20,7 @@ export function StatsEmpty({
       <div className='w-full max-w-sm'>
         <div className='flex flex-col items-center gap-6'>
           {imageData && (
-            <NextImage
+            <NextImage className=' object-contain'
               width={300}
               height={300}
               src={imageData.src}
