@@ -34,12 +34,12 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/notifications',
     linkName: 'Notifications',
-    src: '/assets/ariaplus.svg'
+    src: '/main/ui/primary/bell.svg'
   },
   {
     href: '/messages',
     linkName: 'Messages',
-    src: 'XMarkIcon',
+    src: '/main/ui/primary/chat.svg',
     canBeHidden: true
   },
   {
@@ -101,7 +101,7 @@ export function Sidebar(): JSX.Element {
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          alt=''
           layout='fill'
           width='40px'
           height='40px'
