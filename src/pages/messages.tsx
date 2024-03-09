@@ -95,7 +95,7 @@ export default function Bookmarks(): JSX.Element {
       </MainHeader>
       <section className='mt-0.5'>
           <StatsEmpty
-            title="No Messages"
+            title='No Messages'
             description='You have not sent any Messages'
             imageData={{ src: '/main/ui/secondary/graphics/messages.svg', alt: '' }}
           />
