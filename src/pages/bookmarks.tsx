@@ -98,9 +98,9 @@ export default function Bookmarks(): JSX.Element {
           <Loading className='mt-5' />
         ) : !bookmarksRef ? (
           <StatsEmpty
-            title="Save &'s for later"
+            title="No Bookmarks"
             description='Don’t let the good ones fly away! Bookmark them to easily find them again in the future.'
-            imageData={{ src: '/assets/no-bookmarks.png', alt: 'No bookmarks' }}
+            imageData={{ src: '/main/ui/secondary/graphics/bookmarks.png', alt: 'No bookmarks' }}
           />
         ) : (
           <AnimatePresence mode='popLayout'>
