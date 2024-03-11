@@ -22,7 +22,7 @@ export function ExploreNavLink({ src, path }: UserNavLinkProps): JSX.Element {
         className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center
                    hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
       >
-        <div className='px-6 md:px-8'>
+        <div className='pl-[10px] pr-[10px]'>
           <p
             className={cn(
               'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
