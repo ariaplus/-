@@ -9,19 +9,8 @@ type UserNavProps = {
 
 const allNavs = [
   [
-    { name:'Politics', src: '/assets/ariaplus.svg', path: 'politics' },
-    { src: '/assets/ariaplus.svg', path: 'finance' },
-    { src: '/assets/ariaplus.svg', path: 'business' },
-    { src: '/assets/ariaplus.svg', path: 'fashion' },
-        { src: '/assets/ariaplus.svg', path: 'beauty' },
-    { src: '/assets/ariaplus.svg', path: 'arts' },
-    { src: '/assets/ariaplus.svg', path: 'entertainment' },
-        { src: '/assets/ariaplus.svg', path: 'fitness' },
-    { src: '/assets/ariaplus.svg', path: 'food' },
-        { src: '/assets/ariaplus.svg', path: 'gaming' },
-    { src: '/assets/ariaplus.svg', path: 'family' },
-        { src: '/assets/ariaplus.svg', path: 'sports' },
-    { src: '/assets/ariaplus.svg', path: 'esports' }
+    { name:'Politics', src: '/assets/ariaplus.svg', path: 'politics' }
+
   ]
 ] as const;
 
