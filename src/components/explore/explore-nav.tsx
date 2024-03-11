@@ -31,7 +31,7 @@ export function ExploreNav({ follow }: UserNavProps): JSX.Element {
   return (
     <motion.nav
       className={cn(
-        `hover-animation flex justify-between overflow-y-auto
+        `hover-animation flex justify-between no-scrollbar overflow-y-auto
          border-b border-light-border dark:border-dark-border`,
         follow && 'mt-1 mb-0.5'
       )}
