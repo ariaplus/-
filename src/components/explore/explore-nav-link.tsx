@@ -1,14 +1,16 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import cn from 'clsx';
+
 import { ArplImage } from '@components/ui/ariaplus';
 
 type UserNavLinkProps = {
   src: string;
   path: string;
+  name: string;
 };
 
-export function ExploreNavLink({ src, path }: UserNavLinkProps): JSX.Element {
+export function ExploreNavLink({ name, src, path }: UserNavLinkProps): JSX.Element {
   const {
     asPath,
     query: { id }
@@ -41,6 +43,7 @@ export function ExploreNavLink({ src, path }: UserNavLinkProps): JSX.Element {
           height='25px'
           useSkeleton
        />
+          <ToolTip tip={name} />
             <i className='h-1 scale-50 rounded-full bg-main-accent opacity-0 transition duration-200' />
           </p>
         </div>
