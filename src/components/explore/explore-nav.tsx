@@ -9,15 +9,18 @@ type UserNavProps = {
 
 const allNavs = [
   [
-    { name: 'For You', path: 'foryou' },
-    { name: 'Trending', path: 'trending' },
-    { name: 'News', path: 'news' },
+    { name: 'Politics', path: 'politics' },
+    { name: 'Finance', path: 'finance' },
+    { name: 'Business', path: 'business' },
+    { name: 'Fashion', path: 'fashion' },
+    { name: 'Arts', path: 'arts' },
+    { name: 'Entertainment', path: 'entertainment' },
+   { name: 'Fitness', path: 'fitness' },
+    { name: 'Food', path: 'foods' },
+    { name: 'Gaming', path: 'gaming' },
+   { name: 'Family', path: 'family' },
     { name: 'Sports', path: 'sports' },
-    { name: 'Fun', path: 'fun' }
-  ],
-  [
-    { name: 'Following', path: 'following' },
-    { name: 'Followers', path: 'followers' }
+  { name: 'E-Sports', path: 'esports' }
   ]
 ] as const;
 
@@ -27,7 +30,7 @@ export function ExploreNav({ follow }: UserNavProps): JSX.Element {
   return (
     <motion.nav
       className={cn(
-        `hover-animation flex justify-between overflow-y-auto
+        `hover-animation no-scrollbar flex justify-between overflow-y-auto
          border-b border-light-border dark:border-dark-border`,
         follow && 'mt-1 mb-0.5'
       )}
