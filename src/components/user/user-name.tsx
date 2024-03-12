@@ -3,12 +3,11 @@ import Link from 'next/link';
 import { HeroIcon } from '@components/ui/hero-icon';
 import { ArplImage } from '@components/ui/ariaplus';
 
-
 type UserNameProps = {
   tag?: keyof JSX.IntrinsicElements;
   name: string;
   verified: boolean;
- explore: boolean;
+  explore: boolean;
   username?: string;
   className?: string;
   iconClassName?: string;
@@ -37,32 +36,35 @@ export function UserName({
       >
         <CustomTag className='truncate'>{name}</CustomTag>
         {verified && (
-          <i>
- 
-                    <ArplImage
-          imgClassName='arplicon'
-          blurClassName='none'
-          src='/main/ui/primary/verified.svg'
-          alt=''
-          layout='fill'
-          width='20px'
-          height='20px'
-       />
-         <CustomTag className='truncate'>{name}</CustomTag>
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/verified.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+            <CustomTag className='truncate'>{name}</CustomTag>
+          </>
+        )}
         {explore && (
-          <i>
- 
-                    <ArplImage
-          imgClassName='arplicon'
-          blurClassName='none'
-          src='/assets/explore.svg'
-          alt=''
-          layout='fill'
-          width='20px'
-          height='20px'
-       />
-
-          </i>
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/assets/explore.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
         )}
       </a>
     </Link>
