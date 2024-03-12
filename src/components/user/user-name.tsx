@@ -99,21 +99,7 @@ verifiedapplegreen,
             </i>
           </>
         )}
-       {verifiedbot && (
-          <>
-            <i>
-              <ArplImage
-                imgClassName='arplicon'
-                blurClassName='none'
-                src='/main/ui/primary/user/verified/bot.svg'
-                alt=''
-                layout='fill'
-                width='20px'
-                height='20px'
-              />
-            </i>
-          </>
-        )}
+
         {verifiedcyan && (
           <>
             <i>
@@ -221,7 +207,21 @@ verifiedapplegreen,
             </i>
           </>
         )}
-        
+          {verifiedbot && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/bot.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
       </a>
     </Link>
   );
