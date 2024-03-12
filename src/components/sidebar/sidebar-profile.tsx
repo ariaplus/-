@@ -18,7 +18,16 @@ export function SidebarProfile(): JSX.Element {
   const { user, signOut } = useAuth();
   const { open, openModal, closeModal } = useModal();
 
-  const { name, username, explore, verified, photoURL } = user as User;
+  const { name, username, verifiedred,
+verifiedgreen,
+verifiedbot,
+verifiedcyan,
+verifiedgray,
+verifiedgold,
+verifiedpink,
+verifiedviolet,
+verifiedwhite,
+verifiedapplegreen, verified, photoURL } = user as User;
 
   return (
     <>
@@ -51,7 +60,16 @@ export function SidebarProfile(): JSX.Element {
               <div className='flex gap-3 truncate'>
                 <UserAvatar src={photoURL} alt={name} size={40} />
                 <div className='hidden truncate text-start leading-5 xl:block'>
-                  <UserName name={name} className='start' explore={explore} verified={verified} />
+                  <UserName name={name} className='start' verifiedred={verifiedred}
+verifiedgreen={verifiedgreen}
+verifiedbot={verifiedbot}
+verifiedcyan={verifiedcyan}
+verifiedgray={verifiedgray}
+verifiedgold={verifiedgold}
+verifiedpink={verifiedpink}
+verifiedviolet={verifiedviolet}
+verifiedwhite={verifiedwhite}
+verifiedapplegreen={verifiedapplegreen} verified={verified} />
                   <UserUsername username={username} disableLink />
                 </div>
               </div>
@@ -77,7 +95,16 @@ export function SidebarProfile(): JSX.Element {
                     <div className='flex items-center gap-3 truncate'>
                       <UserAvatar src={photoURL} alt={name} />
                       <div className='truncate'>
-                        <UserName name={name} explore={explore} verified={verified} />
+                        <UserName name={name} verifiedred={verifiedred}
+verifiedgreen={verifiedgreen}
+verifiedbot={verifiedbot}
+verifiedcyan={verifiedcyan}
+verifiedgray={verifiedgray}
+verifiedgold={verifiedgold}
+verifiedpink={verifiedpink}
+verifiedviolet={verifiedviolet}
+verifiedwhite={verifiedwhite}
+verifiedapplegreen={verifiedapplegreen} verified={verified} />
                         <UserUsername username={username} disableLink />
                       </div>
                     </div>
