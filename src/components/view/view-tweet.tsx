@@ -39,7 +39,7 @@ export function ViewTweet(tweet: ViewTweetProps): JSX.Element {
     user: tweetUserData
   } = tweet;
 
-  const { id: ownerId, name, username, verified, photoURL } = tweetUserData;
+  const { id: ownerId, name, username, verified, explore, photoURL } = tweetUserData;
 
   const { user } = useAuth();
 
@@ -93,6 +93,7 @@ export function ViewTweet(tweet: ViewTweetProps): JSX.Element {
                   name={name}
                   username={username}
                   verified={verified}
+                 explore={explore}
                 />
               </UserTooltip>
               <UserTooltip {...tweetUserData}>
