@@ -7,7 +7,16 @@ type UserNameProps = {
   tag?: keyof JSX.IntrinsicElements;
   name: string;
   verified: boolean;
-  explore: boolean;
+verifiedred: boolean;
+verifiedgreen: boolean;
+verifiedbot: boolean;
+verifiedcyan: boolean;
+verifiedgray: boolean;
+verifiedgold: boolean;
+verifiedpink: boolean;
+verifiedviolet: boolean;
+verifiedwhite: boolean;
+verifiedapplegreen: boolean;
   username?: string;
   className?: string;
   iconClassName?: string;
@@ -17,7 +26,16 @@ export function UserName({
   tag,
   name,
   verified,
-  explore,
+verifiedred,
+verifiedgreen,
+verifiedbot,
+verifiedcyan,
+verifiedgray,
+verifiedgold,
+verifiedpink,
+verifiedviolet,
+verifiedwhite,
+verifiedapplegreen,
   username,
   className,
   iconClassName
@@ -66,13 +84,13 @@ export function UserName({
             </i>
           </>
         )}
-         {explore && (
+         {verifiedred && (
           <>
             <i>
               <ArplImage
                 imgClassName='arplicon'
                 blurClassName='none'
-                src='/assets/explore.svg'
+                src='/main/ui/primary/user/verified/red.svg'
                 alt=''
                 layout='fill'
                 width='20px'
@@ -81,6 +99,144 @@ export function UserName({
             </i>
           </>
         )}
+          {verifiedgreen && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/green.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+       {verifiedbot && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/bot.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+        {verifiedcyan && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/cyan.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+      {verifiedgray && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/gray.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+      {verifiedgold && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/gold.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+        {verifiedpink && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/pink.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+       {verifiedviolet && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/violet.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+
+       {verifiedwhite && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/white.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+
+      {verifiedapplegreen && (
+          <>
+            <i>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/main/ui/primary/user/verified/apple-green.svg'
+                alt=''
+                layout='fill'
+                width='20px'
+                height='20px'
+              />
+            </i>
+          </>
+        )}
+        
       </a>
     </Link>
   );
