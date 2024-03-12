@@ -51,7 +51,7 @@ export function Tweet(tweet: TweetProps): JSX.Element {
     user: tweetUserData
   } = tweet;
 
-  const { id: ownerId, name, username, verified, photoURL } = tweetUserData;
+  const { id: ownerId, name, username, verified, explore, photoURL } = tweetUserData;
 
   const { user } = useAuth();
 
@@ -135,6 +135,7 @@ export function Tweet(tweet: TweetProps): JSX.Element {
                       name={name}
                       username={username}
                       verified={verified}
+                     explore={explore}
                       className='text-light-primary dark:text-dark-primary'
                     />
                   </UserTooltip>
