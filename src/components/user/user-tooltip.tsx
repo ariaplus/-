@@ -16,7 +16,16 @@ type UserTooltipProps = Pick<
   | 'bio'
   | 'name'
   | 'verified'
-  | 'explore'
+| 'verifiedred'
+| 'verifiedgreen'
+| 'verifiedbot'
+| 'verifiedcyan'
+| 'verifiedgray'
+| 'verifiedgold'
+| 'verifiedpink'
+| 'verifiedviolet'
+| 'verifiedwhite'
+| 'verifiedapplegreen'
   | 'username'
   | 'photoURL'
   | 'following'
@@ -37,7 +46,16 @@ export function UserTooltip({
   modal,
   avatar,
   verified,
-  explore,
+verifiedred,
+verifiedgreen,
+verifiedbot,
+verifiedcyan,
+verifiedgray,
+verifiedgold,
+verifiedpink,
+verifiedviolet,
+verifiedwhite,
+verifiedapplegreen,
   children,
   photoURL,
   username,
@@ -109,7 +127,16 @@ export function UserTooltip({
                 name={name}
                 username={username}
                 verified={verified}
-               explore={explore}
+verifiedred={verifiedred}
+verifiedgreen={verifiedgreen}
+verifiedbot={verifiedbot}
+verifiedcyan={verifiedcyan}
+verifiedgray={verifiedgray}
+verifiedgold={verifiedgold}
+verifiedpink={verifiedpink}
+verifiedviolet={verifiedviolet}
+verifiedwhite={verifiedwhite}
+verifiedapplegreen={verifiedapplegreen}
               />
               <div className='flex items-center gap-1 text-light-secondary dark:text-dark-secondary'>
                 <UserUsername username={username} />
