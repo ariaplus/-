@@ -16,7 +16,16 @@ type UserDetailsProps = Pick<
   | 'username'
   | 'location'
   | 'verified'
-   | 'explore'
+| 'verifiedred'
+| 'verifiedgreen'
+| 'verifiedbot'
+| 'verifiedcyan'
+| 'verifiedgray'
+| 'verifiedgold'
+| 'verifiedpink'
+| 'verifiedviolet'
+| 'verifiedwhite'
+| 'verifiedapplegreen'
   | 'createdAt'
   | 'following'
   | 'followers'
@@ -32,7 +41,16 @@ export function UserDetails({
   username,
   location,
   verified,
-    explore,
+verifiedred,
+verifiedgreen,
+verifiedbot,
+verifiedcyan,
+verifiedgray,
+verifiedgold,
+verifiedpink,
+verifiedviolet,
+verifiedwhite,
+verifiedapplegreen,
   createdAt,
   following,
   followers
@@ -51,7 +69,16 @@ export function UserDetails({
           name={name}
           iconClassName='w-6 h-6'
           verified={verified}
-       explore={explore}
+ verifiedred={verifiedred}
+verifiedgreen={verifiedgreen}
+verifiedbot={verifiedbot}
+verifiedcyan={verifiedcyan}
+verifiedgray={verifiedgray}
+verifiedgold={verifiedgold}
+verifiedpink={verifiedpink}
+verifiedviolet={verifiedviolet}
+verifiedwhite={verifiedwhite}
+verifiedapplegreen={verifiedapplegreen}
         />
         <div className='flex items-center gap-1 text-light-secondary dark:text-dark-secondary'>
           <p>@{username}</p>
