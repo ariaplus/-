@@ -12,6 +12,7 @@ export type User = {
   username: string;
   photoURL: string;
   verified: boolean;
+    explore: boolean;
   following: string[];
   followers: string[];
   createdAt: Timestamp;
