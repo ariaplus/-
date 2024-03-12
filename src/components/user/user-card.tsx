@@ -13,7 +13,7 @@ type UserCardProps = User & {
 };
 
 export function UserCard(user: UserCardProps): JSX.Element {
-  const { id, bio, name, modal, follow, username, verified, photoURL } = user;
+  const { id, bio, name, modal, follow, username, verified, explore, photoURL } = user;
 
   return (
     <Link href={`/${username}`}>
@@ -33,6 +33,7 @@ export function UserCard(user: UserCardProps): JSX.Element {
                   name={name}
                   username={username}
                   verified={verified}
+                 explore={explore}
                 />
               </UserTooltip>
               <div className='flex items-center gap-1 text-light-secondary dark:text-dark-secondary'>
