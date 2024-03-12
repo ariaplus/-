@@ -69,21 +69,6 @@ verifiedapplegreen,
             <CustomTag className='truncate'></CustomTag>
           </>
         )}
-        {explore && (
-          <>
-            <i>
-              <ArplImage
-                imgClassName='arplicon'
-                blurClassName='none'
-                src='/assets/explore.svg'
-                alt=''
-                layout='fill'
-                width='20px'
-                height='20px'
-              />
-            </i>
-          </>
-        )}
          {verifiedred && (
           <>
             <i>
