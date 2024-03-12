@@ -267,7 +267,7 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
         <ArplImage 
           imgClassName='arplicon'
           blurClassName='none'
-          src='/assets/ariaplus.svg'
+          src='/main/ui/primary/user/ui/edit-profile.svg'
           alt=''
           layout='fill'
           width='20px'
