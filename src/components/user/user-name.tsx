@@ -59,7 +59,7 @@ verifiedapplegreen,
               <ArplImage
                 imgClassName='arplicon'
                 blurClassName='none'
-                src='/main/ui/primary/verified.svg'
+                src='/main/ui/primary/user/verified/blue.svg'
                 alt=''
                 layout='fill'
                 width='20px'
