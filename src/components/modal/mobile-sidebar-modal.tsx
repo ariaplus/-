@@ -64,6 +64,7 @@ type MobileSidebarModalProps = Pick<
   | 'name'
   | 'username'
   | 'verified'
+ | 'explore'
   | 'photoURL'
   | 'following'
   | 'followers'
@@ -76,6 +77,7 @@ export function MobileSidebarModal({
   name,
   username,
   verified,
+  explore,
   photoURL,
   following,
   followers,
