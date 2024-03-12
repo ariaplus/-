@@ -102,7 +102,56 @@ export function ImageModal({
             <Loading iconClassName='w-20 h-20' />
           </motion.div>
         ) : (
-          <motion.div className='relative mx-auto' {...modal} key={src}>
+          <motion.div className='flex relative mx-auto' {...modal} key={src}>
+
+
+            <picture className='group relative flex max-w-3xl'>
+              <source srcSet={src} type='image/*' />
+              <img
+                className='max-h-[75vh] rounded-md object-contain md:max-h-[80vh]'
+                src={src}
+                alt={alt}
+                onClick={preventBubbling()}
+              />
+              <a
+                className='trim-alt accent-tab absolute bottom-0 right-0 mx-2 mb-2 translate-y-4
+                           rounded-md bg-main-background/40 px-2 py-1 text-sm text-light-primary/80 opacity-0
+                           transition hover:bg-main-accent hover:text-white focus-visible:translate-y-0
+                           focus-visible:bg-main-accent focus-visible:text-white focus-visible:opacity-100
+                           group-hover:translate-y-0 group-hover:opacity-100 dark:text-dark-primary/80'
+                href={src}
+                target='_blank'
+                rel='noreferrer'
+                onClick={preventBubbling(null, true)}
+              >
+                {alt}
+              </a>
+            </picture>
+            <a
+              className='custom-underline absolute left-0 -bottom-7 font-medium text-light-primary/80
+                         decoration-transparent underline-offset-2 transition hover:text-light-primary hover:underline
+                         hover:decoration-light-primary focus-visible:text-light-primary dark:text-dark-primary/80 
+                         dark:hover:text-dark-primary dark:hover:decoration-dark-primary dark:focus-visible:text-dark-primary'
+              href={src}
+              target='_blank'
+              rel='noreferrer'
+              onClick={preventBubbling(null, true)}
+            >
+              Open original
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+            
             <picture className='group relative flex max-w-3xl'>
               <source srcSet={src} type='image/*' />
               <img
