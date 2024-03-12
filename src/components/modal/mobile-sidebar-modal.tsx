@@ -64,6 +64,7 @@ type MobileSidebarModalProps = Pick<
   | 'name'
   | 'username'
   | 'verified'
+  | 'explore'
   | 'photoURL'
   | 'following'
   | 'followers'
