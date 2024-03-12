@@ -8,6 +8,7 @@ type UserNameProps = {
   tag?: keyof JSX.IntrinsicElements;
   name: string;
   verified: boolean;
+ explore: boolean;
   username?: string;
   className?: string;
   iconClassName?: string;
@@ -17,6 +18,7 @@ export function UserName({
   tag,
   name,
   verified,
+  explore,
   username,
   className,
   iconClassName
@@ -41,6 +43,19 @@ export function UserName({
           imgClassName='arplicon'
           blurClassName='none'
           src='/main/ui/primary/verified.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
+         <CustomTag className='truncate'>{name}</CustomTag>
+        {explore && (
+          <i>
+ 
+                    <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/explore.svg'
           alt=''
           layout='fill'
           width='20px'
