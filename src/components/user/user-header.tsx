@@ -69,7 +69,16 @@ export function UserHeader(): JSX.Element {
             className='-mt-1 text-xl'
             iconClassName='w-6 h-6'
             verified={user.verified}
-           explore={user.explore}
+verifiedred={user.verifiedred}
+verifiedgreen={user.verifiedgreen}
+verifiedbot={user.verifiedbot}
+verifiedcyan={user.verifiedcyan}
+verifiedgray={user.verifiedgray}
+verifiedgold={user.verifiedgold}
+verifiedpink={user.verifiedpink}
+verifiedviolet={user.verifiedviolet}
+verifiedwhite={user.verifiedwhite}
+verifiedapplegreen={user.verifiedapplegreen}
           />
           <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             {isInFollowPage
