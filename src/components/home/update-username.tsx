@@ -124,13 +124,13 @@ export function UpdateUsername(): JSX.Element {
         <ArplImage 
           imgClassName='arplicon'
           blurClassName='none'
-          src='/assets/ariaplus.svg'
+          src='/main/ui/primary/user/ui/edit-username.svg'
           alt=''
           layout='fill'
           width='20px'
           height='20px'
        />
-        <ToolTip tip='Update Username' />
+        <ToolTip tip='Edit Username' />
       </Button>
     </>
   );
