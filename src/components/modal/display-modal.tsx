@@ -43,7 +43,7 @@ export function DisplayModal({ closeModal }: DisplayModalProps): JSX.Element {
           <UserAvatar src='/assets/twitter-avatar.jpg' alt='Aria+' />
           <div>
             <div className='flex gap-1'>
-              <UserName verified name='Aria+' />
+              <UserName explore verified name='Aria+' />
               <p className='text-light-secondary dark:text-dark-secondary'>
                 @+
               </p>
