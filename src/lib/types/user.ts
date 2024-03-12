@@ -12,7 +12,16 @@ export type User = {
   username: string;
   photoURL: string;
   verified: boolean;
-    explore: boolean;
+verifiedred: boolean;
+verifiedgreen: boolean;
+verifiedbot: boolean;
+verifiedcyan: boolean;
+verifiedgray: boolean;
+verifiedgold: boolean;
+verifiedpink: boolean;
+verifiedviolet: boolean;
+verifiedwhite: boolean;
+verifiedapplegreen: boolean;
   following: string[];
   followers: string[];
   createdAt: Timestamp;
