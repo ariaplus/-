@@ -48,7 +48,7 @@ export function UserName({
                 height='20px'
               />
             </i>
-            <CustomTag className='truncate'>{name}</CustomTag>
+            <CustomTag className='truncate'></CustomTag>
           </>
         )}
         {explore && (
