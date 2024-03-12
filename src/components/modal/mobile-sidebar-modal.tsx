@@ -64,7 +64,16 @@ type MobileSidebarModalProps = Pick<
   | 'name'
   | 'username'
   | 'verified'
-  | 'explore'
+| 'verifiedred'
+| 'verifiedgreen'
+| 'verifiedbot'
+| 'verifiedcyan'
+| 'verifiedgray'
+| 'verifiedgold'
+| 'verifiedpink'
+| 'verifiedviolet'
+| 'verifiedwhite'
+| 'verifiedapplegreen'
   | 'photoURL'
   | 'following'
   | 'followers'
@@ -77,7 +86,16 @@ export function MobileSidebarModal({
   name,
   username,
   verified,
-  explore,
+verifiedred,
+verifiedgreen,
+verifiedbot,
+verifiedcyan,
+verifiedgray,
+verifiedgold,
+verifiedpink,
+verifiedviolet,
+verifiedwhite,
+verifiedapplegreen,
   photoURL,
   following,
   followers,
@@ -164,7 +182,16 @@ export function MobileSidebarModal({
               name={name}
               username={username}
               verified={verified}
-              explore={explore}
+verifiedred={verifiedred}
+verifiedgreen={verifiedgreen}
+verifiedbot={verifiedbot}
+verifiedcyan={verifiedcyan}
+verifiedgray={verifiedgray}
+verifiedgold={verifiedgold}
+verifiedpink={verifiedpink}
+verifiedviolet={verifiedviolet}
+verifiedwhite={verifiedwhite}
+verifiedapplegreen={verifiedapplegreen}
               className='-mb-1'
             />
             <UserUsername username={username} />
