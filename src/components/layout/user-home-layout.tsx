@@ -76,9 +76,6 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                       <UserEditProfile />
                     </div>
                     <div className='items-end'>
-                      <UserEditProfile />
-                    </div>
-                    <div className='items-end'>
                       <UpdateUsername />
                     </div>
                   </div>
