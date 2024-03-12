@@ -85,6 +85,7 @@ export function AuthContextProvider({
           photoURL: photoURL ?? '/assets/twitter-avatar.jpg',
           username: randomUsername,
           verified: false,
+          explore: false,
           following: [],
           followers: [],
           createdAt: serverTimestamp(),
