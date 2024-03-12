@@ -162,6 +162,7 @@ export function MobileSidebarModal({
               name={name}
               username={username}
               verified={verified}
+              explore={explore}
               className='-mb-1'
             />
             <UserUsername username={username} />
