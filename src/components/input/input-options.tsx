@@ -90,7 +90,7 @@ export function InputOptions({
         <input
           className='hidden'
           type='file'
-          accept='image/*'
+         accept='image/*,video/*'
           onChange={handleImageUpload}
           ref={inputFileRef}
           multiple
