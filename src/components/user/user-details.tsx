@@ -65,11 +65,11 @@ verifiedapplegreen,
   followers
 }: UserDetailsProps): JSX.Element {
   const detailIcons: Readonly<DetailIcon[]> = [
-    [location, '/assets/ariaplus.svg'],
-    [website, '/assets/ariaplus.svg'],
-     [job, '/assets/ariaplus.svg'],
-   [maritalstatus, '/assets/ariaplus.svg'],
-    [`Joined ${formatDate(createdAt, 'joined')}`, '/assets/ariaplus.svg']
+    [location, '/main/ui/primary/user/ui/location.svg'],
+    [website, '/main/ui/primary/user/ui/web.svg'],
+     [job, '/main/ui/primary/user/ui/bag.svg'],
+   [maritalstatus, '/main/ui/primary/user/ui/blue-heart.svg'],
+    [`Joined ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg']
   ];
 
   return (
@@ -110,8 +110,8 @@ verifiedapplegreen={verifiedapplegreen}
           src={icon}
           alt=''
           layout='fill'
-          width='25px'
-          height='25px'
+          width='20px'
+          height='20px'
        />                  </i>
                   {index === 1 ? (
                     <a
