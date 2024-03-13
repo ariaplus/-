@@ -36,7 +36,7 @@ type UserDetailsProps = Pick<
   | 'followers'
 >;
 
-type DetailIcon = [string | null, IconName];
+  type DetailIcon = [string | null, null];
 
 export function UserDetails({
   id,
