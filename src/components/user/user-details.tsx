@@ -13,6 +13,9 @@ type UserDetailsProps = Pick<
   | 'bio'
   | 'name'
   | 'website'
+  
+    | 'job'
+
   | 'username'
   | 'location'
   | 'verified'
@@ -38,6 +41,9 @@ export function UserDetails({
   bio,
   name,
   website,
+
+   job,
+  
   username,
   location,
   verified,
@@ -58,6 +64,7 @@ verifiedapplegreen,
   const detailIcons: Readonly<DetailIcon[]> = [
     [location, 'MapPinIcon'],
     [website, 'LinkIcon'],
+     [job, 'Briefcase'],
     [`Joined ${formatDate(createdAt, 'joined')}`, 'CalendarDaysIcon']
   ];
 
