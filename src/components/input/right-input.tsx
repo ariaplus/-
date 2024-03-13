@@ -15,9 +15,9 @@ import { useAuth } from '@lib/context/auth-context';
 import { sleep } from '@lib/utils';
 import { getImagesData } from '@lib/validation';
 import { UserAvatar } from '@components/user/user-avatar';
-import { InputForm, fromTop } from './input-form';
+import { RightInputForm, fromTop } from './right-input-form';
 import { ImagePreview } from './image-preview';
-import { InputOptions } from './input-options';
+import { RightInputOptions } from './right-input-options';
 import type { ReactNode, FormEvent, ChangeEvent, ClipboardEvent } from 'react';
 import type { WithFieldValue } from 'firebase/firestore';
 import type { Variants } from 'framer-motion';
@@ -252,7 +252,7 @@ export function RightInput ({
       >
         <UserAvatar src={photoURL} alt={name} username={username} />
         <div className='flex w-full flex-col gap-4'>
-          <InputForm
+          <RightInputForm
             modal={modal}
             reply={reply}
             formId={formId}
@@ -276,10 +276,10 @@ export function RightInput ({
                 removeImage={!loading ? removeImage : undefined}
               />
             )}
-          </InputForm>
+          </RightInputForm>
           <AnimatePresence initial={false}>
             {(reply ? reply && visited && !loading : !loading) && (
-              <InputOptions
+              <RightInputOptions
                 reply={reply}
                 modal={modal}
                 inputLimit={inputLimit}
