@@ -51,7 +51,7 @@ export function ImagePreview({
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  
+
   const { open, openModal, closeModal } = useModal();
 
   useEffect(() => {
@@ -66,7 +66,6 @@ export function ImagePreview({
 
   const handleSelectedImage = (index: number, isVideo?: boolean) => () => {
     if (isVideo) handleVideoStop();
-
 
     setSelectedIndex(index);
     openModal();
@@ -92,7 +91,7 @@ export function ImagePreview({
       className={cn(
         'grid grid-cols-2 grid-rows-2 rounded-2xl',
         viewTweet
-          ? 'h-[80vw] xs:h-[42vw] md:h-[500px]'
+          ? 'h-[51vw] xs:h-[42vw] md:h-[305px]'
           : 'h-[42vw] xs:h-[37vw] md:h-[271px]',
         isTweet ? 'mt-2 gap-0.5' : 'gap-3'
       )}
@@ -115,9 +114,6 @@ export function ImagePreview({
         />
       </Modal>
       <AnimatePresence mode='popLayout'>
-
-
-
         {imagesPreview.map(({ id, src, alt }, index) => {
           const isVideo = imagesPreview[index].type?.includes('video');
 
@@ -126,9 +122,6 @@ export function ImagePreview({
               type='button'
               className={cn(
                 'accent-tab group relative transition-shadow',
-
-
-        
                 isTweet
                   ? postImageBorderRadius[previewCount][index]
                   : 'rounded-2xl',
@@ -181,16 +174,13 @@ export function ImagePreview({
                   alt={alt}
                   useSkeleton={isTweet}
                 />
-              
               )}
-
-             {removeImage && (
+              {removeImage && (
                 <Button
                   className='group absolute top-0 left-0 translate-x-1 translate-y-1
                            bg-light-primary/75 p-1 backdrop-blur-sm 
                            hover:bg-image-preview-hover/75'
-
-                    onClick={preventBubbling(removeImage(id))}
+                  onClick={preventBubbling(removeImage(id))}
                 >
                   <HeroIcon
                     className='h-5 w-5 text-white'
@@ -202,9 +192,6 @@ export function ImagePreview({
             </motion.button>
           );
         })}
-
-
-                  
       </AnimatePresence>
     </div>
   );
