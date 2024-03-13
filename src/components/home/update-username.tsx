@@ -92,7 +92,6 @@ export function UpdateUsername(): JSX.Element {
 
   const cancelUpdateUsername = (): void => {
     closeModal();
-+
     if (!alreadySet) void updateUsername(user?.id as string);
   };
 
