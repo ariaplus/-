@@ -41,13 +41,14 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
 
   const [loading, setLoading] = useState(false);
 
-  const { bio, name, website, location, photoURL, coverPhotoURL } =
+  const { bio, name, website, job, location, photoURL, coverPhotoURL } =
     user as User;
 
   const [editUserData, setEditUserData] = useState<EditableUserData>({
     bio,
     name,
     website,
+    job,
     photoURL,
     location,
     coverPhotoURL
@@ -88,7 +89,8 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       'name',
       'bio',
       'location',
-      'website'
+      'website',
+      'job'
     ];
 
     const trimmedTexts = trimmedKeys.reduce(
@@ -177,6 +179,7 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       bio,
       name,
       website,
+      job,
       photoURL,
       location,
       coverPhotoURL
@@ -219,6 +222,12 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       label: 'Location',
       inputId: 'location',
       inputValue: editUserData.location,
+      inputLimit: 30
+    },
+    {
+      label: 'Occupation',
+      inputId: 'job',
+      inputValue: editUserData.job,
       inputLimit: 30
     },
     {
