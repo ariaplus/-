@@ -9,6 +9,7 @@ export type User = {
   accent: Accent | null;
   website: string | null;
   job: string | null;
+ maritalstatus: string | null;
   location: string | null;
   username: string;
   photoURL: string;
@@ -35,7 +36,7 @@ verifiedapplegreen: boolean;
 
 export type EditableData = Extract<
   keyof User,
-  'bio' | 'name' | 'website' | 'job' | 'photoURL' | 'location' | 'coverPhotoURL'
+  'bio' | 'name' | 'website' | 'job' | 'maritalstatus' | 'photoURL' | 'location' | 'coverPhotoURL'
 >;
 
 export type EditableUserData = Pick<User, EditableData>;
