@@ -41,7 +41,7 @@ export const variants: Variants = {
   animate: { opacity: 1 }
 };
 
-export function Input({
+export function RightInput ({
   modal,
   reply,
   parent,
