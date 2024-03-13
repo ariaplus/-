@@ -64,7 +64,7 @@ verifiedapplegreen,
   const detailIcons: Readonly<DetailIcon[]> = [
     [location, 'MapPinIcon'],
     [website, 'LinkIcon'],
-     [job, 'Briefcase'],
+     [job, 'BriefcaseIcon'],
     [`Joined ${formatDate(createdAt, 'joined')}`, 'CalendarDaysIcon']
   ];
 
