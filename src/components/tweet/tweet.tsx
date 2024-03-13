@@ -108,6 +108,7 @@ verifiedapplegreen, photoURL } = tweetUserData;
               ? 'mt-0.5 pt-2.5 pb-0'
               : 'border-b border-light-border dark:border-dark-border'
           )}
+         draggable={false}
           onClick={delayScroll(200)}
         >
           <div className='grid grid-cols-[auto,1fr] gap-x-3 gap-y-1'>
