@@ -15,6 +15,7 @@ type UserDetailsProps = Pick<
   | 'website'
   
     | 'job'
+  |'maritalstatus'
 
   | 'username'
   | 'location'
@@ -43,6 +44,7 @@ export function UserDetails({
   website,
 
    job,
+  maritalstatus,
   
   username,
   location,
@@ -65,6 +67,7 @@ verifiedapplegreen,
     [location, 'MapPinIcon'],
     [website, 'LinkIcon'],
      [job, 'BriefcaseIcon'],
+   [maritalstatus, 'HeartIcon'],
     [`Joined ${formatDate(createdAt, 'joined')}`, 'CalendarDaysIcon']
   ];
 
