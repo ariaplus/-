@@ -15,15 +15,16 @@ import { useAuth } from '@lib/context/auth-context';
 import { sleep } from '@lib/utils';
 import { getImagesData } from '@lib/validation';
 import { UserAvatar } from '@components/user/user-avatar';
-import { RightInputForm, fromTop } from './right-input-form';
+import { InputForm, fromTop } from './input-form';
 import { ImagePreview } from './image-preview';
-import { RightInputOptions } from './right-input-options';
+import { InputOptions } from './input-options';
 import type { ReactNode, FormEvent, ChangeEvent, ClipboardEvent } from 'react';
 import type { WithFieldValue } from 'firebase/firestore';
 import type { Variants } from 'framer-motion';
 import type { User } from '@lib/types/user';
 import type { Tweet } from '@lib/types/tweet';
 import type { FilesWithId, ImagesPreview, ImageData } from '@lib/types/file';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type InputProps = {
   modal?: boolean;
@@ -40,7 +41,7 @@ export const variants: Variants = {
   animate: { opacity: 1 }
 };
 
-export function RightInput({
+export function Input({
   modal,
   reply,
   parent,
@@ -114,9 +115,18 @@ export function RightInput({
     toast.success(
       () => (
         <span className='flex gap-2'>
-          Your Tweet was sent
+                  <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
+          
           <Link href={`/plus/${tweetId}`}>
-            <a className='custom-underline font-bold'>View</a>
+            <a className='custom-underline font-bold'>VIEW</a>
           </Link>
         </span>
       ),
@@ -136,7 +146,10 @@ export function RightInput({
 
     const files = isClipboardEvent ? e.clipboardData.files : e.target.files;
 
-    const imagesData = getImagesData(files, previewCount);
+    const imagesData = getImagesData(files, {
+      currentFiles: previewCount,
+      allowUploadingVideos: true
+    });
 
     if (!imagesData) {
       toast.error('Please choose a GIF or photo up to 4');
@@ -218,7 +231,7 @@ export function RightInput({
           {...fromTop}
         >
           Replying to{' '}
-          <Link href={`/${parent?.username as string}`}>
+          <Link href={`/user/${parent?.username as string}`}>
             <a className='custom-underline text-main-accent'>
               {parent?.username as string}
             </a>
@@ -239,7 +252,7 @@ export function RightInput({
       >
         <UserAvatar src={photoURL} alt={name} username={username} />
         <div className='flex w-full flex-col gap-4'>
-          <RightInputForm
+          <InputForm
             modal={modal}
             reply={reply}
             formId={formId}
@@ -263,10 +276,10 @@ export function RightInput({
                 removeImage={!loading ? removeImage : undefined}
               />
             )}
-          </RightInputForm>
+          </InputForm>
           <AnimatePresence initial={false}>
             {(reply ? reply && visited && !loading : !loading) && (
-              <RightInputOptions
+              <InputOptions
                 reply={reply}
                 modal={modal}
                 inputLimit={inputLimit}
