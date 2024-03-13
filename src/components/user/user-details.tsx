@@ -6,6 +6,7 @@ import { UserFollowing } from './user-following';
 import { UserFollowStats } from './user-follow-stats';
 import type { IconName } from '@components/ui/hero-icon';
 import type { User } from '@lib/types/user';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type UserDetailsProps = Pick<
   User,
@@ -64,11 +65,11 @@ verifiedapplegreen,
   followers
 }: UserDetailsProps): JSX.Element {
   const detailIcons: Readonly<DetailIcon[]> = [
-    [location, 'MapPinIcon'],
-    [website, 'LinkIcon'],
-     [job, 'BriefcaseIcon'],
-   [maritalstatus, 'HeartIcon'],
-    [`Joined ${formatDate(createdAt, 'joined')}`, 'CalendarDaysIcon']
+    [location, '/assets/ariaplus.svg'],
+    [website, '/assets/ariaplus.svg'],
+     [job, '/assets/ariaplus.svg'],
+   [maritalstatus, '/assets/ariaplus.svg'],
+    [`Joined ${formatDate(createdAt, 'joined')}`, '/assets/ariaplus.svg']
   ];
 
   return (
@@ -103,8 +104,15 @@ verifiedapplegreen={verifiedapplegreen}
               detail && (
                 <div className='flex items-center gap-1' key={icon}>
                   <i>
-                    <HeroIcon className='h-5 w-5' iconName={icon} />
-                  </i>
+        <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src={icon}
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />                  </i>
                   {index === 1 ? (
                     <a
                       className='custom-underline text-main-accent'
