@@ -234,8 +234,19 @@ export function TweetActions({
                     >
                       {tweetIsPinned ? (
                         <>
-                          <CustomIcon iconName='PinOffIcon' />
-                          Unpin from profile
+
+                                    <ArplImage
+          imgClassName='aplicon'
+          blurClassName=''
+          src='/main/ui/primary/user/ui/pin.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
+             
+                          
+                          Unpin
                         </>
                       ) : (
                         <>
