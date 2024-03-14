@@ -13,7 +13,7 @@ const allNavs = [
     { name:'', src: '/main/ui/primary/user/ui/bubble-replies.svg', path: 'replies' },
     { name:'', src: '/main/ui/primary/user/ui/shorts.svg', path: 'shorts' },
     {  name:'', src: '/main/ui/primary/user/ui/media.svg', path: 'media' },
-    {  name:'', src: '/main/ui/primary/user/ui/bubble-likes.svg', path: 'likes' }
+    {  name:'', src: '/main/ui/primary/user/ui/bubble-like.svg', path: 'likes' }
   ],
   [
     {  name:'Following', src: '', path: 'following' },
