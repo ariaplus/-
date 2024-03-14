@@ -19,14 +19,14 @@ export function TweetStatus({ type, children }: TweetStatusProps): JSX.Element {
       <i className='justify-self-end'>
         {type === 'pin' ? (
           <div className='flex' > {/* Wrap the elements in a div */}
-            <ArplImage className='mr-[6.5px] opacity-50'
+            <ArplImage className='mr-[5.5px] opacity-50'
               imgClassName='aplicon'
               blurClassName=''
               src='/main/ui/primary/user/ui/pin.svg'
               alt=''
               layout='fill'
-              width='25px'
-              height='25px'
+              width='20px'
+              height='20px'
             />
             <ArplImage className='opacity-50'
               imgClassName='aplicon'
@@ -34,8 +34,8 @@ export function TweetStatus({ type, children }: TweetStatusProps): JSX.Element {
               src='/assets/ariaplus.svg'
               alt=''
               layout='fill'
-              width='25px'
-              height='25px'
+              width='20px'
+              height='20px'
             />
           </div>
         ) : (
