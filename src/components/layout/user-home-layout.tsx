@@ -17,6 +17,7 @@ import { UserEditProfile } from '@components/user/user-edit-profile';
 import { UserShare } from '@components/user/user-share';
 import type { LayoutProps } from './common-layout';
 import { UpdateUsername } from '@components/home/update-username';
+import { MessageButton } from '@components/user/buttons/message-button';
 
 export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
   const { user, isAdmin } = useAuth();
@@ -84,14 +85,10 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                   <div className='flex gap-2 self-start'>
                     <UserShare username={userData.username} />
 
-                    <Button
-                      className='dark-bg-tab group relative cursor-not-allowed border border-light-line-reply p-2
-                                 hover:bg-light-primary/10 active:bg-light-primary/20 dark:border-light-secondary 
-                                 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
-                    >
-                      <HeroIcon className='h-5 w-5' iconName='EnvelopeIcon' />
-                      <ToolTip tip='Message' />
-                    </Button>
+
+                      <MessageButton/>
+
+                    
                     <FollowButton
                       userTargetId={userData.id}
                       userTargetUsername={userData.username}
