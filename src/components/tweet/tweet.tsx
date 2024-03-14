@@ -116,15 +116,7 @@ verifiedapplegreen, photoURL } = tweetUserData;
             <AnimatePresence initial={false}>
               {modal ? null : pinned ? (
                 <TweetStatus type='pin'>
-                          <ArplImage className='opacity-50'
-          imgClassName='aplicon'
-          blurClassName=''
-          src='assets/ariaplus.svg'
-          alt=''
-          layout='fill'
-          width='25px'
-          height='25px'
-       />
+
                 </TweetStatus>
               ) : (
                 tweetIsRetweeted && (
