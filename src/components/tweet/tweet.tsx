@@ -115,14 +115,14 @@ verifiedapplegreen, photoURL } = tweetUserData;
             <AnimatePresence initial={false}>
               {modal ? null : pinned ? (
                 <TweetStatus type='pin'>
-                  <p className='text-sm font-bold'>Pinned Tweet</p>
+                  <p className='text-sm font-bold'>Pinned</p>
                 </TweetStatus>
               ) : (
                 tweetIsRetweeted && (
                   <TweetStatus type='tweet'>
                     <Link href={profileUsername as string}>
                       <a className='custom-underline truncate text-sm font-bold'>
-                        {userId === profileId ? 'You' : profileName} Retweeted
+                        {userId === profileId ? 'You' : profileName} Re-Posted
                       </a>
                     </Link>
                   </TweetStatus>
