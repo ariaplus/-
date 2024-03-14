@@ -83,7 +83,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                 ) : (
 
                   <div className='flex gap-2 self-start'>
-                    <UserShare username={userData.username} />
+
 
 
                       <MessageButton/>
@@ -93,6 +93,8 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
                       userTargetId={userData.id}
                       userTargetUsername={userData.username}
                     />
+
+                 <UserShare username={userData.username} />
                     {isAdmin && <UserEditProfile hide />}
                   </div>
                 )}
