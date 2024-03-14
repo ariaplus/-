@@ -69,7 +69,7 @@ verifiedapplegreen,
     [website, '/main/ui/primary/user/ui/web.svg'],
      [job, '/main/ui/primary/user/ui/bag.svg'],
    [maritalstatus, '/main/ui/primary/user/ui/blue-heart.svg'],
-    [`Joined ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg']
+    [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg']
   ];
 
   return (
