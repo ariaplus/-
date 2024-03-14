@@ -198,11 +198,15 @@ export function TweetActions({
               )}
             >
               <div className='group relative'>
-                <HeroIcon
-                  className='h-5 w-5 text-light-secondary group-hover:text-accent-blue
-                             group-focus-visible:text-accent-blue dark:text-dark-secondary/80'
-                  iconName='EllipsisHorizontalIcon'
-                />
+              <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/primary/post/ui/down-arrow.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+                 />
                 {!open && <ToolTip tip='More' />}
               </div>
             </Popover.Button>
