@@ -16,8 +16,8 @@ const allNavs = [
     {  name:'', src: '/main/ui/primary/user/ui/bubble-likes.svg', path: 'likes' }
   ],
   [
-    {  name:'', src: 'Following', path: 'following' },
-    { name:'',  src: 'Followers', path: 'followers' }
+    {  name:'Following', src: 'Following', path: 'following' },
+    { name:'Followers',  src: 'Followers', path: 'followers' }
   ]
 ] as const;
 
