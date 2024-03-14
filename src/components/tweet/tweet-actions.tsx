@@ -26,6 +26,7 @@ import { CustomIcon } from '@components/ui/custom-icon';
 import type { Variants } from 'framer-motion';
 import type { Tweet } from '@lib/types/tweet';
 import type { User } from '@lib/types/user';
+import { ArplImage } from '@components/ui/ariaplus';
 
 export const variants: Variants = {
   initial: { opacity: 0, y: -25 },
@@ -238,7 +239,15 @@ export function TweetActions({
                         </>
                       ) : (
                         <>
-                          <CustomIcon iconName='AriaPlusIcon' />
+                                <ArplImage
+          imgClassName='aplicon'
+          blurClassName=''
+          src='/main/ui/primary/user/ui/pin.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
                           Pin to your profile
                         </>
                       )}
