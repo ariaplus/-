@@ -9,15 +9,15 @@ type UserNavProps = {
 
 const allNavs = [
   [
-    { src: '/assets/ariaplus.svg', path: '' },
-    { src: '/assets/ariaplus.svg', path: 'replies' },
-    { src: '/assets/ariaplus.svg', path: 'shorts' },
-    { src: '/assets/ariaplus.svg', path: 'media' },
-    { src: '/assets/ariaplus.svg', path: 'likes' }
+    { name:'', src: '/assets/ariaplus.svg', path: '' },
+    { name:'', src: '/main/ui/primary/user/ui/bubble-replies.svg', path: 'replies' },
+    { name:'', src: '/main/ui/primary/user/ui/shorts.svg', path: 'shorts' },
+    {  name:'', src: '/main/ui/primary/user/ui/media.svg', path: 'media' },
+    {  name:'', src: '/main/ui/primary/user/ui/bubble-likes.svg', path: 'likes' }
   ],
   [
-    { src: 'Following', path: 'following' },
-    { src: 'Followers', path: 'followers' }
+    {  name:'', src: 'Following', path: 'following' },
+    { name:'',  src: 'Followers', path: 'followers' }
   ]
 ] as const;
 
@@ -34,9 +34,9 @@ export function UserNav({ follow }: UserNavProps): JSX.Element {
       {...variants}
       exit={undefined}
     >
-      {userNav.map(({ src, path }) => (
+      {userNav.map(({ name, src, path }) => (
 
-        <UserNavLink src={src} path={path} key={src} />
+        <UserNavLink src={src} name={name} path={path} key={src} />
       
       ))}
     </motion.nav>
