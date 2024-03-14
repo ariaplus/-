@@ -18,25 +18,26 @@ export function TweetStatus({ type, children }: TweetStatusProps): JSX.Element {
     >
       <i className='justify-self-end'>
         {type === 'pin' ? (
-        <ArplImage className='opacity-50'
-          imgClassName='aplicon'
-          blurClassName=''
-          src='/main/ui/primary/user/ui/pin.svg'
-          alt=''
-          layout='fill'
-          width='25px'
-          height='25px'
-       />
-
-                                <ArplImage className='opacity-50'
-          imgClassName='aplicon'
-          blurClassName=''
-          src='assets/ariaplus.svg'
-          alt=''
-          layout='fill'
-          width='25px'
-          height='25px'
-       />
+          <div> {/* Wrap the elements in a div */}
+            <ArplImage className='opacity-50'
+              imgClassName='aplicon'
+              blurClassName=''
+              src='/main/ui/primary/user/ui/pin.svg'
+              alt=''
+              layout='fill'
+              width='25px'
+              height='25px'
+            />
+            <ArplImage className='opacity-50'
+              imgClassName='aplicon'
+              blurClassName=''
+              src='assets/ariaplus.svg'
+              alt=''
+              layout='fill'
+              width='25px'
+              height='25px'
+            />
+          </div>
         ) : (
           <HeroIcon className='h-5 w-5' iconName='ArrowPathRoundedSquareIcon' />
         )}
