@@ -4,6 +4,7 @@ import { toast } from 'react-hot-toast';
 import { orderBy, query } from 'firebase/firestore';
 import { useAuth } from '@lib/context/auth-context';
 import { useModal } from '@lib/hooks/useModal';
+import { useRouter } from 'next/router';
 import { useCollection } from '@lib/hooks/useCollection';
 import { useArrayDocument } from '@lib/hooks/useArrayDocument';
 import { clearAllBookmarks } from '@lib/firebase/utils';
@@ -26,7 +27,8 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function Bookmarks(): JSX.Element {
+export default function Mesasges(): JSX.Element {
+    const { back } = useRouter();
   const { user } = useAuth();
 
   const { open, openModal, closeModal } = useModal();
@@ -107,7 +109,7 @@ export default function Bookmarks(): JSX.Element {
   );
 }
 
-Bookmarks.getLayout = (page: ReactElement): ReactNode => (
+Messages.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
