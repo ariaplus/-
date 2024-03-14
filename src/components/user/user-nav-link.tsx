@@ -4,11 +4,12 @@ import cn from 'clsx';
 import { ArplImage } from '@components/ui/ariaplus';
 
 type UserNavLinkProps = {
+  name: string;
   src: string;
   path: string;
 };
 
-export function UserNavLink({ src, path }: UserNavLinkProps): JSX.Element {
+export function UserNavLink({ name, src, path }: UserNavLinkProps): JSX.Element {
   const {
     asPath,
     query: { id }
@@ -31,6 +32,10 @@ export function UserNavLink({ src, path }: UserNavLinkProps): JSX.Element {
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
+
+            {name}
+
+            
                       <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
