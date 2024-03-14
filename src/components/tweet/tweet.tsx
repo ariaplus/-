@@ -18,6 +18,7 @@ import { TweetDate } from './tweet-date';
 import type { Variants } from 'framer-motion';
 import type { Tweet } from '@lib/types/tweet';
 import type { User } from '@lib/types/user';
+import { ArplImage } from '@components/ui/ariaplus';
 
 export type TweetProps = Tweet & {
   user: User;
@@ -115,7 +116,15 @@ verifiedapplegreen, photoURL } = tweetUserData;
             <AnimatePresence initial={false}>
               {modal ? null : pinned ? (
                 <TweetStatus type='pin'>
-                  <p className='text-sm font-bold'>Pinned</p>
+                          <ArplImage className='opacity-50'
+          imgClassName='aplicon'
+          blurClassName=''
+          src='assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
                 </TweetStatus>
               ) : (
                 tweetIsRetweeted && (
