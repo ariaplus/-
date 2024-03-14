@@ -8,6 +8,7 @@ import { Button } from '@components/ui/button';
 import { HeroIcon } from '@components/ui/hero-icon';
 import { ToolTip } from '@components/ui/tooltip';
 import { variants } from '@components/tweet/tweet-actions';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type UserShareProps = {
   username: string;
@@ -27,13 +28,22 @@ export function UserShare({ username }: UserShareProps): JSX.Element {
           <Popover.Button
             as={Button}
             className={cn(
-              `dark-bg-tab group relative border border-light-line-reply p-2
+              `dark-bg-tab group relative -reply p-2
                hover:bg-light-primary/10 active:bg-light-primary/20 dark:border-light-secondary
                dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20`,
               open && 'bg-light-primary/10 dark:bg-dark-primary/10'
             )}
           >
-            <HeroIcon className='h-5 w-5' iconName='EllipsisHorizontalIcon' />
+                    <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/primary/user/ui/more.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
+            
             {!open && <ToolTip tip='More' />}
           </Popover.Button>
           <AnimatePresence>
