@@ -4,6 +4,7 @@ import { toast } from 'react-hot-toast';
 import { orderBy, query } from 'firebase/firestore';
 import { useAuth } from '@lib/context/auth-context';
 import { useModal } from '@lib/hooks/useModal';
+import { useRouter } from 'next/router';
 import { useCollection } from '@lib/hooks/useCollection';
 import { useArrayDocument } from '@lib/hooks/useArrayDocument';
 import { clearAllBookmarks } from '@lib/firebase/utils';
@@ -27,6 +28,7 @@ import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
 export default function Notifications(): JSX.Element {
+    const { back } = useRouter();
   const { user } = useAuth();
 
   const { open, openModal, closeModal } = useModal();
