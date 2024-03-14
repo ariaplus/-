@@ -3,6 +3,7 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { CustomIcon } from '@components/ui/custom-icon';
 import { fromTop } from '@components/input/input-form';
 import type { ReactNode } from 'react';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type TweetStatusProps = {
   type: 'pin' | 'tweet';
@@ -17,10 +18,15 @@ export function TweetStatus({ type, children }: TweetStatusProps): JSX.Element {
     >
       <i className='justify-self-end'>
         {type === 'pin' ? (
-          <CustomIcon
-            className='h-5 w-5 -rotate-45 fill-light-secondary dark:fill-dark-secondary'
-            iconName='AriaPlusIcon'
-          />
+        <ArplImage
+          imgClassName='aplicon'
+          blurClassName=''
+          src='/main/ui/primary/user/ui/pin.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+       />
         ) : (
           <HeroIcon className='h-5 w-5' iconName='ArrowPathRoundedSquareIcon' />
         )}
