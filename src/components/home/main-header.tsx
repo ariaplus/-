@@ -5,6 +5,7 @@ import { ToolTip } from '@components/ui/tooltip';
 import { MobileSidebar } from '@components/sidebar/mobile-sidebar';
 import type { ReactNode } from 'react';
 import type { IconName } from '@components/ui/hero-icon';
+import { ArplImage } from '@components/ui/ariaplus';
 
 type HomeHeaderProps = {
   tip?: string;
@@ -43,10 +44,15 @@ export function MainHeader({
                      dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
           onClick={action}
         >
-          <HeroIcon
-            className='h-5 w-5'
-            iconName={iconName ?? 'ArrowLeftIcon'}
-          />
+          <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/primary/header/back.svg'
+          alt=''
+          layout='fill'
+          width='25px'
+          height='25px'
+                 />
           <ToolTip tip={tip ?? 'Back'} />
         </Button>
       )}
