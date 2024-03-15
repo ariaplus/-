@@ -17,7 +17,16 @@ type UserDetailsProps = Pick<
   
     | 'job'
   |'maritalstatus'
+| 'category'
+  | 'highschool'
+  | 'college'
+  | 'pronoun'
+  | 'gender'
+  | 'vaccinated'
+  | 'bday'
+  
 
+  
   | 'username'
   | 'location'
   | 'verified'
@@ -46,7 +55,15 @@ export function UserDetails({
 
    job,
   maritalstatus,
-  
+
+ category,
+  highschool,
+  college,
+  pronoun,
+  gender,
+  vaccinated,
+  bday,
+
   username,
   location,
   verified,
@@ -65,10 +82,21 @@ verifiedapplegreen,
   followers
 }: UserDetailsProps): JSX.Element {
   const detailIcons: Readonly<DetailIcon[]> = [
+    [category, ''],
+  
     [location, '/main/ui/primary/user/ui/location.svg'],
+    [highschool, '/main/ui/primary/user/ui/school.svg'],
+    [college, '/main/ui/primary/user/ui/college.svg'],
+    
     [website, '/main/ui/primary/user/ui/web.svg'],
+     [gender, '/main/ui/primary/user/ui/gender.svg'],
+        [pronoun, '/main/ui/primary/user/ui/pronoun.svg'],
      [job, '/main/ui/primary/user/ui/bag.svg'],
+        [vaccinated, '/main/ui/primary/user/ui/covid.svg'],
+    
+    
    [maritalstatus, '/main/ui/primary/user/ui/blue-heart.svg'],
+    [bday, '/main/ui/primary/user/ui/cake.svg'],
     [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg']
   ];
 
