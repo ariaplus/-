@@ -126,14 +126,15 @@ verifiedapplegreen={verifiedapplegreen}
       <div className='flex flex-col gap-2'>
         {bio && <p className='whitespace-pre-line break-words'>{bio}</p>}
         <div className='flex flex-wrap gap-x-3 gap-y-1 text-light-secondary dark:text-dark-secondary'>
+          
+         <div className='flex flex-col gap-2'>
+          {category && <p className='whitespace-pre-line break-words'>{category}</p>}
+          
           {detailIcons.map(
             ([detail, icon], index) =>
               detail && (
                 <div className='flex items-center gap-1' key={icon}>
 
-          {category && <p className='whitespace-pre-line break-words'>{category}</p>}
-
-                  
                   <i>
         <ArplImage
           imgClassName='arplicon'
