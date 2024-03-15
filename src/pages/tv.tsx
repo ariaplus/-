@@ -49,12 +49,13 @@ export default function TV(): JSX.Element {
             @{user?.username}
           </p>
         </div>
+       </div>
         
         <div className=' flex items-end'>
 
        <TvPassModal  />
           </div>
-       </div>
+
         
       </MainHeader>
       <Movie/>
