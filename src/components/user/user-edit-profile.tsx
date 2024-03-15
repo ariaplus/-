@@ -41,7 +41,13 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
 
   const [loading, setLoading] = useState(false);
 
-  const { bio, name, website, job, maritalstatus, location, photoURL, coverPhotoURL } =
+  const { bio, name, website, job, maritalstatus,     category,
+    highschool,
+    college,
+    pronoun,
+    gender,
+    vaccinated,
+    bday, location, photoURL, coverPhotoURL } =
     user as User;
 
   const [editUserData, setEditUserData] = useState<EditableUserData>({
