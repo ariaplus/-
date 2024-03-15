@@ -82,7 +82,6 @@ verifiedapplegreen,
   followers
 }: UserDetailsProps): JSX.Element {
   const detailIcons: Readonly<DetailIcon[]> = [
-    [category, ''],
   
     [location, '/main/ui/primary/user/ui/location.svg'],
     [highschool, '/main/ui/primary/user/ui/school.svg'],
@@ -131,6 +130,10 @@ verifiedapplegreen={verifiedapplegreen}
             ([detail, icon], index) =>
               detail && (
                 <div className='flex items-center gap-1' key={icon}>
+
+          {category && <p className='whitespace-pre-line break-words'>{category}</p>}
+
+                  
                   <i>
         <ArplImage
           imgClassName='arplicon'
