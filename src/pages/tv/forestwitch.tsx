@@ -16,6 +16,7 @@ import { NextImage } from '@components/ui/next-image';
 import Image from 'next/image';
 import { Movie } from '@components/tv/movie';
 import { ArplImage } from '@components/ui/ariaplus';
+import { TvPassModal } from '@components/modal/tv/tv-pass';
 
 export default function Bookmarks(): JSX.Element {
   const { back } = useRouter();
@@ -39,7 +40,7 @@ export default function Bookmarks(): JSX.Element {
         src='/assets/tv/movie/data/forestwitch/fw.png' // Update this with the path to your image
         alt='4K'
         width={250}
-        height={125}
+        height={125}  
         className=' mt-56 rounded-lg pt-20'
                />
       <p className='text-gray-600 mt-4 text-center'>Horror 2024 | 1hr 40min | 4K</p>
@@ -48,8 +49,8 @@ export default function Bookmarks(): JSX.Element {
       <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 w-80 rounded-lg'>Play</Button>
-
-        </div>
+      <TvPassModal/  >   
+        </div>         
         
       <p className='text-gray-600 mt-4 text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
      </div>
