@@ -37,10 +37,11 @@ export function AsideTv({ inTrendsPage }: AsideTvProps): JSX.Element {
   return (
     
     <section
+      
       className={cn(
         !inTrendsPage &&
-          'hover-animation rounded-2xl bg-black border border-slate-700'
-      )}
+          'hover-animation rounded-2xl h-[560px] bg-black border border-slate-700'
+      )}  style={{ backgroundImage: 'url(https://lumiere-a.akamaihd.net/v1/images/619a5bf6c65f63186980f1b10f6bef2e_4096x3510_4a98acae.jpeg)' }}
     >
 
     </section>
