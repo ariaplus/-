@@ -125,7 +125,7 @@ verifiedapplegreen={verifiedapplegreen}
       </div>
       
       
-      <div className='flex flex-col -mt-[12x] gap-2'>
+      <div className='flex flex-col -mt-[12px] gap-2'>
         {bio && <p className='whitespace-pre-line break-words'>{bio}</p>}
 
       <div className='flex flex-col opacity-50 -mt-[5px]  gap-2'>
