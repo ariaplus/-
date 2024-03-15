@@ -11,6 +11,16 @@ export type User = {
   job: string | null;
  maritalstatus: string | null;
   location: string | null;
+
+  category: string | null;
+  highschool: string | null;
+    college: string | null;
+  pronoun: string | null;
+  gender: string | null;
+  vaccinated: string | null;
+  bday: string | null;
+
+
   username: string;
   photoURL: string;
   verified: boolean;
@@ -36,7 +46,7 @@ verifiedapplegreen: boolean;
 
 export type EditableData = Extract<
   keyof User,
-  'bio' | 'name' | 'website' | 'job' | 'maritalstatus' | 'photoURL' | 'location' | 'coverPhotoURL'
+  'bio' | 'name' | 'website' | 'job' | 'category' | 'highschool' | 'college' | 'pronoun' | 'gender' | 'vaccinated' | 'bday' |'maritalstatus' | 'photoURL' | 'location' | 'coverPhotoURL'
 >;
 
 export type EditableUserData = Pick<User, EditableData>;
