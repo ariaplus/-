@@ -3,6 +3,7 @@ import { Aside } from '@components/aside/aside';
 import { AsideRightTrends } from '@components/aside/aside-right-trends';
 import { Suggestions } from '@components/aside/suggestions';
 import { Placeholder } from '@components/common/placeholder';
+import { AsideTv } from '@components/aside/aside-tv';
 import type { ReactNode } from 'react';
 
 export type LayoutProps = {
@@ -36,6 +37,17 @@ export function UserLayout({ children }: LayoutProps): JSX.Element {
       <Aside>
         <Suggestions />
         <AsideRightTrends />
+      </Aside>
+    </>
+  );
+}
+
+export function TvLayout({ children }: LayoutProps): JSX.Element {
+  return (
+    <>
+      {children}
+      <Aside>
+        <AsideTv />
       </Aside>
     </>
   );
