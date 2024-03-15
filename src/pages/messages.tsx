@@ -27,7 +27,7 @@ import { HeroIcon } from '@components/ui/hero-icon';
 import { Loading } from '@components/ui/loading';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function Mesasges(): JSX.Element {
+export default function Messages(): JSX.Element {
     const { back } = useRouter();
   const { user } = useAuth();
 
