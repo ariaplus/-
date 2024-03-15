@@ -50,6 +50,13 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
     website,
     maritalstatus,
     job,
+    category,
+    highschool,
+    college,
+    pronoun,
+    gender,
+    vaccinated,
+    bday,
     photoURL,
     location,
     coverPhotoURL
@@ -92,7 +99,14 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       'location',
       'website',
       'maritalstatus',
-      'job'
+      'job',
+      'category',
+      'highschool',
+      'college',
+      'pronoun',
+      'gender',
+      'vaccinated',
+      'bday'
     ];
 
     const trimmedTexts = trimmedKeys.reduce(
@@ -183,6 +197,13 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       website,
       maritalstatus,
       job,
+      category,
+      highschool,
+      college,
+      pronoun,
+      gender,
+      vaccinated,
+      bday,
       photoURL,
       location,
       coverPhotoURL
@@ -214,6 +235,12 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       inputLimit: 50,
       errorMessage: inputNameError
     },
+     {
+      label: 'Category',
+      inputId: 'category',
+      inputValue: editUserData.category,
+      inputLimit: 15,
+    },
     {
       label: 'Bio',
       inputId: 'bio',
@@ -227,16 +254,55 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       inputValue: editUserData.location,
       inputLimit: 30
     },
+
+     {
+      label: ' High School',
+      inputId: 'highschool',
+      inputValue: editUserData.highschool,
+      inputLimit: 20
+    },
+     {
+      label: 'College',
+      inputId: 'college',
+      inputValue: editUserData.college,
+      inputLimit: 20
+    },
+     {
+      label: ' Pronoun',
+      inputId: 'pronoun',
+      inputValue: editUserData.pronoun,
+      inputLimit: 20
+    },
+     {
+      label: 'Gender',
+      inputId: 'gender',
+      inputValue: editUserData.gender,
+      inputLimit: 10
+    },
+     {
+      label: 'Vaccinated',
+      inputId: 'vaccinated',
+      inputValue: editUserData.vaccinated,
+      inputLimit: 20
+    },
+    
     {
       label: 'Occupation',
       inputId: 'job',
       inputValue: editUserData.job,
       inputLimit: 30
     },
+    
      {
       label: 'Marital Status',
       inputId: 'maritalstatus',
       inputValue: editUserData.maritalstatus,
+      inputLimit: 20
+    },
+      {
+      label: ' Birthday',
+      inputId: 'bday',
+      inputValue: editUserData.bday,
       inputLimit: 20
     },
     {
