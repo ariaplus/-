@@ -41,7 +41,7 @@ export function AsideTv({ inTrendsPage }: AsideTvProps): JSX.Element {
       className={cn(
         !inTrendsPage &&
           'hover-animation rounded-2xl h-[560px] bg-black border border-slate-700'
-      )}  style={{ backgroundImage: 'url(https://lumiere-a.akamaihd.net/v1/images/619a5bf6c65f63186980f1b10f6bef2e_4096x3510_4a98acae.jpeg)' }}
+      )}  style={{ backgroundImage: 'url(https://bgr.com/wp-content/uploads/2019/11/disney-plus.jpg)' }}
     >
 
     </section>
