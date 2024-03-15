@@ -245,7 +245,7 @@ export function UserEditProfile({ hide }: UserEditProfileProps): JSX.Element {
       label: 'Category',
       inputId: 'category',
       inputValue: editUserData.category,
-      inputLimit: 15,
+      inputLimit: 15
     },
     {
       label: 'Bio',
