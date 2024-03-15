@@ -52,7 +52,7 @@ export default function TV(): JSX.Element {
         
         <div className=' flex items-end'>
 
-       <TvPassModal  className />
+       <TvPassModal  />
           </div>
        </div>
         
