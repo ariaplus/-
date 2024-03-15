@@ -128,11 +128,12 @@ verifiedapplegreen={verifiedapplegreen}
       <div className='flex flex-col -mt-[12px] gap-2'>
         {bio && <p className='whitespace-pre-line break-words'>{bio}</p>}
 
-      <div className='flex flex-col opacity-50 -mt-[5px]  gap-2'>
-          {category && <p className='whitespace-pre-line break-words'>{category}</p>}
-           </div>  
 
         <div className='flex flex-wrap gap-x-3 gap-y-1 text-light-secondary dark:text-dark-secondary'>
+          
+          <div className='flex flex-col text-sky-400 opacity-50 -mt-[5px]  gap-2'>
+          {category && <p className='whitespace-pre-line break-words'>{category}</p>}
+           </div>  
 
           {detailIcons.map(
             ([detail, icon], index) =>
