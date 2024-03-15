@@ -41,7 +41,7 @@ export default function TV(): JSX.Element {
     <MainContainer>
       <SEO title='tv | Aria+' />
       
-          <MainHeader useActionButton action={back} className='flex items-center '>
+          <MainHeader useActionButton action={back} className='flex items-center justify-between '>
             <div className='justify-between flex '>
         <div className='-mb-1 flex flex-col'>
           <h2 className='-mt-1 text-xl font-bold'>tv</h2>
@@ -52,7 +52,7 @@ export default function TV(): JSX.Element {
         
         <div className=' flex items-end'>
 
-       <TvPassModal/>
+       <TvPassModal  className />
           </div>
        </div>
         
