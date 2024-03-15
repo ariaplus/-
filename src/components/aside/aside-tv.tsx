@@ -40,8 +40,8 @@ export function AsideTv({ inTrendsPage }: AsideTvProps): JSX.Element {
       
       className={cn(
         !inTrendsPage &&
-          'hover-animation rounded-2xl h-[560px] bg-black border border-slate-700'
-      )}  style={{ backgroundImage: 'url(https://bgr.com/wp-content/uploads/2019/11/disney-plus.jpg)' }}
+          'hover-animation rounded-2xl h-[560px] bg-black border bg-center bg-cover bg-no-repeat border-slate-700'
+      )}  style={{ backgroundImage: 'url(https://facts.net/wp-content/uploads/2023/09/16-facts-about-princess-anna-frozen-1693809476.jpg)' }}
     >
 
     </section>
