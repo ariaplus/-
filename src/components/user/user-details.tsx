@@ -129,6 +129,7 @@ verifiedapplegreen={verifiedapplegreen}
           
          <div className='flex flex-col gap-2'>
           {category && <p className='whitespace-pre-line break-words'>{category}</p>}
+           </div>
           
           {detailIcons.map(
             ([detail, icon], index) =>
