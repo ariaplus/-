@@ -12,7 +12,7 @@ import {
   moviesCollection,
   userBookmarksCollection
 } from '@lib/firebase/collections';
-import { HomeLayout, ProtectedLayout } from '@components/layout/common-layout';
+import { TvLayout, ProtectedLayout } from '@components/layout/common-layout';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
@@ -66,7 +66,7 @@ export default function TV(): JSX.Element {
 TV.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
-      <HomeLayout>{page}</HomeLayout>
+      <TvLayout>{page}</TvLayout>
     </MainLayout>
   </ProtectedLayout>
 );
