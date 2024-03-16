@@ -115,15 +115,12 @@ export function UserDetails({
         {bio && <p className='whitespace-pre-line break-words'>{bio}</p>}
 
         <div className='flex flex-wrap gap-x-3 gap-y-1 text-light-secondary dark:text-dark-secondary'>
-          <div className='flex flex-col text-main-accent opacity-100 -mt-[5px]  pt-[4px] -mr-[5px] gap-2'>
-            {category && (
-              <ToolTip
-                className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
-                tip='Category'
-              />
-                <p className='custom-underline group relative'>{category}</p>
-     
-            )}
+          <div className='flex flex-col text-main-accent opacity-100 -mt-[5px]  pt-[4px] -mr-[5px] gap-2'> 
+        {category && <p className='whitespace-pre-line break-words'>{category}</p>}
+                             <ToolTip
+                    className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
+                    tip='Category'
+                  />
           </div>
 
           {detailIcons.map(([detail, icon, tooltip], index) => detail && (
