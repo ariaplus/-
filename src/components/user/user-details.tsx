@@ -133,7 +133,7 @@ export function UserDetails({
                   height='20px'
                 />
               </i>
-              {index === 4 ? (
+              {index === 3 ? (
                 <a
                   className='custom-underline text-main-accent'
                   href={`https://${detail}`}
@@ -142,7 +142,7 @@ export function UserDetails({
                 >
                   {detail}
                 </a>
-              ) : index > 1 && index <= 10 ? (
+              ) : index > 0 && index <= 10 ? (
                 <button className='custom-underline group relative'>
                   {detail}
                   <ToolTip
