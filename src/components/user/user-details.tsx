@@ -118,15 +118,17 @@ export function UserDetails({
           <div className='flex flex-col text-main-accent opacity-100 -mt-[5px]  pt-[4px] -mr-[5px] gap-2'>
 
             
-                        {category && (
+            {category && (
               <>
-                <p className='custom-underline group relative'>{category}</p>
                 <ToolTip
                   className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
                   tip='Category'
-                />
+                >
+                  <p className='custom-underline group relative'>{category}</p>
+                </ToolTip>
               </>
             )}
+          </div>
 
             
           </div>
