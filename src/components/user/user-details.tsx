@@ -83,7 +83,8 @@ export function UserDetails({
     [vaccinated, '/main/ui/primary/user/ui/covid.svg', 'Vaccinated'],
     [maritalstatus, '/main/ui/primary/user/ui/blue-heart.svg', 'Marital Status'],
     [bday, '/main/ui/primary/user/ui/cake.svg', 'Birthday'],
-    [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined']
+    [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined'],
+
   ];
 
   return (
@@ -141,7 +142,7 @@ export function UserDetails({
                 >
                   {detail}
                 </a>
-              ) : index === 2 || index === 3 || index === 4 ? (
+              ) : index > 1 && index <= 10 ? (
                 <button className='custom-underline group relative'>
                   {detail}
                   <ToolTip
