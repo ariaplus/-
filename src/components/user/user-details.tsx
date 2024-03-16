@@ -133,7 +133,7 @@ export function UserDetails({
                   height='20px'
                 />
               </i>
-              {index === 1 ? (
+              {index === 4 ? (
                 <a
                   className='custom-underline text-main-accent'
                   href={`https://${detail}`}
