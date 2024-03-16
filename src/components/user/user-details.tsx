@@ -84,7 +84,6 @@ export function UserDetails({
     [maritalstatus, '/main/ui/primary/user/ui/blue-heart.svg', 'Marital Status'],
     [bday, '/main/ui/primary/user/ui/cake.svg', 'Birthday'],
     [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined']
-
   ];
 
   return (
@@ -133,7 +132,7 @@ export function UserDetails({
                   height='20px'
                 />
               </i>
-              {index === 3 ? (
+              {index === 0 ? (
                 <a
                   className='custom-underline text-main-accent'
                   href={`https://${detail}`}
