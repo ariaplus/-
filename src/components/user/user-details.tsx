@@ -120,9 +120,9 @@ export function UserDetails({
               <ToolTip
                 className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
                 tip='Category'
-              >
+              />
                 <p className='custom-underline group relative'>{category}</p>
-              </ToolTip>
+     
             )}
           </div>
 
