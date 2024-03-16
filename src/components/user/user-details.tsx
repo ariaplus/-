@@ -132,16 +132,7 @@ export function UserDetails({
                   height='20px'
                 />
               </i>
-              {index === 0 ? (
-                <a
-                  className='custom-underline text-main-accent'
-                  
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  {detail}
-                </a>
-              ) : index === 3 ? (
+              {index === 0 || index === 3 ? (
                 <a
                   className='custom-underline text-main-accent'
                   href={`https://${detail}`}
@@ -154,7 +145,7 @@ export function UserDetails({
                 <button className='custom-underline group relative'>
                   {detail}
                   <ToolTip
-                    className='translate-y-1'
+                    className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
                     tip={tooltip || ''}
                   />
                 </button>
