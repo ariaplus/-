@@ -135,6 +135,15 @@ export function UserDetails({
               {index === 0 ? (
                 <a
                   className='custom-underline text-main-accent'
+                  
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  {detail}
+                </a>
+              ) : index === 3 ? (
+                <a
+                  className='custom-underline text-main-accent'
                   href={`https://${detail}`}
                   target='_blank'
                   rel='noreferrer'
