@@ -83,7 +83,7 @@ export function UserDetails({
     [vaccinated, '/main/ui/primary/user/ui/covid.svg', 'Vaccinated'],
     [maritalstatus, '/main/ui/primary/user/ui/blue-heart.svg', 'Marital Status'],
     [bday, '/main/ui/primary/user/ui/cake.svg', 'Birthday'],
-    [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined'],
+    [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined']
 
   ];
 
