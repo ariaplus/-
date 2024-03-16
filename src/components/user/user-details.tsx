@@ -141,7 +141,7 @@ export function UserDetails({
                 >
                   {detail}
                 </a>
-              ) : index === 2 ? (
+              ) : index === 2 || index === 3 || index === 4 ? (
                 <button className='custom-underline group relative'>
                   {detail}
                   <ToolTip
