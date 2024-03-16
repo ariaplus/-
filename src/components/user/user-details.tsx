@@ -86,7 +86,7 @@ export function UserDetails({
     [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined']
   ];
 
-  return (
+ return (
     <>
       <div>
         <UserName
@@ -116,21 +116,14 @@ export function UserDetails({
 
         <div className='flex flex-wrap gap-x-3 gap-y-1 text-light-secondary dark:text-dark-secondary'>
           <div className='flex flex-col text-main-accent opacity-100 -mt-[5px]  pt-[4px] -mr-[5px] gap-2'>
-
-            
             {category && (
-              <>
-                <ToolTip
-                  className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
-                  tip='Category'
-                >
-                  <p className='custom-underline group relative'>{category}</p>
-                </ToolTip>
-              </>
+              <ToolTip
+                className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
+                tip='Category'
+              >
+                <p className='custom-underline group relative'>{category}</p>
+              </ToolTip>
             )}
-          </div>
-
-            
           </div>
 
           {detailIcons.map(([detail, icon, tooltip], index) => detail && (
