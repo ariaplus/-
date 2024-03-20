@@ -10,22 +10,17 @@ interface ImageProps {
 export function Movie() {
   const images: ImageProps[] = [
    { src: '/assets/tv/movie/data/forestwitch/forestwitch.jpg', href: '/tv/forestwitch' },
-   { src: '/assets/tv/movie/n.jpg', href: '/tv/nowhere' },
-   { src: '/assets/tv/movie/twtc.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/gits.jpeg', href: '/link1' },
-   { src: '/assets/tv/movie/bw.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/emily.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/encanto.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/persuasion.jpg', href: '/tv/persuasion' },
-   { src: '/assets/tv/movie/itsyourchance.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/raya.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/tangled.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/st.jpg', href: '/link1' },
-   { src: '/assets/tv/movie/pd.jpg', href: '/link1' }
-    
-    
-  
-    
+   { src: '/assets/tv/movie/data/madhouse/madhose-web.jpg', href: '/tv/madhouse' },
+   { src: '/assets/tv/movie/data/strangecriminals/strange-criminals-web.jpg', href: '/tv/strangecriminals' },
+   { src: '/assets/tv/movie/data/petitesecrets/petite-secrets-web.jpg', href: '/tv/petitesecrets' },
+   { src: '/assets/tv/movie/data/dove/dove-web.jpg', href: '/tv/dove' },
+   { src: '/assets/tv/movie/data/youvereachedrebecca/yrr-web.jpg', href: '/tv/youvereachedrebecca' },
+   { src: '/assets/tv/movie/data/missie/missie-web.jpg', href: '/tv/missie' },
+   { src: '/assets/tv/movie/data/candy/candy-web.jpg', href: '/tv/candy' },
+   { src: '/assets/tv/movie/data/luminescent/lumen-web.png', href: '/tv/luminescent' },
+   { src: '/assets/tv/movie/data/404/404-web.jpg', href: '/tv/404' },
+   { src: '/assets/tv/movie/data/rot/rot-web.jpg', href: '/tv/rot' }
+
     // Add more images as needed
   ];
 
