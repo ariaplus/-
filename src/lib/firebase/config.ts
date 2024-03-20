@@ -10,9 +10,9 @@ const config = {
 
 type Config = typeof config;
 
-export function getFirebaseConfig(): Config | null {
+export function getFirebaseConfig(): Config {
   if (Object.values(config).some((value) => !value))
-    return null; // or return an empty object {}
+    throw new Error('Firebase config is not set or incomplete');
 
   return config;
 }
