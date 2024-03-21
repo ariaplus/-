@@ -10,7 +10,8 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
-import { ExploreNav } from '@components/explore/explore-nav';
+import { BusinessNav } from '@components/navbar/primary/business/business-nav';
+import { useRouter } from 'next/router';
 
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
@@ -24,7 +25,8 @@ import { ServerDown } from '@components/maintenance/server-down';
 
 export default function Home(): JSX.Element {
   const { isMobile } = useWindow();
-
+  const { back } = useRouter();
+  
   const { data, loading, LoadMore } = useInfiniteScroll(
     tweetsCollection,
     [where('parent', '==', null), orderBy('createdAt', 'desc')],
@@ -35,14 +37,14 @@ export default function Home(): JSX.Element {
     <MainContainer>
       <SEO title='Business | Aria+' />
       <MainHeader
-        useMobileSidebar
+        useActionButton action={back} 
         title='Business'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
          </div>
       </MainHeader>
-      <ExploreNav/>
+      <BusinessNav/>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
