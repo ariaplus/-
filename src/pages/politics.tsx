@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
     <MainContainer>
       <SEO title='Politics | Aria+' />
       <MainHeader
-        useMobileSidebar
+        
           useActionButton action={back} 
         title='Politics'
         className='flex items-center justify-between text-[0px]'
