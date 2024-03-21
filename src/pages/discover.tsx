@@ -43,11 +43,7 @@ export default function Home(): JSX.Element {
         <Start />
          </div>
       </MainHeader>
-       <SubHeader className='flex items-center justify-between ' >
-              <div className='flex items-center' >
-        <NewsButton />
-         </div>
-      </SubHeader>
+
       <ExploreNav/>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
