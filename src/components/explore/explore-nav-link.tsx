@@ -20,16 +20,24 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
 
   return (
     <Link href={userPath} scroll={false}>
-         
+
+      
+    
       
       <a
         className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center
                    hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
       >
         
-        <ToolTip tip={name} />
+
+        
         <div className='px-[8px] md:px-[16px]'>
-          
+
+            <ToolTip
+                    className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
+                    tip={name}
+                  />
+         
                   <p
             className={cn(
               'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
@@ -40,7 +48,8 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
           >
      
 
-         <ToolTip tip={name} />
+
+                  
             <ArplImage
               imgClassName='arplicon'
               blurClassName='none'
