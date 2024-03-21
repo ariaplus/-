@@ -1,3 +1,5 @@
+
+
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import cn from 'clsx';
@@ -11,26 +13,34 @@ type ExploreNavLinkProps = {
 };
 
 export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.Element {
-  const router = useRouter();
-  const { asPath } = router;
+  const {
+    asPath,
+    query: { id }
+  } = useRouter();
 
   const userPath = path ? `/${path}` : '';
 
-  const handleClick = async () => {
-    await router.push(userPath);
-  };
-
   return (
-    <div>
-      <button
+    <Link href={userPath} scroll={false}>
+
+      
+    
+      
+      <a
         className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center
                    hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
-        onClick={handleClick}
       >
-         <ToolTip tip={name} />
+        
+
         
         <div className='px-[8px] md:px-[16px]'>
-          <p
+
+            <ToolTip
+                    className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
+                    tip={name}
+                  />
+         
+                  <p
             className={cn(
               'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
               asPath === userPath
@@ -38,7 +48,10 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
-            <ToolTip tip={name} />
+     
+
+
+                  
             <ArplImage
               imgClassName='arplicon'
               blurClassName='none'
@@ -52,12 +65,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
             <i className='h-1 scale-50 rounded-full bg-main-accent opacity-0 transition duration-200' />
           </p>
         </div>
-      </button>
-      <Link href={userPath} scroll={false}>
-        <a className='sr-only'>
-          <ToolTip tip={name} />
-        </a>
-      </Link>
-    </div>
+      </a>
+    </Link>
   );
 }
