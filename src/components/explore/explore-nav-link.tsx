@@ -30,7 +30,14 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
         <ToolTip tip={name} />
         <div className='px-[8px] md:px-[16px]'>
           
-        
+                  <p
+            className={cn(
+              'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
+              asPath === userPath
+                ? 'text-light-primary dark:text-dark-primary [&>i]:scale-100 [&>i]:opacity-100'
+                : 'text-light-secondary dark:text-dark-secondary'
+            )}
+          >
      
 
          <ToolTip tip={name} />
@@ -45,6 +52,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
               useSkeleton
             />
             <i className='h-1 scale-50 rounded-full bg-main-accent opacity-0 transition duration-200' />
+          </p>
         </div>
       </a>
     </Link>
