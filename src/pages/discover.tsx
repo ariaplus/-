@@ -3,7 +3,7 @@ import { where, orderBy } from 'firebase/firestore';
 import { useWindow } from '@lib/context/window-context';
 import { useInfiniteScroll } from '@lib/hooks/useInfiniteScroll';
 import { tweetsCollection } from '@lib/firebase/collections';
-import { HomeLayout, ProtectedLayout } from '@components/layout/common-layout';
+import { DiscoverLayout, ProtectedLayout } from '@components/layout/common-layout';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { MainContainer } from '@components/home/main-container';
@@ -11,6 +11,9 @@ import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
 import { ExploreNav } from '@components/explore/explore-nav';
+
+import { DiscoverDataLayout } from '@components/layout/discover/discover-data-layout';
+import { DiscoverHomeLayout } from '@components/layout/discover/discover-home-layout';
 
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
@@ -22,7 +25,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
 
-export default function Home(): JSX.Element {
+export default function Discover(): JSX.Element {
   const { isMobile } = useWindow();
 
   const { data, loading, LoadMore } = useInfiniteScroll(
@@ -74,10 +77,14 @@ export default function Home(): JSX.Element {
   );
 }
 
-Home.getLayout = (page: ReactElement): ReactNode => (
+Discover.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
-      <HomeLayout>{page}</HomeLayout>
+      <DiscoverLayout>
+        <DiscoverDataLayout>
+          <DiscoverHomeLayout>{page}</DiscoverHomeLayout>
+        </DiscoverDataLayout>
+      </DiscoverLayout>
     </MainLayout>
   </ProtectedLayout>
 );
