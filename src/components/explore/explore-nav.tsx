@@ -10,13 +10,13 @@ type ExploreNavProps = {
 const allNavs = [
   [
     { name:'Discover', src: '/assets/ariaplus.svg', path: 'discover' },
-    { name:'', src: '/assets/ariaplus.svg', path: 'politics' },
-    { name:'', src: '/assets/ariaplus.svg', path: 'business' },
-    { name:'', src: '/assets/ariaplus.svg', path: 'fashion' },
-    {  name:'', src: '/assets/ariaplus.svg', path: 'entertainment' },
-    {  name:'', src: '/assets/ariaplus.svg', path: 'fyi' },
-    {  name:'', src: '/assets/ariaplus.svg', path: 'sports' },
-    {  name:'', src: '/assets/ariaplus.svg', path: 'news' }
+    { name:'', src: '/main/ui/header/primary/discover/politics.svg', path: 'politics' },
+    { name:'', src: '/main/ui/header/primary/discover/business.svg', path: 'business' },
+    { name:'', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
+    {  name:'', src: '/main/ui/header/primary/discover/hollywood.svg', path: 'entertainment' },
+    {  name:'', src: '/main/ui/header/primary/discover/arts.svg', path: 'arts' },
+    {  name:'', src: '/main/ui/header/primary/discover/sports.svg', path: 'sports' },
+    {  name:'', src: '/main/ui/header/primary/discover/news.svg', path: 'news' }
   ]
 
 ] as const;
