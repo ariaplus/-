@@ -41,11 +41,9 @@ export function DiscoverHomeLayout({ children }: LayoutProps): JSX.Element {
 
   return (
     <>
-        <SEO
-          title=' Discover | Aria+`}
-        />
-     
-     
+      <SEO
+        title=' Discover | Aria+'
+      />
       {userData && (
         <>
           <UserNav />
