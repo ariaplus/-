@@ -37,7 +37,7 @@ export function SportsNav({ follow }: SportsNavProps): JSX.Element {
     >
       {sportsNav.map(({ name, src, path }) => (
 
-        <ExploreNavLink src={src} name={name} path={path}  key={src} />
+        <SportsNavLink src={src} name={name} path={path}  key={src} />
       
       ))}
     </motion.nav>
