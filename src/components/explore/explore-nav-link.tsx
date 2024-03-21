@@ -27,6 +27,8 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
                    hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
         onClick={handleClick}
       >
+         <ToolTip tip={name} />
+        
         <div className='px-[8px] md:px-[16px]'>
           <p
             className={cn(
@@ -36,6 +38,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
+            <ToolTip tip={name} />
             <ArplImage
               imgClassName='arplicon'
               blurClassName='none'
