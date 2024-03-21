@@ -20,6 +20,9 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
 
   return (
     <Link href={userPath} scroll={false}>
+         
+      <ToolTip tip={name} />
+      
       <a
         className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center
                    hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
@@ -36,7 +39,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
             )}
           >
 
-            
+         <ToolTip tip={name} />
             <ArplImage
               imgClassName='arplicon'
               blurClassName='none'
