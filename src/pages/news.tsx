@@ -1,65 +1,82 @@
 import { AnimatePresence } from 'framer-motion';
-import { query, where, orderBy } from 'firebase/firestore';
-import { useCollection } from '@lib/hooks/useCollection';
+import { where, orderBy } from 'firebase/firestore';
+import { useWindow } from '@lib/context/window-context';
+import { useInfiniteScroll } from '@lib/hooks/useInfiniteScroll';
 import { tweetsCollection } from '@lib/firebase/collections';
-import { useUser } from '@lib/context/user-context';
-import { UserLayout, ProtectedLayout } from '@components/layout/common-layout';
+import { HomeLayout, ProtectedLayout } from '@components/layout/common-layout';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
-import { UserDataLayout } from '@components/layout/user-data-layout';
-import { UserHomeLayout } from '@components/layout/user-home-layout';
+import { MainContainer } from '@components/home/main-container';
+import { UpdateUsername } from '@components/home/update-username';
+import { MainHeader } from '@components/home/main-header';
+import { SubHeader } from '@components/home/sub-header';
+import { ExploreNav } from '@components/explore/explore-nav';
+
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
-import { StatsEmpty } from '@components/tweet/stats-empty';
+import { Error } from '@components/ui/error';
+import { Start } from '@components/modal/discover/start';
+import { ExploreButton } from '@components/explore/header/explore-button';
+import { NewsButton } from '@components/explore/header/news-button';
 import type { ReactElement, ReactNode } from 'react';
+import { NextImage } from '@components/ui/next-image';
+import { ServerDown } from '@components/maintenance/server-down';
 
-export default function UserLikes(): JSX.Element {
-  const { user } = useUser();
+export default function Home(): JSX.Element {
+  const { isMobile } = useWindow();
 
-  const { id, name, username } = user ?? {};
-
-  const { data, loading } = useCollection(
-    query(
-      tweetsCollection,
-      where('userLikes', 'array-contains', id),
-      orderBy('createdAt', 'desc')
-    ),
-    { includeUser: true, allowNull: true }
+  const { data, loading, LoadMore } = useInfiniteScroll(
+    tweetsCollection,
+    [where('parent', '==', null), orderBy('createdAt', 'desc')],
+    { includeUser: true, allowNull: true, preserve: true }
   );
 
   return (
-    <section>
-      <SEO
-        title={`Tweets liked by ${name as string} (@${
-          username as string
-        }) / Twitter`}
-      />
-      {loading ? (
-        <Loading className='mt-5' />
-      ) : !data ? (
-        <StatsEmpty
-          title={`@${username as string} hasn't liked any Tweets`}
-          description='When they do, those Tweets will show up here.'
-        />
-      ) : (
-        <AnimatePresence mode='popLayout'>
-          {data.map((tweet) => (
-            <Tweet {...tweet} key={tweet.id} />
-          ))}
-        </AnimatePresence>
-      )}
-    </section>
+    <MainContainer>
+      <SEO title='News | Aria+' />
+      <MainHeader
+        useMobileSidebar
+        title='News'
+        className='flex items-center justify-between text-[0px]'
+      > <div className='flex items-right' >
+        <ExploreButton />
+        <Start />
+         </div>
+      </MainHeader>
+      <ExploreNav/>
+     <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
+            useSkeleton
+            layout='fill'
+            imgClassName='object-cover'
+            src='https://static.timesofisrael.com/www/uploads/2012/12/F090630TA34.jpg'
+            alt=''
+            key=''
+          />
+         <ServerDown/>
+      <section className='mt-0.5 xs:mt-0'>
+        {loading ? (
+          <Loading className='mt-5' />
+        ) : !data ? (
+          <Error message='Something went wrong' />
+        ) : (
+          <>
+            <AnimatePresence mode='popLayout'>
+              {data.map((tweet) => (
+                <Tweet {...tweet} key={tweet.id} />
+              ))}
+            </AnimatePresence>
+            <LoadMore />
+          </>
+        )}
+      </section>
+    </MainContainer>
   );
 }
 
-UserLikes.getLayout = (page: ReactElement): ReactNode => (
+Home.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
-      <UserLayout>
-        <UserDataLayout>
-          <UserHomeLayout>{page}</UserHomeLayout>
-        </UserDataLayout>
-      </UserLayout>
+      <HomeLayout>{page}</HomeLayout>
     </MainLayout>
   </ProtectedLayout>
 );
