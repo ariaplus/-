@@ -12,15 +12,12 @@ type ExploreNavLinkProps = {
 
 export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.Element {
   const router = useRouter();
-  const {
-    asPath,
-    query: { id }
-  } = router;
+  const { asPath } = router;
 
   const userPath = path ? `/${path}` : '';
 
-  const handleClick = () => {
-    router.push(userPath);
+  const handleClick = async () => {
+    await router.push(userPath);
   };
 
   return (
