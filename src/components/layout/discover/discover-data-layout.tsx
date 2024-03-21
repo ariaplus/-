@@ -7,7 +7,7 @@ import { SEO } from '@components/common/seo';
 import { MainContainer } from '@components/home/main-container';
 import { MainHeader } from '@components/home/main-header';
 import { UserHeader } from '@components/user/user-header';
-import type { LayoutProps } from './common-layout';
+import type { LayoutProps } from '@components/layout/common-layout';
 
 export function DiscoverDataLayout({ children }: LayoutProps): JSX.Element {
   const {
