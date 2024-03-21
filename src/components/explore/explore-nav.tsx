@@ -36,7 +36,7 @@ export function ExploreNav({ follow }: ExploreNavProps): JSX.Element {
     >
       {exploreNav.map(({ name, src, path }) => (
 
-        <ExploreNavLink src={src} name={name} path={path}  tip={name} key={src} />
+        <ExploreNavLink src={src} name={name} path={path}  key={src} />
       
       ))}
     </motion.nav>
