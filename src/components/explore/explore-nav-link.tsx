@@ -15,7 +15,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
     query: { id }
   } = useRouter();
 
-  const userPath = `/${id as string}${path ? `/${path}` : ''}`;
+  const userPath = `/${path}` : ''}`;
 
   return (
     <Link href={userPath} scroll={false}>
