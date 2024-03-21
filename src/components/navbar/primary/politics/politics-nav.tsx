@@ -9,15 +9,9 @@ type PoliticsNavProps = {
 
 const allNavs = [
   [
-    { name:'Soccer', src: '/main/ui/header/primary/sports/sports-filled.svg', path: 'sports' },
-    { name:'', src: '/main/ui/header/primary/sports/soccer.svg', path: 'soccer' },
-    { name:'', src: '/main/ui/header/primary/sports/football.svg', path: 'football' },
-    
-    {  name:'', src: '/main/ui/header/primary/sports/basketball.svg', path: 'basketball' },
-    { name:'', src: '/main/ui/header/primary/sports/baseball.svg', path: 'baseball' },
-    {  name:'', src: '/main/ui/header/primary/sports/tennis.svg', path: 'tennis' },
-    {  name:'', src: '/main/ui/header/primary/sports/golf.svg', path: 'golf' },
-    {  name:'', src: '/main/ui/header/primary/sports/esports2.svg', path: 'esports' }
+    { name:'GOP', src: '/main/ui/header/primary/politics/GOP.svg', path: 'us/republican' },
+    { name:'Democrats', src: '/main/ui/header/primary/politics/democrat.svg', path: 'us/demoratic' }
+ 
   ]
 
 ] as const;
