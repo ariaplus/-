@@ -34,7 +34,7 @@ export function BusinessNav({ follow }: BusinessNavProps): JSX.Element {
     >
       {businessNav.map(({ name, src, path }) => (
 
-        <PoliticsNavLink src={src} name={name} path={path}  key={src} />
+        <BusinessNavLink src={src} name={name} path={path}  key={src} />
       
       ))}
     </motion.nav>
