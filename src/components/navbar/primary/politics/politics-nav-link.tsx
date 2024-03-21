@@ -1,5 +1,3 @@
-
-
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import cn from 'clsx';
@@ -12,7 +10,7 @@ type PoliticsNavLinkProp = {
   path: string;
 };
 
-export function ({ name, src, path }: PoliticsNavLinkProp): JSX.Element {
+export function PoliticsNavLink({ name, src, path }: PoliticsNavLinkProp): JSX.Element {
   const {
     asPath,
     query: { id }
@@ -22,25 +20,15 @@ export function ({ name, src, path }: PoliticsNavLinkProp): JSX.Element {
 
   return (
     <Link href={userPath} scroll={false}>
-
-      
-    
-      
       <a
-        className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center
-                   hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
+        className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
       >
-        
-
-        
         <div className='px-[8px] md:px-[16px]'>
-
-            <ToolTip
-                    className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
-                    tip={name}
-                  />
-         
-                  <p
+          <ToolTip
+            className='translate-y-1 z-50' // Apply z-index to bring tooltip to the top
+            tip={name}
+          />
+          <p
             className={cn(
               'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
               asPath === userPath
@@ -48,10 +36,6 @@ export function ({ name, src, path }: PoliticsNavLinkProp): JSX.Element {
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
-     
-
-
-                  
             <ArplImage
               imgClassName='arplicon'
               blurClassName='none'
