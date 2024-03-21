@@ -21,7 +21,6 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
   return (
     <Link href={userPath} scroll={false}>
          
-      <ToolTip tip={name} />
       
       <a
         className='hover-animation main-tab dark-bg-tab flex flex-1 justify-center
@@ -29,7 +28,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
       >
         <div className='px-[8px] md:px-[16px]'>
           
-           <ToolTip tip={name} />
+        
           <p
             className={cn(
               'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
