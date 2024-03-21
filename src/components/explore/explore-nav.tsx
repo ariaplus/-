@@ -3,24 +3,28 @@ import cn from 'clsx';
 import { variants } from '@components/user/user-header';
 import { ExploreNavLink } from './explore-nav-link';
 
-type UserNavProps = {
+type ExploreNavProps = {
   follow?: boolean;
 };
 
 const allNavs = [
   [
-    { name:'Politics', src: '/assets/ariaplus.svg', path: 'politics' }
-
+    { name:'', src: '/assets/ariaplus.svg', path: '' },
+    { name:'', src: '/main/ui/primary/user/ui/bubble-replies.svg', path: 'replies' },
+    { name:'', src: '/main/ui/primary/user/ui/shorts.svg', path: 'shorts' },
+    {  name:'', src: '/main/ui/primary/user/ui/media.svg', path: 'media' },
+    {  name:'', src: '/main/ui/primary/user/ui/bubble-like.svg', path: 'likes' }
   ]
+
 ] as const;
 
-export function ExploreNav({ follow }: UserNavProps): JSX.Element {
-  const exploreNav  = allNavs[+!!follow];
+export function ExploreNav({ follow }: ExploreNavProps): JSX.Element {
+  const exploreNav = allNavs[+!!follow];
 
   return (
     <motion.nav
       className={cn(
-        `hover-animation flex justify-between no-scrollbar overflow-y-auto
+        `hover-animation flex justify-between overflow-y-auto
          border-b border-light-border dark:border-dark-border`,
         follow && 'mt-1 mb-0.5'
       )}
@@ -29,7 +33,7 @@ export function ExploreNav({ follow }: UserNavProps): JSX.Element {
     >
       {exploreNav.map(({ name, src, path }) => (
 
-        <ExploreNavLink name={name} src={src} path={path} key={src} />
+        <ExploreNavLink src={src} name={name} path={path} key={src} />
       
       ))}
     </motion.nav>
