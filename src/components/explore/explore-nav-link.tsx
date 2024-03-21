@@ -15,7 +15,7 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
     query: { id }
   } = useRouter();
 
-  const userPath = `/${path}` : ''}`;
+  const userPath = path ? `/${path}` : '';
 
   return (
     <Link href={userPath} scroll={false}>
@@ -32,20 +32,17 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
-
             {name}
-
-            
-                      <ArplImage
-          imgClassName='arplicon'
-          blurClassName='none'
-          src={src}
-          alt=''
-          layout='fill'
-          width='25px'
-          height='25px'
-          useSkeleton
-       />
+            <ArplImage
+              imgClassName='arplicon'
+              blurClassName='none'
+              src={src}
+              alt=''
+              layout='fill'
+              width='25px'
+              height='25px'
+              useSkeleton
+            />
             <i className='h-1 scale-50 rounded-full bg-main-accent opacity-0 transition duration-200' />
           </p>
         </div>
