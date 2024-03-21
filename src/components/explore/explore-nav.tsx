@@ -9,7 +9,7 @@ type ExploreNavProps = {
 
 const allNavs = [
   [
-    { name:'Discover', src: '/assets/ariaplus.svg', path: 'discover' },
+    { name:'Discover', src: '/main/ui/primary/discover.svg', path: 'discover' },
     { name:'', src: '/main/ui/header/primary/discover/politics.svg', path: 'politics' },
     { name:'', src: '/main/ui/header/primary/discover/business.svg', path: 'business' },
     { name:'', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
@@ -36,7 +36,7 @@ export function ExploreNav({ follow }: ExploreNavProps): JSX.Element {
     >
       {exploreNav.map(({ name, src, path }) => (
 
-        <ExploreNavLink src={src} name={name} path={path} key={src} />
+        <ExploreNavLink src={src} name={name} path={path}  tip={name} key={src} />
       
       ))}
     </motion.nav>
