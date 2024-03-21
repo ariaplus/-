@@ -24,6 +24,7 @@ import { ServerDown } from '@components/maintenance/server-down';
 
 export default function Home(): JSX.Element {
   const { isMobile } = useWindow();
+    const { back } = useRouter();
 
   const { data, loading, LoadMore } = useInfiniteScroll(
     tweetsCollection,
@@ -35,6 +36,7 @@ export default function Home(): JSX.Element {
     <MainContainer>
       <SEO title='Sports | Aria+' />
       <MainHeader
+        useActionButton action={back} 
         useMobileSidebar
         title='Sports'
         className='flex items-center justify-between text-[0px]'
