@@ -10,7 +10,8 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
-import { ExploreNav } from '@components/explore/explore-nav';
+import { EntNav } from '@components/navbar/primary/entertainment/ent-nav';
+import { useRouter } from 'next/router';
 
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
@@ -22,8 +23,9 @@ import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
 
-export default function Home(): JSX.Element {
+export default function Entertainment(): JSX.Element {
   const { isMobile } = useWindow();
+  const { back } = useRouter();
 
   const { data, loading, LoadMore } = useInfiniteScroll(
     tweetsCollection,
@@ -35,15 +37,15 @@ export default function Home(): JSX.Element {
     <MainContainer>
       <SEO title='Entertainment | Aria+' />
       <MainHeader
-        useMobileSidebar
-        title='Entertainment'
+       useActionButton action={back} 
+         title='Entertainment'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
 
          </div>
       </MainHeader>
-      <ExploreNav/>
+      <EntNav/>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
@@ -73,7 +75,7 @@ export default function Home(): JSX.Element {
   );
 }
 
-Home.getLayout = (page: ReactElement): ReactNode => (
+Entertainment.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
