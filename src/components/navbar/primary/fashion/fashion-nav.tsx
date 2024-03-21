@@ -9,11 +9,11 @@ type FashionNavProps = {
 
 const allNavs = [
   [
-    { name:'Business', src: '/main/ui/header/primary/discover/business.svg', path: 'business' },
-    { name:'Banks', src: '/main/ui/header/primary/business/bank.svg', path: 'banks' },
-  { name:'Fed', src: '/main/ui/header/primary/business/3d-coin.svg', path: 'fed' },
-    { name:'Finance', src: '/main/ui/header/primary/business/gold-bars.svg', path: 'finance' },
-       { name:'Invest', src: '/main/ui/header/primary/business/investment-chart.svg', path: 'invest' }
+    { name:'Fashion', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
+    { name:'FashionProducts', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'fashion/products' },
+  { name:'Clothing', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'clothing' },
+    { name:'FashionShows', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'fashionshows' },
+       { name:'FashionCategories', src: '/main/ui/header/primary/fashion/down.svg', path: 'fashion/categories' }
  
   ]
 
