@@ -10,8 +10,7 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
-import { ExploreNav } from '@components/explore/explore-nav';
-
+import { PoliticsNav } from '@components/navbar/primary/politics/politics-nav';
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
@@ -24,6 +23,7 @@ import { ServerDown } from '@components/maintenance/server-down';
 
 export default function Home(): JSX.Element {
   const { isMobile } = useWindow();
+      const { back } = useRouter();
 
   const { data, loading, LoadMore } = useInfiniteScroll(
     tweetsCollection,
@@ -36,6 +36,7 @@ export default function Home(): JSX.Element {
       <SEO title='Politics | Aria+' />
       <MainHeader
         useMobileSidebar
+          useActionButton action={back} 
         title='Politics'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
@@ -43,7 +44,7 @@ export default function Home(): JSX.Element {
        
          </div>
       </MainHeader>
-      <ExploreNav/>
+      <PoliticsNav/>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
