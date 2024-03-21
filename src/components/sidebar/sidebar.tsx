@@ -45,7 +45,7 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/tv',
     linkName: 'tv',
-    src: 'TicketIcon',
+    src: '/main/ui/primary/tv-box.svg',
     canBeHidden: true
   },
   {
