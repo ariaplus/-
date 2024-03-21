@@ -10,7 +10,7 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
-import { ExploreNav } from '@components/explore/explore-nav';
+import { SportsNav } from '@components/navbar/primary/sports-nav.tsx';
 
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
         <ExploreButton />
          </div>
       </MainHeader>
-      <ExploreNav/>
+      <SportsNav/>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
