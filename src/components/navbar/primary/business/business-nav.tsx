@@ -9,8 +9,11 @@ type BusinessNavProps = {
 
 const allNavs = [
   [
-    { name:'GOP', src: '/main/ui/header/primary/politics/GOP.svg', path: 'us/republican' },
-    { name:'Democrats', src: '/main/ui/header/primary/politics/democrat.svg', path: 'us/demoratic' }
+    { name:'Business', src: '/main/ui/header/primary/discover/business.svg', path: 'business' },
+    { name:'Banks', src: '/main/ui/header/primary/business/bank.svg', path: 'banks' },
+  { name:'Fed', src: '/main/ui/header/primary/business/3d-coin.svg', path: 'fed' },
+    { name:'Finance', src: '/main/ui/header/primary/business/gold-bars.svg', path: 'finance' },
+       { name:'Invest', src: '/main/ui/header/primary/business/investment-chart.svg', path: 'invest' }
  
   ]
 
