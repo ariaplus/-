@@ -9,11 +9,11 @@ type EntNavProps = {
 
 const allNavs = [
   [
-    { name:'Fashion', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
-    { name:'FashionProducts', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'fashion/products' },
-  { name:'Clothing', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'clothing' },
-    { name:'FashionShows', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'fashionshows' },
-       { name:'FashionCategories', src: '/main/ui/header/primary/fashion/down.svg', path: 'fashion/categories' }
+    { name:'Entertainment', src: '/main/ui/header/primary/discover/hollywood.svg', path: 'entertainment' },
+    { name:'HollywoodNews', src: '/main/ui/header/primary/ent/hollywood-camera.svg', path: 'hollywood/news' },
+  { name:'HollywoodAwards', src: '/main/ui/header/primary/ent/oscar.svg', path: 'hollywood/awards' },
+    { name:'HollywoodMusic', src: '/main/ui/header/primary/ent/hollywood-music.svg', path: 'hollywood/music' },
+       { name:'HollywoodCategoories', src: '/main/ui/header/primary/down.svg', path: 'hollywood/categories' }
  
   ]
 
