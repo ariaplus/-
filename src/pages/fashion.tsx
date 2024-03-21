@@ -1,4 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
+
 import { where, orderBy } from 'firebase/firestore';
 import { useWindow } from '@lib/context/window-context';
 import { useInfiniteScroll } from '@lib/hooks/useInfiniteScroll';
@@ -10,7 +12,7 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
-import { ExploreNav } from '@components/explore/explore-nav';
+import { FashionNav } from '@components/navbar/primary/fashion/fashion-nav';
 
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
@@ -22,8 +24,9 @@ import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
 
-export default function Home(): JSX.Element {
+export default function Fashion(): JSX.Element {
   const { isMobile } = useWindow();
+    const { back } = useRouter();
 
   const { data, loading, LoadMore } = useInfiniteScroll(
     tweetsCollection,
@@ -35,15 +38,14 @@ export default function Home(): JSX.Element {
     <MainContainer>
       <SEO title='Fashion | Aria+' />
       <MainHeader
-        useMobileSidebar
-        title='Fashion'
+        useActionButton action={back}         title='Fashion'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
 
       </div>
       </MainHeader>
-      <ExploreNav/>
+      <FashionNav/>
      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
             useSkeleton
             layout='fill'
@@ -73,7 +75,7 @@ export default function Home(): JSX.Element {
   );
 }
 
-Home.getLayout = (page: ReactElement): ReactNode => (
+Fashion.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
