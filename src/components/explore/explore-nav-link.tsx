@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import cn from 'clsx';
+import { ToolTip } from '@components/ui/tooltip';
 import { ArplImage } from '@components/ui/ariaplus';
 
 type ExploreNavLinkProps = {
@@ -24,6 +25,8 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
                    hover:bg-light-primary/10 dark:hover:bg-dark-primary/10'
       >
         <div className='px-[8px] md:px-[16px]'>
+          
+           <ToolTip tip={name} />
           <p
             className={cn(
               'flex flex-col gap-3 whitespace-nowrap pt-3 font-bold transition-colors duration-200',
@@ -32,7 +35,8 @@ export function ExploreNavLink({ name, src, path }: ExploreNavLinkProps): JSX.El
                 : 'text-light-secondary dark:text-dark-secondary'
             )}
           >
-            {name}
+
+            
             <ArplImage
               imgClassName='arplicon'
               blurClassName='none'
