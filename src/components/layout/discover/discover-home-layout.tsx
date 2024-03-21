@@ -15,7 +15,7 @@ import { FollowButton } from '@components/ui/follow-button';
 import { variants } from '@components/user/user-header';
 import { UserEditProfile } from '@components/user/user-edit-profile';
 import { UserShare } from '@components/user/user-share';
-import type { LayoutProps } from './common-layout';
+import type { LayoutProps } from '@components/layout/common-layout';
 import { UpdateUsername } from '@components/home/update-username';
 import { MessageButton } from '@components/user/buttons/message-button';
 
