@@ -9,7 +9,7 @@ type ExploreNavProps = {
 
 const allNavs = [
   [
-    { name:'', src: '/assets/ariaplus.svg', path: 'discover' },
+    { name:'Discover', src: '/assets/ariaplus.svg', path: 'discover' },
     { name:'', src: '/assets/ariaplus.svg', path: 'politics' },
     { name:'', src: '/assets/ariaplus.svg', path: 'business' },
     { name:'', src: '/assets/ariaplus.svg', path: 'fashion' },
