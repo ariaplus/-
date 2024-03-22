@@ -9,10 +9,10 @@ type NewsNavProps = {
 
 const allNavs = [
   [
-    { name:'News', src: 'public/main/ui/header/primary/discover/news.svg', path: 'news' },
-    { name:'Trends', src: 'public/main/ui/header/primary/news/trend.svg', path: 'news/trends' },
-  { name:'NewYorkTimes', src: 'public/main/ui/header/primary/news/nytimes.svg', path: 'newyorktimes' },
-    { name:'Articles', src: 'public/main/ui/header/primary/news/news-article.svg', path: 'articles' },
+    { name:'News', src: '/main/ui/header/primary/discover/news.svg', path: 'news' },
+    { name:'Trends', src: '/main/ui/header/primary/news/trend.svg', path: 'news/trends' },
+  { name:'NewYorkTimes', src: '/main/ui/header/primary/news/nytimes.svg', path: 'newyorktimes' },
+    { name:'Articles', src: '/main/ui/header/primary/news/news-article.svg', path: 'articles' },
        { name:'NewsCategories', src: '/main/ui/header/primary/down.svg', path: 'news/categories' }
  
   ]
