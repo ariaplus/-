@@ -14,7 +14,7 @@ const allNavs = [
     { name:'', src: '/main/ui/header/primary/discover/business.svg', path: 'business' },
     { name:'', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
     {  name:'', src: '/main/ui/header/primary/discover/hollywood.svg', path: 'entertainment' },
-    {  name:'', src: '/main/ui/header/primary/discover/arts.svg', path: 'arts' },
+    {  name:'', src: '/main/ui/header/primary/discover/ballon.svg', path: 'arts' },
     {  name:'', src: '/main/ui/header/primary/discover/sports.svg', path: 'sports' },
     {  name:'', src: '/main/ui/header/primary/discover/news.svg', path: 'news' }
   ]
