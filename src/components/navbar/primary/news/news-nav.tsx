@@ -9,11 +9,11 @@ type NewsNavProps = {
 
 const allNavs = [
   [
-    { name:'Entertainment', src: '/main/ui/header/primary/discover/hollywood.svg', path: 'entertainment' },
-    { name:'HollywoodNews', src: '/main/ui/header/primary/ent/hollywood-camera.svg', path: 'hollywood/news' },
-  { name:'HollywoodAwards', src: '/main/ui/header/primary/ent/oscar.svg', path: 'hollywood/awards' },
-    { name:'HollywoodMusic', src: '/main/ui/header/primary/ent/hollywood-music.svg', path: 'hollywood/music' },
-       { name:'HollywoodCategoories', src: '/main/ui/header/primary/down.svg', path: 'hollywood/categories' }
+    { name:'News', src: 'public/main/ui/header/primary/discover/news.svg', path: 'news' },
+    { name:'Trends', src: 'public/main/ui/header/primary/news/trend.svg', path: 'news/trends' },
+  { name:'NewYorkTimes', src: 'public/main/ui/header/primary/news/nytimes.svg', path: 'newyorktimes' },
+    { name:'Articles', src: 'public/main/ui/header/primary/news/news-article.svg', path: 'articles' },
+       { name:'NewsCategories', src: '/main/ui/header/primary/down.svg', path: 'news/categories' }
  
   ]
 
