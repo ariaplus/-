@@ -8,7 +8,7 @@ const { user } = useAuth();
 const userId = user?.id as string;
   
   return (
-    <Link href='/pay/card'>
+    <Link href='/pay/flow'>
       <a className='block bg-cover border-solid border-2 border-white bg-center h-52 xs:h-64 sm:h-64 rounded-2xl shadow-md' style={{ backgroundImage: 'url(/assets/blue.jpg)' }}>
 
           <div className='flex p-4 items:end content-end '>
