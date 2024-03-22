@@ -21,9 +21,10 @@ import { PaymentsButton } from '@components/pay/payments-button';
 import { WalletButton } from '@components/pay/wallet-button';
 import { PaymentCard } from '@components/pay/paymentcard';
 import { PaySettingsButton } from '@components/pay/pay-settings-button';
+import { PayNav } from '@components/navbar/primary/pay/pay-nav';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function Bookmarks(): JSX.Element {
+export default function Pay(): JSX.Element {
   const { back } = useRouter();
   
  const { user } = useAuth();
@@ -32,20 +33,13 @@ export default function Bookmarks(): JSX.Element {
   return (
     <MainContainer>
       <SEO title='Pay | Aria+' />
-      <MainHeader className='flex items-center justify-between'>
-        <div className='-mb-1 flex flex-col'>
-          <h2 className='-mt-1 text-xl font-bold'>tv</h2>
-          <p className='text-xs text-light-secondary dark:text-dark-secondary'>
-            @{user?.username}
-          </p>
-        </div>
-        <div className=' flex items-right'>
-       <CardsButton/>
-       <PaymentsButton/>
-        <WalletButton/>
+      <MainHeader     useActionButton action={back} 
+        title='Pay'
+        className='flex items-center justify-between text-[0px]'
+      > 
        <PaySettingsButton/>
-          </div>
       </MainHeader>
+      <PayNav/>
       <div className='px-8'>
       <PaymentCard />
         </div>
@@ -53,7 +47,7 @@ export default function Bookmarks(): JSX.Element {
   );
 }
 
-Bookmarks.getLayout = (page: ReactElement): ReactNode => (
+Pay.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <TrendsLayout>{page}</TrendsLayout>
