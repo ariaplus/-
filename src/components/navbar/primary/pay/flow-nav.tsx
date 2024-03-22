@@ -9,8 +9,8 @@ type FlowNavProps = {
 
 const allNavs = [
   [
-    { name:'Send', src: '/main/ui/header/primary/pay/quick-pay.svg', path: 'pay/send' },
-    { name:'Receive', src: '/main/ui/header/primary/pay/wallet.svg', path: 'pay/receive' }
+    { name:'Send', src: '/main/ui/header/primary/pay/pay-send.svg', path: 'pay/send' },
+    { name:'Receive', src: '/main/ui/header/primary/pay/pay-recieve.svg', path: 'pay/receive' }
 
  
   ]
