@@ -21,7 +21,7 @@ import { PaymentsButton } from '@components/pay/payments-button';
 import { WalletButton } from '@components/pay/wallet-button';
 import { PaymentCard } from '@components/pay/paymentcard';
 import { PaySettingsButton } from '@components/pay/pay-settings-button';
-import { PayNav } from '@components/navbar/primary/pay/pay-nav';
+import { FlowNav } from '@components/navbar/primary/pay/flow-nav';
 import type { ReactElement, ReactNode } from 'react';
 
 export default function Receive(): JSX.Element {
@@ -39,7 +39,7 @@ export default function Receive(): JSX.Element {
       > 
        <PaySettingsButton/>
       </MainHeader>
-      <PayNav/>
+      <FlowNav/>
       <div className='px-8'>
       <PaymentCard />
         </div>
