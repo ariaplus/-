@@ -9,8 +9,8 @@ type PayNavProps = {
 
 const allNavs = [
   [
-    { name:'News', src: '/main/ui/header/primary/discover/news.svg', path: 'pay' },
-    { name:'Trends', src: '/main/ui/header/primary/news/trend.svg', path: 'pay/wallet' }
+    { name:'Pay', src: '/main/ui/header/primary/pay/quick-pay.svg', path: 'pay' },
+    { name:'Wallet', src: '/main/ui/header/primary/pay/wallet.svg', path: 'pay/wallet' }
 
  
   ]
