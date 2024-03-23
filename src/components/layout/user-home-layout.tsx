@@ -86,7 +86,7 @@ export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
 
 
 
-                      <MessageButton/>
+                      <MessagesButton/>
 
                     
                     <FollowButton
