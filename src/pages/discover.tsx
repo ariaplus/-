@@ -15,9 +15,7 @@ import { DiscoverNav } from '@components/navbar/primary/discover/discover-nav';
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
-import { Start } from '@components/modal/discover/start';
-import { ExploreButton } from '@components/explore/header/explore-button';
-import { NewsButton } from '@components/explore/header/news-button';
+import { ExploreButton } from '@components/buttons/primary/explore-button';
 import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
@@ -40,7 +38,7 @@ export default function Home(): JSX.Element {
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
-        <Start />
+  
          </div>
       </MainHeader>
       <DiscoverNav/>
