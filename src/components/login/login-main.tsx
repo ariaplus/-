@@ -75,8 +75,8 @@ export function LoginMain(): JSX.Element {
               Sign up with phone or email
             </Button>
             <p
-              className='inner:custom-underline font-Helvetica inner:custom-underline text-center text-xs
-                         text-light-secondary font-Helvetica inner:text-accent-blue dark:text-dark-secondary'
+              className='inner:custom-underline font-Helvetica inner:custom-underline text-center opacity-60 text-white text-[12.5px] font-Helvetica
+                         font-Helvetica inner:text-accent-blue'
             >
               By signing up, you agree to the{' '}
               <a
@@ -106,7 +106,7 @@ export function LoginMain(): JSX.Element {
             </p>
           </div>
           <div className='flex flex-col gap-3'>
-            <p className='font-bold font-Helvetica '>Already have an account? </p>
+            <p className='opacity-60 text-white text-[13px] font-Helvetica '>Already have an account? </p>
             <Button
               className='border border-light-line-reply font-bold text-accent-blue hover:bg-accent-blue/10
                          focus-visible:bg-accent-blue/10 focus-visible:!ring-accent-blue/80 active:bg-accent-blue/20
@@ -127,7 +127,7 @@ export function LoginMain(): JSX.Element {
           height='25px'
           useSkeleton
        />
-            <p className='font-bold text-light-secondary text-xs font-Helvetica '>With this accouynt you can access all services and applications of the Aria+ Comapany</p>
+            <p className='opacity-60 text-white text-[12.5px] font-Helvetica '>With this account you can access all services and applications of the Aria+ Company</p>
             
             
             </div>
