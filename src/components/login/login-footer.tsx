@@ -17,7 +17,7 @@ const footerLinks = [
 
 export function LoginFooter(): JSX.Element {
   return (
-    <footer className='hidden justify-center text-sm text-light-secondary dark:text-dark-secondary lg:flex'>
+    <footer className='hidden justify-evenly bg-black text-sm text-light-secondary z-50 h-[30px] dark:text-dark-secondary lg:flex'>
       <nav className='flex flex-wrap justify-center gap-4 gap-y-2'>
         {footerLinks.map(([linkName, href]) => (
           <a
