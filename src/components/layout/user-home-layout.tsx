@@ -17,7 +17,7 @@ import { UserEditProfile } from '@components/user/user-edit-profile';
 import { UserShare } from '@components/user/user-share';
 import type { LayoutProps } from './common-layout';
 import { UpdateUsername } from '@components/home/update-username';
-import { MessageButton } from '@components/user/buttons/message-button';
+import { MessageButton } from '@components/buttons/primary/messages-button';
 
 export function UserHomeLayout({ children }: LayoutProps): JSX.Element {
   const { user, isAdmin } = useAuth();
