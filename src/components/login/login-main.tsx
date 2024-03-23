@@ -115,7 +115,7 @@ export function LoginMain(): JSX.Element {
             >
               Sign in
             </Button>
-            <div className='flex'>
+            <div className='flow-root'>
 
                      <ArplImage
           imgClassName='arplicon'
@@ -123,11 +123,11 @@ export function LoginMain(): JSX.Element {
           src='/assets/ariaplus.svg'
           alt=''
           layout='fill'
-          width='10px'
-          height='10px'
+          width='25px'
+          height='25px'
           useSkeleton
        />
-            <p className='font-bold text-xs font-Helvetica '>With this accouynt you can access all services and applications of the Aria+ Comapany</p>
+            <p className='font-bold text-light-secondary text-xs font-Helvetica '>With this accouynt you can access all services and applications of the Aria+ Comapany</p>
             
             
             </div>
