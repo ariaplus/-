@@ -45,7 +45,7 @@ export default function TV(): JSX.Element {
           <MainHeader useActionButton action={back} className='flex items-center justify-between '>
             <div className='justify-between flex '>
         <div className='-mb-1 flex flex-col'>
-          <h2 className=' text-[100px] -mt-[10px] -mb-[20px] font-bold'>tv</h2>
+          <h2 className=' text-[100px] -mt-[30px] -mb-[20px] font-bold'>tv</h2>
        
         </div>
        </div>
