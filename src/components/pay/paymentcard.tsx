@@ -6,7 +6,6 @@ import { UserName } from '@components/user/user-name';
 
 export function PaymentCard() {
 
-const { user } = useAuth();
 const userId = user?.id as string;
   const { user, loading } = useUser();
   
