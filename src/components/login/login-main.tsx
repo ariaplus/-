@@ -23,7 +23,7 @@ export function LoginMain(): JSX.Element {
        />
         </i>
       </div>
-      <div className='flex flex-col items-center justify-between gap-6 p-8 lg:items-start lg:justify-center'>
+      <div className='flex flex-col items-center justify-center gap-6 p-8 lg:items-start lg:justify-center'>
         <i className=' self-center  lg:self-auto'>
         <ArplImage
           imgClassName='arplicon'
@@ -38,10 +38,10 @@ export function LoginMain(): JSX.Element {
         </i>
         <div className='flex max-w-xs flex-col gap-4 font-Helvetica lg:max-w-none'>
           <h1
-            className='text-[45px] font-bold before:content-["hello."] 
-                       lg:text-[45px] font-bold lg:before:content-["hello."]'
+            className='text-[23px] font-bold before:content-["Everything is Here."] 
+                       lg:text-[23px] font-bold lg:before:content-["Everything is Here."]'
           />
-          <h2 className='hidden font-medium -mt-5 text-[20px] lg:block lg:text-[20px]'>Join + today</h2>
+          <h2 className='hidden font-medium -mt-5 text-[20px] lg:block lg:text-[20px]'> </h2>
         </div>
         <div className='flex max-w-xs flex-col gap-6 [&_button]:py-2'>
           <div className='grid gap-3 font-bold'>
