@@ -8,7 +8,7 @@ import { userStatsCollection } from '@lib/firebase/collections';
 import { UserName } from './user-name';
 import type { Variants } from 'framer-motion';
 import { useAuth } from '@lib/context/auth-context';
-import { useAuth } from '@lib/context/auth-context';
+import { UserEditProfile } from '@components/user/user-edit-profile';
 
 export const variants: Variants = {
   initial: { opacity: 0 },
