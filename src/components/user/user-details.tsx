@@ -99,6 +99,22 @@ export function UserDetails({
   const isInTweetPage = ['[id]', 'with_replies'].includes(currentPage);
   const isInFollowPage = ['following', 'followers'].includes(currentPage);
 
+
+  const { user, loading } = useUser();
+
+  const userId = user ? user.id : null;
+
+  const { data: statsData, loading: statsLoading } = useDocument(
+    doc(userStatsCollection(userId ?? 'null'), 'stats'),
+    {
+      allowNull: true,
+      disabled: !userId
+    }
+  );
+
+
+
+  
   return (
     <>
       <div>
