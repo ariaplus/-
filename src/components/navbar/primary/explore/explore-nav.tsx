@@ -9,11 +9,11 @@ type ExploreNavProps = {
 
 const allNavs = [
   [
-    { name:'Fashion', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
-    { name:'FashionProducts', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'fashion/products' },
-  { name:'Clothing', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'clothing' },
-    { name:'FashionShows', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'fashionshows' },
-       { name:'FashionCategories', src: '/main/ui/header/primary/fashion/down.svg', path: 'fashion/categories' }
+    { name:'Explore', src: '/main/ui/header/primary/explore/feed.svg', path: 'explore' },
+    { name:'Trends', src: '/main/ui/header/primary/explore/trends.svg', path: 'trends' },
+  { name:'Likes', src: '/main/ui/header/primary/explore/liked.svg', path: 'likes' },
+    { name:'ExploreMore', src: '/main/ui/header/primary/explore/explore-more.svg', path: 'explore/more' }
+
  
   ]
 
