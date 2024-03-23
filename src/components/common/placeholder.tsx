@@ -14,7 +14,7 @@ export function Placeholder(): JSX.Element {
           imgClassName='arplicon'
           blurClassName='none'
           src='/assets/ariaplus.svg'
-          alt='Twitter banner'
+          alt='+'
           layout='fill'
           width='60px'
           height='60px'
