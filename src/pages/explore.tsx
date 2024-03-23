@@ -15,8 +15,8 @@ import { Tweet } from '@components/tweet/tweet';
 import { ExploreNav } from '@components/navbar/primary/explore/explore-nav';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
-import { DiscoverButton } from '@components/explore/header/discover-button';
-import { ExploreButton } from '@components/explore/header/explore-button';
+import { DiscoverButton } from '@components/buttons/primary/discover-button';
+import { ExploreButton } from '@components/buttons/primary/explore-button';
 import { ServerDown } from '@components/maintenance/server-down';
 import type { ReactElement, ReactNode } from 'react';
 
