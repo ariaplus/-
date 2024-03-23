@@ -86,6 +86,19 @@ export function UserDetails({
     [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined']
   ];
 
+  
+  const { tweets, likes } = statsData ?? {};
+
+  const [totalTweets, totalPhotos, totalLikes] = [
+    (user?.totalTweets ?? 0) + (tweets?.length ?? 0),
+    user?.totalPhotos,
+    likes?.length
+  ];
+
+  
+  const isInTweetPage = ['[id]', 'with_replies'].includes(currentPage);
+  const isInFollowPage = ['following', 'followers'].includes(currentPage);
+
   return (
     <>
       <div>
@@ -164,7 +177,27 @@ export function UserDetails({
           ))}
         </div>
       </div>
+      <div className='flex'>
       <UserFollowStats following={following} followers={followers} />
+
+                  <p className='text-xs text-light-secondary dark:text-dark-secondary'>
+            {isInFollowPage
+              ? `@${user.username}`
+              : isInTweetPage
+              ? totalTweets
+                ? `${totalTweets} ${`+${isPlural(totalTweets)}`}`
+                : "No +'s"
+              : currentPage === 'media'
+              ? totalPhotos
+                ? `${totalPhotos} Photo${isPlural(totalPhotos)} & GIF${isPlural(
+                    totalPhotos
+                  )}`
+                : 'No Photo & GIF'
+              : totalLikes
+              ? `${totalLikes} Like${isPlural(totalLikes)}`
+              : 'No Like'}
+          </p>
+        </div>
     </>
   );
 }
