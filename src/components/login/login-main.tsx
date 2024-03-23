@@ -127,7 +127,7 @@ export function LoginMain(): JSX.Element {
           height='25px'
           useSkeleton
        />
-            <p className='opacity-60 text-white text-[12.5px] font-Helvetica '>With this account you can access all services and applications of the Aria+ Company</p>
+            <p className='opacity-60 text-white text-[12.5px] font-Helvetica '>Access Aria+ Company's full suite of services and apps. Streamline operations, explore creative solutions, and stay ahead in the digital landscape.</p>
             
             
             </div>
