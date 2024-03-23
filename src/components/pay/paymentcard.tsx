@@ -6,7 +6,8 @@ import { UserName } from '@components/user/user-name';
 
 export function PaymentCard() {
   const { user, loading } = useUser();
-  const userId = user?.id as string;
+
+ const userId = user ? user.id : null;
   
   return (
     <Link href='/pay/flow'>
