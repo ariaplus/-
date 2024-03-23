@@ -38,8 +38,8 @@ export function LoginMain(): JSX.Element {
         </i>
         <div className='flex max-w-xs flex-col gap-4 font-Helvetica lg:max-w-none'>
           <h1
-            className='text-[23px] font-bold before:content-["Everything is Here."] 
-                       lg:text-[23px] font-bold lg:before:content-["Everything is Here."]'
+            className='text-[23px] font-bold before:content-["Everything-is-Here."] 
+                       lg:text-[23px] font-bold lg:before:content-["Everything-is-Here."]'
           />
           <h2 className='hidden font-medium -mt-5 text-[20px] lg:block lg:text-[20px]'> </h2>
         </div>
