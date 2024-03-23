@@ -21,7 +21,7 @@ const userId = user?.id as string;
           width='25px'
           height='25px'
        />
-        <p className='pl-2 text-xl text-light-secondary dark:text-dark-secondary'>
+        <p className='pl-2 font-[Helveticva] text-[18px] font-bold text-gray-400    '>
             $0
           </p>
         </div>
