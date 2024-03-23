@@ -17,13 +17,13 @@ export function LoginMain(): JSX.Element {
             src='https://images.pexels.com/photos/1573434/pexels-photo-1573434.jpeg'
             alt=''
             layout='fill'
-            width='735px'
+            width='850px'
             height='624px'
             useSkeleton
           />
         </i>
       </div>
-      <div className='flex flex-col items-center justify-center gap-6 p-8 lg:items-start lg:justify-center'>
+      <div className='flex flex-col items-center justify-center gap-6 p-8 lg:items-start lg:pl-[105px] lg:justify-center'>
         <i className=' self-center  lg:self-auto'>
           <ArplImage
             imgClassName='arplicon'
