@@ -75,7 +75,32 @@ export function LoginMain(): JSX.Element {
             >
               Sign up with phone or email
             </Button>
-            <p
+
+          </div>
+          <div className='flex flex-col gap-3'>
+            <p className='opacity-60 text-white text-[13px] font-Helvetica '>Already have an account? </p>
+            <Button
+              className='border border-light-line-reply font-bold text-accent-blue hover:bg-accent-blue/10
+                         focus-visible:bg-accent-blue/10 focus-visible:!ring-accent-blue/80 active:bg-accent-blue/20
+                         dark:border-light-secondary'
+              onClick={signInWithGoogle}
+            >
+              Sign in
+            </Button>
+            <div className='flow-root'>
+              <ArplImage
+                imgClassName='arplicon'
+                blurClassName='none'
+                src='/assets/ariaplus.svg'
+                alt=''
+                layout='fill'
+                width='25px'
+                height='25px'
+                useSkeleton
+              />
+              <p className='opacity-60 text-white text-[12.5px] font-Helvetica '>Access Aria+ Company&apos;s full suite of services and apps. Streamline operations, explore creative solutions, and stay ahead in the digital landscape.</p>
+            </div>
+                        <p
               className='inner:custom-underline font-Helvetica font-thin inner:custom-underline text-center opacity-60 text-white text-[12.5px] font-Helvetica
                          font-Helvetica inner:text-accent-blue'
             >
@@ -105,30 +130,6 @@ export function LoginMain(): JSX.Element {
               </a>
               .
             </p>
-          </div>
-          <div className='flex flex-col gap-3'>
-            <p className='opacity-60 text-white text-[13px] font-Helvetica '>Already have an account? </p>
-            <Button
-              className='border border-light-line-reply font-bold text-accent-blue hover:bg-accent-blue/10
-                         focus-visible:bg-accent-blue/10 focus-visible:!ring-accent-blue/80 active:bg-accent-blue/20
-                         dark:border-light-secondary'
-              onClick={signInWithGoogle}
-            >
-              Sign in
-            </Button>
-            <div className='flow-root'>
-              <ArplImage
-                imgClassName='arplicon'
-                blurClassName='none'
-                src='/assets/ariaplus.svg'
-                alt=''
-                layout='fill'
-                width='25px'
-                height='25px'
-                useSkeleton
-              />
-              <p className='opacity-60 text-white text-[12.5px] font-Helvetica '>Access Aria+ Company&apos;s full suite of services and apps. Streamline operations, explore creative solutions, and stay ahead in the digital landscape.</p>
-            </div>
           </div>
         </div>
       </div>
