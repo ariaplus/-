@@ -8,6 +8,7 @@ import { useModal } from '@lib/hooks/useModal';
 import { useCollection } from '@lib/hooks/useCollection';
 import { useArrayDocument } from '@lib/hooks/useArrayDocument';
 import { clearAllBookmarks } from '@lib/firebase/utils';
+import { TvNav } from '@components/navbar/primary/tv/tv-nav';
 import {
   moviesCollection,
   userBookmarksCollection
@@ -44,10 +45,8 @@ export default function TV(): JSX.Element {
           <MainHeader useActionButton action={back} className='flex items-center justify-between '>
             <div className='justify-between flex '>
         <div className='-mb-1 flex flex-col'>
-          <h2 className='-mt-1 text-xl font-bold'>tv</h2>
-          <p className='text-xs text-light-secondary dark:text-dark-secondary'>
-            @{user?.username}
-          </p>
+          <h2 className='-mt-1 text-[100px] mt-[40px] mb-[20px] font-bold'>tv</h2>
+       
         </div>
        </div>
         
@@ -58,6 +57,7 @@ export default function TV(): JSX.Element {
 
         
       </MainHeader>
+      <TvNav/>
       <Movie/>
     </MainContainer>
   );
