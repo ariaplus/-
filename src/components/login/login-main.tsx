@@ -115,6 +115,22 @@ export function LoginMain(): JSX.Element {
             >
               Sign in
             </Button>
+            <div className='flex'>
+
+                     <ArplImage
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/assets/ariaplus.svg'
+          alt=''
+          layout='fill'
+          width='10px'
+          height='10px'
+          useSkeleton
+       />
+            <p className='font-bold text-xs font-Helvetica '>With this accouynt you can access all services and applications of the Aria+ Comapany</p>
+            
+            
+            </div>
           </div>
         </div>
       </div>
