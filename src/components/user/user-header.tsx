@@ -7,8 +7,6 @@ import { isPlural } from '@lib/utils';
 import { userStatsCollection } from '@lib/firebase/collections';
 import { UserName } from './user-name';
 import type { Variants } from 'framer-motion';
-import { useAuth } from '@lib/context/auth-context';
-import { UserEditProfile } from '@components/user/user-edit-profile';
 
 export const variants: Variants = {
   initial: { opacity: 0 },
@@ -20,14 +18,11 @@ export function UserHeader(): JSX.Element {
   const {
     pathname,
     query: { id }
-  } = useRouter(); 
-  
-  const { user, isAdmin } = useAuth();
-  const { user: userData, loading } = useUser();
+  } = useRouter();
+
+  const { user, loading } = useUser();
 
   const userId = user ? user.id : null;
-
-  const isOwner = userData?.id === userId;
 
   const { data: statsData, loading: statsLoading } = useDocument(
     doc(userStatsCollection(userId ?? 'null'), 'stats'),
@@ -74,16 +69,16 @@ export function UserHeader(): JSX.Element {
             className='-mt-1 text-xl'
             iconClassName='w-6 h-6'
             verified={user.verified}
-            verifiedred={user.verifiedred}
-            verifiedgreen={user.verifiedgreen}
-            verifiedbot={user.verifiedbot}
-            verifiedcyan={user.verifiedcyan}
-            verifiedgray={user.verifiedgray}
-            verifiedgold={user.verifiedgold}
-            verifiedpink={user.verifiedpink}
-            verifiedviolet={user.verifiedviolet}
-            verifiedwhite={user.verifiedwhite}
-            verifiedapplegreen={user.verifiedapplegreen}
+verifiedred={user.verifiedred}
+verifiedgreen={user.verifiedgreen}
+verifiedbot={user.verifiedbot}
+verifiedcyan={user.verifiedcyan}
+verifiedgray={user.verifiedgray}
+verifiedgold={user.verifiedgold}
+verifiedpink={user.verifiedpink}
+verifiedviolet={user.verifiedviolet}
+verifiedwhite={user.verifiedwhite}
+verifiedapplegreen={user.verifiedapplegreen}
           />
           <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             {isInFollowPage
@@ -102,13 +97,7 @@ export function UserHeader(): JSX.Element {
               ? `${totalLikes} Like${isPlural(totalLikes)}`
               : 'No Like'}
           </p>
-          {isOwner ? (
-            <div className='flex items-end gap-2'>
-              <div className='items-end'>
-                <UserEditProfile />
-              </div>
-            </div>
-          ) : null}
+ 
         </motion.div>
       )}
     </AnimatePresence>
