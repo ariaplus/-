@@ -22,19 +22,13 @@ export function UserHeader(): JSX.Element {
     query: { id }
   } = useRouter(); 
   
-
-
-  
-    const { user, isAdmin } = useAuth();
-const { user: userData, loading } = useUser();
-
+  const { user, isAdmin } = useAuth();
+  const { user: userData, loading } = useUser();
 
   const userId = user ? user.id : null;
 
   const isOwner = userData?.id === userId;
 
-
-  
   const { data: statsData, loading: statsLoading } = useDocument(
     doc(userStatsCollection(userId ?? 'null'), 'stats'),
     {
@@ -80,16 +74,16 @@ const { user: userData, loading } = useUser();
             className='-mt-1 text-xl'
             iconClassName='w-6 h-6'
             verified={user.verified}
-verifiedred={user.verifiedred}
-verifiedgreen={user.verifiedgreen}
-verifiedbot={user.verifiedbot}
-verifiedcyan={user.verifiedcyan}
-verifiedgray={user.verifiedgray}
-verifiedgold={user.verifiedgold}
-verifiedpink={user.verifiedpink}
-verifiedviolet={user.verifiedviolet}
-verifiedwhite={user.verifiedwhite}
-verifiedapplegreen={user.verifiedapplegreen}
+            verifiedred={user.verifiedred}
+            verifiedgreen={user.verifiedgreen}
+            verifiedbot={user.verifiedbot}
+            verifiedcyan={user.verifiedcyan}
+            verifiedgray={user.verifiedgray}
+            verifiedgold={user.verifiedgold}
+            verifiedpink={user.verifiedpink}
+            verifiedviolet={user.verifiedviolet}
+            verifiedwhite={user.verifiedwhite}
+            verifiedapplegreen={user.verifiedapplegreen}
           />
           <p className='text-xs text-light-secondary dark:text-dark-secondary'>
             {isInFollowPage
@@ -108,20 +102,14 @@ verifiedapplegreen={user.verifiedapplegreen}
               ? `${totalLikes} Like${isPlural(totalLikes)}`
               : 'No Like'}
           </p>
- 
+          {isOwner ? (
+            <div className='flex items-end gap-2'>
+              <div className='items-end'>
+                <UserEditProfile />
+              </div>
+            </div>
+          ) : null}
         </motion.div>
-      
-               {isOwner ? (
-                  <div className='flex items-end gap-2'>
-                    <div className='items-end'>
-                      <UserEditProfile />
-                    </div>
-                   
-                )}
-
-
-
-      
       )}
     </AnimatePresence>
   );
