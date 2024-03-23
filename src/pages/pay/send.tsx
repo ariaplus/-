@@ -40,7 +40,7 @@ export default function Send(): JSX.Element {
        <PaySettingsButton/>
       </MainHeader>
       <FlowNav/>
-      <div className='px-8'>
+      <div className='self-center'>
       <PaymentCard />
         </div>
     </MainContainer>
