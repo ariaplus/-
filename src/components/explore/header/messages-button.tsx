@@ -40,7 +40,7 @@ export function MessagesButton(): JSX.Element {
         <ArplImage
           imgClassName='arplicon'
           blurClassName='none'
-          src='/main/ui/header/primary/placeholder.svg'
+          src='/main/ui/primary/chat.svg'
           alt=''
           layout='fill'
           width='25px'
