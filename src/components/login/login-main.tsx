@@ -14,7 +14,7 @@ export function LoginMain(): JSX.Element {
           <ArplImage
             imgClassName='arplicon'
             blurClassName='none'
-            src='/assets/cover.jpg'
+            src='https://images.pexels.com/photos/1573434/pexels-photo-1573434.jpeg'
             alt=''
             layout='fill'
             width='735px'
