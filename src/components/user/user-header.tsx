@@ -23,13 +23,7 @@ export function UserHeader(): JSX.Element {
   } = useRouter(); 
   
 
-  const coverData = userData?.coverPhotoURL
-    ? { src: userData.coverPhotoURL, alt: userData.name }
-    : null;
 
-  const profileData = userData
-    ? { src: userData.photoURL, alt: userData.name }
-    : null;
   
     const { user, isAdmin } = useAuth();
 const { user: userData, loading } = useUser();
