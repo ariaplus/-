@@ -5,11 +5,6 @@ import { UserFollowing } from './user-following';
 import { UserFollowStats } from './user-follow-stats';
 import type { User } from '@lib/types/user';
 import { ArplImage } from '@components/ui/ariaplus';
-import { useDocument } from '@lib/hooks/useDocument'; // Import the useDocument hook
-import { userStatsCollection } from '@lib/firebase/collections';
-import { useUser } from '@lib/context/user-context';
-import { isPlural } from '@lib/utils';
-import { useRouter } from 'next/router';
 
 type UserDetailsProps = Pick<
   User,
@@ -91,30 +86,6 @@ export function UserDetails({
     [` ${formatDate(createdAt, 'joined')}`, '/main/ui/primary/user/ui/blue-clock.svg', 'Joined']
   ];
 
-  const router = useRouter();
-  const currentPage = router.pathname.split('/').pop() ?? '';
-  const isInTweetPage = ['[id]', 'with_replies'].includes(currentPage);
-  const isInFollowPage = ['following', 'followers'].includes(currentPage);
-
-  const { user, loading } = useUser();
-  const userId = user ? user.id : null;
-
-  const { data: statsData, loading: statsLoading } = useDocument(
-    userStatsCollection(userId ?? 'null'),
-    // Pass only one argument to useDocument
-    {
-      allowNull: true,
-      disabled: !userId
-    }
-  );
-
-  const { tweets, likes } = statsData ?? {};
-  const [totalTweets, totalPhotos, totalLikes] = [
-    (user?.totalTweets ?? 0) + (tweets?.length ?? 0),
-    user?.totalPhotos ?? 0,
-    likes?.length ?? 0
-  ];
-
   return (
     <>
       <div>
@@ -193,22 +164,7 @@ export function UserDetails({
           ))}
         </div>
       </div>
-      <div className='flex'>
-        <UserFollowStats following={following} followers={followers} />
-
-        <p className='text-xs text-light-secondary dark:text-dark-secondary'>
-          {isInFollowPage
-            ?
-          `@${user.username}`
-            : isInTweetPage
-            ? `${totalTweets} ${`+${isPlural(totalTweets)}`}`
-            : "No +'s"
-            : currentPage === 'media'
-            ? `${totalPhotos} Photo${isPlural(totalPhotos)} & GIF${isPlural(totalPhotos)}`
-            : 'No Photo & GIF'
-            : `${totalLikes} Like${isPlural(totalLikes)}`}
-        </p>
-      </div>
+      <UserFollowStats following={following} followers={followers} />
     </>
   );
 }
