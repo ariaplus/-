@@ -1,4 +1,4 @@
-aimport Link from 'next/link';
+import Link from 'next/link';
 import { useAuth } from '@lib/context/auth-context';
 import { ArplImage } from '@components/ui/ariaplus';
 
