@@ -11,6 +11,8 @@ import { Input } from '@components/input/input';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { Tweet } from '@components/tweet/tweet';
+
+import { ExploreNav } from '@components/navbar/primary/explore/explore-nav';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { DiscoverButton } from '@components/explore/header/discover-button';
@@ -41,6 +43,7 @@ export default function Home(): JSX.Element {
          </div>
       </MainHeader>
       {!isMobile && <Input />}
+      <ExploreNav/>
       <ServerDown/>
       <section className='mt-0.5 xs:mt-0 no-scrollbar'>
         {loading ? (
