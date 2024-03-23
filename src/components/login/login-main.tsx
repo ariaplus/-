@@ -41,7 +41,7 @@ export function LoginMain(): JSX.Element {
             className='text-[23px] font-bold before:content-["Everything_is_Here."] 
                        lg:text-[23px] font-bold lg:before:content-["Everything_is_Here."]'
           >
-            Content Title
+    
           </h1>
           <h2 className='hidden font-medium -mt-5 text-[20px] lg:block lg:text-[20px]'> </h2>
         </div>
