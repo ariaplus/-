@@ -12,7 +12,7 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { SubHeader } from '@components/home/sub-header';
-import { SportsNav } from '@components/navbar/primary/sports-nav';
+import { SportsNav } from '@components/navbar/primary/sports/sports-nav';
 
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
