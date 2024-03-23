@@ -9,7 +9,7 @@ export function LoginMain(): JSX.Element {
 
   return (
     <main className='grid lg:grid-cols-[1fr,45vw]'>
-      <div className='relative hidden items-center justify-center  lg:flex'>
+      <div className='relative hidden items-center justify-center z-10 lg:flex'>
         <i className='absolute'>
           <ArplImage
             imgClassName='arplicon'
