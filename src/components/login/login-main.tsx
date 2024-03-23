@@ -68,14 +68,14 @@ export function LoginMain(): JSX.Element {
               <i className='border-b border-light-border dark:border-dark-border' />
             </div>
             <Button
-              className='border border-light-line-reply font-bold text-accent-blue hover:bg-accent-blue/10
+              className='border border-light-line-reply text-accent-blue hover:bg-accent-blue/10
                          focus-visible:bg-accent-blue/10 focus-visible:!ring-accent-blue/80 active:bg-accent-blue/20
                          dark:border-light-secondary'
             >
               Sign up with phone or email
             </Button>
             <p
-              className='inner:custom-underline font-Helvetica inner:custom-underline text-center opacity-60 text-white text-[12.5px] font-Helvetica
+              className='inner:custom-underline font-Helvetica font-thin inner:custom-underline text-center opacity-60 text-white text-[12.5px] font-Helvetica
                          font-Helvetica inner:text-accent-blue'
             >
               By signing up, you agree to the{' '}
