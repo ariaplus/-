@@ -7,6 +7,8 @@ import { isPlural } from '@lib/utils';
 import { userStatsCollection } from '@lib/firebase/collections';
 import { UserName } from './user-name';
 import type { Variants } from 'framer-motion';
+import { useAuth } from '@lib/context/auth-context';
+import { useAuth } from '@lib/context/auth-context';
 
 export const variants: Variants = {
   initial: { opacity: 0 },
@@ -18,12 +20,27 @@ export function UserHeader(): JSX.Element {
   const {
     pathname,
     query: { id }
-  } = useRouter();
+  } = useRouter(); 
+  
 
-  const { user, loading } = useUser();
+  const coverData = userData?.coverPhotoURL
+    ? { src: userData.coverPhotoURL, alt: userData.name }
+    : null;
+
+  const profileData = userData
+    ? { src: userData.photoURL, alt: userData.name }
+    : null;
+  
+    const { user, isAdmin } = useAuth();
+const { user: userData, loading } = useUser();
+
 
   const userId = user ? user.id : null;
 
+  const isOwner = userData?.id === userId;
+
+
+  
   const { data: statsData, loading: statsLoading } = useDocument(
     doc(userStatsCollection(userId ?? 'null'), 'stats'),
     {
@@ -99,6 +116,18 @@ verifiedapplegreen={user.verifiedapplegreen}
           </p>
  
         </motion.div>
+      
+               {isOwner ? (
+                  <div className='flex items-end gap-2'>
+                    <div className='items-end'>
+                      <UserEditProfile />
+                    </div>
+                   
+                )}
+
+
+
+      
       )}
     </AnimatePresence>
   );
