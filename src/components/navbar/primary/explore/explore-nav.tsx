@@ -11,7 +11,7 @@ const allNavs = [
   [
     { name:'Explore', src: '/main/ui/header/primary/explore/feed.svg', path: 'explore' },
     { name:'Trends', src: '/main/ui/header/primary/explore/trends.svg', path: 'trends' },
-        { name:'Easter', src: 'public/main/ui/header/secondary/explore/easter.svg', path: 'easter' },
+        { name:'Easter', src: '/main/ui/header/secondary/explore/easter.svg', path: 'easter' },
   { name:'Likes', src: '/main/ui/header/primary/explore/liked.svg', path: 'likes' },
     { name:'ExploreMore', src: '/main/ui/header/primary/explore/explore-more.svg', path: 'explore/more' }
 
