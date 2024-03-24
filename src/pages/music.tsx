@@ -38,7 +38,7 @@ export default function Music(): JSX.Element {
       </MainHeader>
           <MusicNav/>
   
-      <div className='self-center'>
+      <div className='self-center contents'>
    
   <NewMusicSlide/>
         </div>
