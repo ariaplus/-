@@ -38,19 +38,20 @@ export default function PalmSunday(): JSX.Element {
         useActionButton action={back} 
         title='Palm Sunday'
         className='flex z-80 items-center justify-between text-[0px]'
-      > <div className='flex items-right' >
-        <ExploreButton />
-         </div>
+      >
+        <div className='flex items-right'>
+          <ExploreButton />
+        </div>
       </MainHeader>
       <NextImage className='z-[8] accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
-            useSkeleton
-            layout='fill'
-            imgClassName='object-cover'
-            src='https://media.istockphoto.com/id/959120756/photo/elegant-composition-of-female-hand-holding-palm-leaf.webp?s=2048x2048&w=is&k=20&c=BYHrEUnnOr8HwUUFK0xA8S6rhzhZh_oocD0tjiKoGBA='
-            alt=''
-            key=''
-          />
-      <p className='z-[9] text-[13px] px-[20px]  text-center -mt-[25px] '> Palm Sunday marks the beginning of Holy Week in the Christian tradition, commemorating Jesus Christ's triumphal entry into Jerusalem, as described in the Gospels. It is celebrated on the Sunday before Easter Sunday, with worshippers often carrying palm branches, symbolizing the ones laid before Jesus as he rode into the city. This event signifies the anticipation and joy of the crowds who hailed Jesus as the Messiah, spreading their cloaks and palm branches on the road. Palm Sunday serves as a reminder of the humility, sacrifice, and ultimate purpose of Jesus's journey towards crucifixion and resurrection, setting the stage for the profound events that follow during Holy Week.</p>
+        useSkeleton
+        layout='fill'
+        imgClassName='object-cover'
+        src='https://media.istockphoto.com/id/959120756/photo/elegant-composition-of-female-hand-holding-palm-leaf.webp?s=2048x2048&w=is&k=20&c=BYHrEUnnOr8HwUUFK0xA8S6rhzhZh_oocD0tjiKoGBA='
+        alt=''
+        key=''
+      />
+      <p className='z-[9] text-[13px] px-[20px] text-center -mt-[25px]'>Palm Sunday marks the beginning of Holy Week in the Christian tradition, commemorating Jesus Christ&apos;s triumphal entry into Jerusalem, as described in the Gospels. It is celebrated on the Sunday before Easter Sunday, with worshippers often carrying palm branches, symbolizing the ones laid before Jesus as he rode into the city. This event signifies the anticipation and joy of the crowds who hailed Jesus as the Messiah, spreading their cloaks and palm branches on the road. Palm Sunday serves as a reminder of the humility, sacrifice, and ultimate purpose of Jesus&apos;s journey towards crucifixion and resurrection, setting the stage for the profound events that follow during Holy Week.</p>
 
       <EasterNav/>
       <ServerDown/>
