@@ -17,7 +17,6 @@ import { SportsNav } from '@components/navbar/primary/sports/sports-nav';
 import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
-import { Start } from '@components/modal/discover/start';
 import { ExploreButton } from '@components/explore/header/explore-button';
 import { NewsButton } from '@components/explore/header/news-button';
 import type { ReactElement, ReactNode } from 'react';
