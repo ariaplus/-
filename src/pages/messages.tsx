@@ -12,7 +12,7 @@ import {
   tweetsCollection,
   userBookmarksCollection
 } from '@lib/firebase/collections';
-import { HomeLayout, ProtectedLayout } from '@components/layout/common-layout';
+import { AsideMessages, ProtectedLayout } from '@components/layout/common-layout';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
@@ -112,7 +112,7 @@ export default function Messages(): JSX.Element {
 Messages.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
-      <HomeLayout>{page}</HomeLayout>
+      <AsideMessages>{page}</AsideMessages>
     </MainLayout>
   </ProtectedLayout>
 );
