@@ -76,12 +76,10 @@ export default function Messages(): JSX.Element {
         />
       </Modal>
       
-          <MainHeader useActionButton action={back} className='flex items-center '>
+          <MainHeader useActionButton action={back} className='flex items-center justify-between '>
         <div className='-mb-1 justify-between flex flex-col'>
           <h2 className='-mt-1 text-xl font-bold'>Messages</h2>
-          <p className='text-xs text-light-secondary dark:text-dark-secondary'>
-            @{user?.username}
-          </p>
+      
         </div>
         
         <Button
