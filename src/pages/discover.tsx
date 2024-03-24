@@ -20,7 +20,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
 
-export default function Home(): JSX.Element {
+export default function Discover(): JSX.Element {
   const { isMobile } = useWindow();
 
   const { data, loading, LoadMore } = useInfiniteScroll(
@@ -71,7 +71,7 @@ export default function Home(): JSX.Element {
   );
 }
 
-Home.getLayout = (page: ReactElement): ReactNode => (
+Discover.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
