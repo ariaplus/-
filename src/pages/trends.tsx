@@ -1,42 +1,72 @@
-import { useRouter } from 'next/router';
-import {
-  TrendsLayout,
-  ProtectedLayout
-} from '@components/layout/common-layout';
+import { AnimatePresence } from 'framer-motion';
+import { where, orderBy } from 'firebase/firestore';
+import { useWindow } from '@lib/context/window-context';
+import { useInfiniteScroll } from '@lib/hooks/useInfiniteScroll';
+import { tweetsCollection } from '@lib/firebase/collections';
+import { HomeLayout, ProtectedLayout } from '@components/layout/common-layout';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
-import { MainHeader } from '@components/home/main-header';
 import { MainContainer } from '@components/home/main-container';
-import { AsideTrends } from '@components/aside/aside-trends';
-import { Button } from '@components/ui/button';
-import { ToolTip } from '@components/ui/tooltip';
-import { HeroIcon } from '@components/ui/hero-icon';
+import { UpdateUsername } from '@components/home/update-username';
+import { MainHeader } from '@components/home/main-header';
+import { Tweet } from '@components/tweet/tweet';
+
+import { ExploreNav } from '@components/navbar/primary/explore/explore-nav';
+import { Loading } from '@components/ui/loading';
+import { Error } from '@components/ui/error';
+import { DiscoverButton } from '@components/buttons/primary/discover-button';
+import { ExploreButton } from '@components/buttons/primary/explore-button';
+import { ServerDown } from '@components/maintenance/server-down';
 import type { ReactElement, ReactNode } from 'react';
 
-export default function Bookmarks(): JSX.Element {
-  const { back } = useRouter();
+
+export default function Trends(): JSX.Element {
+  const { isMobile } = useWindow();
+
+  const { data, loading, LoadMore } = useInfiniteScroll(
+    tweetsCollection,
+    [where('parent', '==', null), orderBy('createdAt', 'desc')],
+    { includeUser: true, allowNull: true, preserve: true }
+  );
 
   return (
-    <MainContainer>
+    <MainContainer className='no-scrollbar'>
       <SEO title='Trends | Aria+' />
-      <MainHeader useActionButton title='Trends' action={back}>
-        <Button
-          className='dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
-        >
-          <HeroIcon className='h-5 w-5' iconName='Cog8ToothIcon' />
-          <ToolTip tip='Settings' />
-        </Button>
+      <MainHeader
+        
+        title='Trends'
+        className='flex items-center justify-between text-[0px]'
+      > <div className='flex items-right' >
+        <ExploreButton />
+        <DiscoverButton />
+         </div>
       </MainHeader>
-      <AsideTrends inTrendsPage />
+      <ExploreNav/>
+      <ServerDown/>
+      <section className='mt-0.5 xs:mt-0 no-scrollbar'>
+        {loading ? (
+          <Loading className='mt-5' />
+        ) : !data ? (
+          <Error message='Something went wrong' />
+        ) : (
+          <>
+            <AnimatePresence mode='popLayout'>
+              {data.map((tweet) => (
+                <Tweet {...tweet} key={tweet.id} />
+              ))}
+            </AnimatePresence>
+            <LoadMore />
+          </>
+        )}
+      </section>
     </MainContainer>
   );
 }
 
-Bookmarks.getLayout = (page: ReactElement): ReactNode => (
+Trends.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
-      <TrendsLayout>{page}</TrendsLayout>
+      <HomeLayout>{page}</HomeLayout>
     </MainLayout>
   </ProtectedLayout>
 );
