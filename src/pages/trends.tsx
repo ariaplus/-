@@ -10,6 +10,7 @@ import { MainContainer } from '@components/home/main-container';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { Tweet } from '@components/tweet/tweet';
+import { useRouter } from 'next/router';
 
 import { ExploreNav } from '@components/navbar/primary/explore/explore-nav';
 import { Loading } from '@components/ui/loading';
@@ -22,7 +23,8 @@ import type { ReactElement, ReactNode } from 'react';
 
 export default function Trends(): JSX.Element {
   const { isMobile } = useWindow();
-
+  const { back } = useRouter();
+             
   const { data, loading, LoadMore } = useInfiniteScroll(
     tweetsCollection,
     [where('parent', '==', null), orderBy('createdAt', 'desc')],
@@ -33,7 +35,7 @@ export default function Trends(): JSX.Element {
     <MainContainer className='no-scrollbar'>
       <SEO title='Trends | Aria+' />
       <MainHeader
-        
+        useActionButton action={back} 
         title='Trends'
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
