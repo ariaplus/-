@@ -9,11 +9,11 @@ type EasterNavProps = {
 
 const allNavs = [
   [
-    { name:'Fashion', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
-    { name:'FashionProducts', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'fashion/products' },
-  { name:'Clothing', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'clothing' },
-    { name:'FashionShows', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'fashionshows' },
-       { name:'FashionCategories', src: '/main/ui/header/primary/fashion/down.svg', path: 'fashion/categories' }
+    { name:'Easter', src: '/main/ui/header/primary/discover/fashion.svg', path: 'easter' },
+    { name:'PalmSunday', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'palmsunday' },
+  { name:'HolyThurday', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'holythursday' },
+    { name:'GoodFriday', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'goodfriday' },
+       { name:'EasterSunday', src: '/main/ui/header/primary/fashion/down.svg', path: 'eastersunday' }
  
   ]
 
