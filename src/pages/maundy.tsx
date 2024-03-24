@@ -20,7 +20,6 @@ import { ExploreButton } from '@components/buttons/primary/explore-button';
 import { ServerDown } from '@components/maintenance/server-down';
 import type { ReactElement, ReactNode } from 'react';
 
-
 export default function Maundy(): JSX.Element {
   const { isMobile } = useWindow();
   const { back } = useRouter();
@@ -51,7 +50,7 @@ export default function Maundy(): JSX.Element {
         alt=''
         key=''
       />
-      <p className='z-[9] text-[13px] px-[20px] text-center -mt-[25px]'>Maundy Thursday, observed in the Christian liturgical calendar during Holy Week, commemorates the Last Supper of Jesus Christ with his disciples, as described in the Gospels. This solemn day holds profound significance, marking Jesus' institution of the Eucharist and the priesthood, as well as his act of humility in washing the feet of his disciples, demonstrating the essence of servant leadership. The term "Maundy" is derived from the Latin word "mandatum," meaning commandment, referencing Jesus' new commandment to love one another as he has loved them. </p>
+      <p className='z-[9] text-[13px] px-[20px] text-center -mt-[25px]'>Maundy Thursday, observed in the Christian liturgical calendar during Holy Week, commemorates the Last Supper of Jesus Christ with his disciples, as described in the Gospels. This solemn day holds profound significance, marking Jesus&apos; institution of the Eucharist and the priesthood, as well as his act of humility in washing the feet of his disciples, demonstrating the essence of servant leadership. The term &quot;Maundy&quot; is derived from the Latin word &quot;mandatum,&quot; meaning commandment, referencing Jesus&apos; new commandment to love one another as he has loved them. </p>
 
       <EasterNav/>
       <ServerDown/>
