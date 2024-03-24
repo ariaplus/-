@@ -18,13 +18,13 @@ import { Tweet } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 
-import { ExploreButton } from '@components/explore/header/explore-button';
-import { NewsButton } from '@components/explore/header/news-button';
+import { ExploreButton } from '@components/buttons/primary/explore-button';
+
 import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
 import { ServerDown } from '@components/maintenance/server-down';
 
-export default function Home(): JSX.Element {
+export default function News(): JSX.Element {
   const { isMobile } = useWindow();
     const { back } = useRouter();
 
@@ -76,7 +76,7 @@ export default function Home(): JSX.Element {
   );
 }
 
-Home.getLayout = (page: ReactElement): ReactNode => (
+News.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <HomeLayout>{page}</HomeLayout>
