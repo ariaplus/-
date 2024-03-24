@@ -25,7 +25,7 @@ type AsideTrendsProps = {
   inTrendsPage?: boolean;
 };
 
-export function AsideRightTrends({ inTrendsPage }: AsideTrendsProps): JSX.Element {
+export function AsideMessages({ inTrendsPage }: AsideTrendsProps): JSX.Element {
   const { data, loading } = useTrends(1, inTrendsPage ? 100 : 10, {
     refreshInterval: 30000
   });
