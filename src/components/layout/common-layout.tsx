@@ -1,7 +1,7 @@
 import { useRequireAuth } from '@lib/hooks/useRequireAuth';
 import { Aside } from '@components/aside/aside';
 import { AsideRightTrends } from '@components/aside/aside-right-trends';
-import { AsideMessages } from '@components/aside/messages/aside-messages";
+import { AsideMessages } from '@components/aside/messages/aside-messages';
 import { Suggestions } from '@components/aside/suggestions';
 import { Placeholder } from '@components/common/placeholder';
 import { AsideTv } from '@components/aside/aside-tv';
