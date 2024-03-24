@@ -37,7 +37,7 @@ export default function Easter(): JSX.Element {
       <MainHeader
         useActionButton action={back} 
         title='Easter'
-        className='flex items-center justify-between text-[0px]'
+        className='flex z-80 items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
          </div>
