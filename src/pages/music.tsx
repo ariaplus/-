@@ -1,8 +1,13 @@
 import { useRouter } from 'next/router';
+import { useAuth } from '@lib/context/auth-context';
 import {
   TrendsLayout,
   ProtectedLayout
 } from '@components/layout/common-layout';
+import {
+  moviesCollection,
+  userBookmarksCollection
+} from '@lib/firebase/collections';
 import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
@@ -10,43 +15,38 @@ import { MainContainer } from '@components/home/main-container';
 import { AsideTrends } from '@components/aside/aside-trends';
 import { Button } from '@components/ui/button';
 import { ToolTip } from '@components/ui/tooltip';
+import { HeroIcon } from '@components/ui/hero-icon';
 import { MusicNav  } from '@components/navbar/primary/music/music-nav';
 
-import { HeroIcon } from '@components/ui/hero-icon';
-import type { ReactElement, ReactNode } from 'react';
-import { useAuth } from '@lib/context/auth-context';
 import { NewMusicSlide } from '@components/music/new';
+import type { ReactElement, ReactNode } from 'react';
 
-export default function Bookmarks(): JSX.Element {
+export default function Music(): JSX.Element {
   const { back } = useRouter();
-  const { user } = useAuth();
-
+  
+ const { user } = useAuth();
   const userId = user?.id as string;
   
   return (
     <MainContainer>
       <SEO title='Music | Aria+' />
-      <MainHeader useActionButton action={back} className='justify-between' >
-          <div className='-mb-1 flex flex-col'>
-          <h2 className='-mt-1 text-xl font-bold'>Aria+ Music</h2>
-     
-          </p>
-        </div>
-        <Button
-          className='dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10
-                     active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
-        >
-          <HeroIcon className='h-5 w-5' iconName='Cog8ToothIcon' />
-          <ToolTip tip='Settings' />
-        </Button>
+      <MainHeader     useActionButton action={back} 
+        title='Music'
+        className='flex items-center justify-between text-[0px]'
+      > 
+       
       </MainHeader>
-    <MusicNav/>
+          <MusicNav/>
+  
+      <div className='self-center'>
+   
   <NewMusicSlide/>
+        </div>
     </MainContainer>
   );
 }
 
-Bookmarks.getLayout = (page: ReactElement): ReactNode => (
+Music.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
       <TrendsLayout>{page}</TrendsLayout>
