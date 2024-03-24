@@ -28,7 +28,7 @@ export function Movie() {
     <div className='grid grid-cols-3 gap-4 px-3'>
       {images.map((image, index) => (
         <Link key={index} href={image.href}>
-          <a className='relative h-48 border-[#333333] md:h-64 sm:h-56 overflow-hidden hover-animation transition rounded-lg'>
+          <a className='relative h-48 border border-[#333333] md:h-64 sm:h-56 overflow-hidden hover-animation transition rounded-lg'>
             <NextImage
               useSkeleton
               src={image.src}
