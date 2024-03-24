@@ -11,11 +11,11 @@ import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
 import { Tweet } from '@components/tweet/tweet';
 import { useRouter } from 'next/router';
+import { NextImage } from '@components/ui/next-image';
 
-import { ExploreNav } from '@components/navbar/primary/explore/explore-nav';
+import { EasterNav } from '@components/navbar/secondary/explore/easter/easter.nav';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
-import { DiscoverButton } from '@components/buttons/primary/discover-button';
 import { ExploreButton } from '@components/buttons/primary/explore-button';
 import { ServerDown } from '@components/maintenance/server-down';
 import type { ReactElement, ReactNode } from 'react';
@@ -40,10 +40,19 @@ export default function Easter(): JSX.Element {
         className='flex items-center justify-between text-[0px]'
       > <div className='flex items-right' >
         <ExploreButton />
-        <DiscoverButton />
          </div>
       </MainHeader>
-      <ExploreNav/>
+      <NextImage className='accent-tab relative mt-0.5 h-64 xs:h-64 sm:h-64 h-64 w-full rounded-lg p-0 transition hover:brightness-75 xs:rounded-lg'
+            useSkeleton
+            layout='fill'
+            imgClassName='object-cover'
+            src='https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg'
+            alt=''
+            key=''
+          />
+      <p className='text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
+
+      <EasterNav/>
       <ServerDown/>
       <section className='mt-0.5 xs:mt-0 no-scrollbar'>
         {loading ? (
