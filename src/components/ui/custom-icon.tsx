@@ -57,7 +57,7 @@ function FeatherIcon({ className }: IconProps): JSX.Element {
 function SpinnerIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
-      className={cn('animate-[spin_0.3s_linear_infinite]', className)}
+      className={cn('cortana-loader', className)}
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 24 24'
