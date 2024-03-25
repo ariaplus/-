@@ -13,7 +13,7 @@ import { Tweet } from '@components/tweet/tweet';
 import { useRouter } from 'next/router';
 import { NextImage } from '@components/ui/next-image';
 
-import { EasterNav } from '@components/navbar/secondary/explore/easter/easter.nav';
+import { EasterNav } from '@components/navbar/secondary/explore/easter/easter-nav';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { ExploreButton } from '@components/buttons/primary/explore-button';
