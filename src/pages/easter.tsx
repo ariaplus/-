@@ -46,7 +46,7 @@ export default function Easter(): JSX.Element {
             useSkeleton
             layout='fill'
             imgClassName='object-cover'
-            src='https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg'
+            src='/main/ui/secondary/banner/easter/easter-cover.jpg'
             alt=''
             key=''
           />
