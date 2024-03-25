@@ -23,35 +23,35 @@ const navLinks: Readonly<NavLink[]> = [
   {
     href: '/explore',
     linkName: 'Explore',
-    src: '/main/ui/primary/explore.svg'
+    src: '/main/ui/primary/sidebar/explore.svg'
   },
   {
     href: '/discover',
     linkName: 'Discover',
-    src: '/main/ui/primary/discover.svg'
+    src: '/main/ui/primary/sidebar/discover.svg'
 
   },
   {
     href: '/notifications',
     linkName: 'Notifications',
-    src: '/main/ui/primary/bell.svg'
+    src: '/main/ui/primary/sidebar/bell.svg'
   },
   {
     href: '/messages',
     linkName: 'Messages',
-    src: '/main/ui/primary/chat.svg',
+    src: '/main/ui/primary/sidebar/chat.svg',
     canBeHidden: true
   },
   {
     href: '/tv',
     linkName: 'tv',
-    src: '/main/ui/primary/tv-box.svg',
+    src: '/main/ui/primary/sidebar/3d-tv-box.svg',
     canBeHidden: true
   },
   {
     href: '/music',
     linkName: 'Music',
-    src: 'MusicalNoteIcon',
+    src: '/main/ui/primary/sidebar/music.svg',
     canBeHidden: true
   },
  {
@@ -118,7 +118,7 @@ export function Sidebar(): JSX.Element {
               href={`/${username}`}
               username={username}
               linkName='Profile'
-              src='/assets/ariaplus.svg'
+              src='/main/ui/primary/sidebar/user1.svg'
             />
  
             {!isMobile && <MoreSettings />}
