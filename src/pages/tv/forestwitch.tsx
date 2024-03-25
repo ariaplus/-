@@ -10,6 +10,8 @@ import { MainContainer } from '@components/home/main-container';
 import { AsideTrends } from '@components/aside/aside-trends';
 import { Button } from '@components/ui/button';
 import { ToolTip } from '@components/ui/tooltip';
+
+import { AImage } from '@components/ui/tertiary/containers/image/a-image';
 import { HeroIcon } from '@components/ui/hero-icon';
 import type { ReactElement, ReactNode } from 'react';
 import { NextImage } from '@components/ui/next-image';
@@ -39,7 +41,7 @@ export default function Bookmarks(): JSX.Element {
                />
       <div className='flex gap-10px] '>
         <div className='flex'>  
-       <NextImage
+       <AImage
         src='/main/ui/tertiary/elements/tv/premieroriginals.svg' // Update this with the path to your image
         alt=''
         width={200}
