@@ -39,7 +39,7 @@ export default function Bookmarks(): JSX.Element {
                />
       <div className='flex gap-10px] '>
         <div className='flex'>  
-       <ArplImage
+       <NextImage
         src='/main/ui/tertiary/elements/tv/premieroriginals.svg' // Update this with the path to your image
         alt=''
         width={200}
