@@ -37,8 +37,21 @@ export default function Bookmarks(): JSX.Element {
         height={125}  
         className=' mt-56 rounded-lg pt-20'
                />
+      <div className='flex'>
+        <div className='flex'>  
+       <NextImage
+        src='/main/ui/tertiary/elements/tv/premieroriginals.svg' // Update this with the path to your image
+        alt='4K'
+        width={250}
+        height={125}  
+        className=''
+               />
+        </div>
+        <div className='flex-col'>
       <p className='text-gray-600 mt-4 text-center'>Horror | 2024 | 1hr 40min | 4K</p>
       <p className='text-yellow-600 text-center'>Coming to Aria+ at a Later Date</p>
+        </div>
+      </div>
       <div className='flex pt-[7px] gap-[10px] ml-[40px] '>
       <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
