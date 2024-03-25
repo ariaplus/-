@@ -9,11 +9,11 @@ type CoachellaNavProps = {
 
 const allNavs = [
   [
-    { name:'Coachella', src: '/main/ui/header/secondary/explore/easter.svg', path: 'coachella' },
-    { name:'CoachellaMusic', src: '/main/ui/header/secondary/explore/easter/modern-green-leaf.svg', path: 'coachella/music' },
-  { name:'CoachellaParties', src: '/main/ui/header/secondary/explore/easter/bread.svg', path: 'coachella/parties' },
-    { name:'CoachellaCommunities', src: '/main/ui/header/secondary/explore/easter/goodfriday.svg', path: 'communities/coachella' },
-       { name:'CoachellaCamp', src: '/main/ui/header/secondary/explore/easter/easter-sunday.svg', path: 'coachella/camp' }
+    { name:'Coachella', src: '/main/ui/header/secondary/explore/coachella/coachella.svg', path: 'coachella' },
+    { name:'CoachellaMusic', src: '/main/ui/header/secondary/explore/coachella/music.svg', path: 'coachella/music' },
+  { name:'CoachellaParties', src: '/main/ui/header/secondary/explore/coachella/communities.svg', path: 'coachella/parties' },
+    { name:'CoachellaCommunities', src: '/main/ui/header/secondary/explore/coachella/star.svg', path: 'communities/coachella' },
+       { name:'CoachellaCamp', src: '/main/ui/header/secondary/explore/coachella/tent.svg', path: 'coachella/camp' }
  
   ]
 
