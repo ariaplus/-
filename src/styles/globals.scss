@@ -105,3 +105,66 @@
            dark:[box-shadow:#ffffff33_0px_0px_15px,_#ffffff26_0px_0px_3px_1px];
   }
 }
+
+
+
+.circle-loader {
+  position: relative;
+}
+.circle-loader:before, .circle-loader:after {
+  animation-duration: 900ms;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-style: preserve-3d;
+}
+.circle-loader:before {
+  animation-name: outerFlip;
+  box-shadow: 0 0 0 9px #3589c7;
+  height: 89px;
+  width: 89px;
+}
+
+
+.demo {
+  height: 107px;
+  margin: 60px auto 0;
+  width: 107px;
+}
+
+.response {
+  font-size: 28px;
+  line-height: 32px;
+  margin: 40px auto 0;
+  text-align: center;
+  width: 320px;
+}
+
+
+@keyframes outerFlip {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  7% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  60% {
+    transform: rotateY(180deg);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotateY(180deg);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+}
+
