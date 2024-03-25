@@ -32,19 +32,19 @@ export default function Bookmarks(): JSX.Element {
 
        <NextImage
         src='/assets/tv/movie/data/forestwitch/fw.png' // Update this with the path to your image
-        alt='4K'
+        alt=''
         width={250}
         height={125}  
         className=' mt-56 rounded-lg pt-20'
                />
-      <div className='flex'>
+      <div className='flex gap-10px] '>
         <div className='flex'>  
        <ArplImage
         src='/main/ui/tertiary/elements/tv/premieroriginals.svg' // Update this with the path to your image
-        alt='4K'
-        width={250}
+        alt=''
+        width={200}
         height={125}  
-        className=''
+        className='object-contain -mt-[9px]'
                />
         </div>
         <div className='flex-col'>
@@ -59,7 +59,7 @@ export default function Bookmarks(): JSX.Element {
       <TvPassModal/  >   
         </div>         
         
-      <p className='text-gray-600 pt-[10px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
+      <p className='text-gray-600 pt-[10px] text-[13px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
      </div>
      <div className='border-solid border-2 border-white mx-3.5 mb-5 shadow-md rounded-md p-8'>
       <h2 className='text-2xl font-bold mb-2'>Forest Witch</h2>
