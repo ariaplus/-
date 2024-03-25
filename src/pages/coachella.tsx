@@ -13,7 +13,7 @@ import { Tweet } from '@components/tweet/tweet';
 import { useRouter } from 'next/router';
 import { NextImage } from '@components/ui/next-image';
 
-import { EasterNav } from '@components/navbar/secondary/explore/easter/easter.nav';
+import { CoachellaNav } from '@components/navbar/secondary/explore/coachella/coachella-nav';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import { ExploreButton } from '@components/buttons/primary/explore-button';
@@ -51,7 +51,7 @@ export default function Coachella(): JSX.Element {
         key=''
       />
       <p className='z-[9] text-[13px] px-[20px] text-center -mt-[25px]'>Coachella is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.</p>
-      <EasterNav/>
+      <CoachellaNav/>
       <ServerDown/>
       <section className='mt-0.5 xs:mt-0 no-scrollbar'>
         {loading ? (
