@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import cn from 'clsx';
 import { variants } from '@components/user/user-header';
-import { CoachellaNavLink } from './easter-nav-link';
+import { CoachellaNavLink } from './coachella-nav-link';
 
 type CoachellaNavProps = {
   follow?: boolean;
@@ -9,11 +9,11 @@ type CoachellaNavProps = {
 
 const allNavs = [
   [
-    { name:'Easter', src: '/main/ui/header/secondary/explore/easter.svg', path: 'easter' },
-    { name:'PalmSunday', src: '/main/ui/header/secondary/explore/easter/modern-green-leaf.svg', path: 'palmsunday' },
-  { name:'HolyThurday', src: '/main/ui/header/secondary/explore/easter/bread.svg', path: 'maundy' },
-    { name:'GoodFriday', src: '/main/ui/header/secondary/explore/easter/goodfriday.svg', path: 'goodfriday' },
-       { name:'EasterSunday', src: '/main/ui/header/secondary/explore/easter/easter-sunday.svg', path: 'eastersunday' }
+    { name:'Coachella', src: '/main/ui/header/secondary/explore/easter.svg', path: 'coachella' },
+    { name:'CoachellaMusic', src: '/main/ui/header/secondary/explore/easter/modern-green-leaf.svg', path: 'coachella/music' },
+  { name:'CoachellaParties', src: '/main/ui/header/secondary/explore/easter/bread.svg', path: 'coachella/parties' },
+    { name:'CoachellaCommunities', src: '/main/ui/header/secondary/explore/easter/goodfriday.svg', path: 'communities/coachella' },
+       { name:'CoachellaCamp', src: '/main/ui/header/secondary/explore/easter/easter-sunday.svg', path: 'coachella/camp' }
  
   ]
 
