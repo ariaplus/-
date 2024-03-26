@@ -9,11 +9,11 @@ type TvNavProps = {
 
 const allNavs = [
   [
-    { name:'Fashion', src: '/main/ui/header/primary/discover/fashion.svg', path: 'fashion' },
-    { name:'FashionProducts', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'fashion/products' },
-  { name:'Clothing', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'clothing' },
-    { name:'FashionShows', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'fashionshows' },
-       { name:'FashionCategories', src: '/main/ui/header/primary/fashion/down.svg', path: 'fashion/categories' }
+    { name:'tv', src: '/main/ui/primary/tv/3d-tv-box.svg', path: 'tv' },
+    { name:'Featured', src: '/main/ui/header/primary/fashion/makeup.svg', path: 'featured' },
+  { name:'Originals', src: '/main/ui/header/primary/fashion/fashion-clothing.svg', path: 'originals' },
+    { name:'Categories', src: '/main/ui/header/primary/fashion/fashionshow.svg', path: 'categories' },
+       { name:'Watchlist', src: '/main/ui/header/primary/fashion/down.svg', path: 'watchlist' }
  
   ]
 
