@@ -47,7 +47,7 @@ export function AsideTransactions(): JSX.Element {
         </motion.div>
       ) : (
         <Error />
-      )}
+ 
     </section>
   );
 }
