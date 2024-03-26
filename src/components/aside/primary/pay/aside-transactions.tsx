@@ -35,9 +35,9 @@ export function AsideTransactions(): JSX.Element {
   );
 
   return (
-    <section className='hover-animation flex  rounded-2xl text-center bg-black border border-gray-800 pt-[10px]'>
+    <section className='hover-animation flex  rounded-2xl text-center h-[450px] bg-black border border-gray-800 pt-[10px]'>
 
-      <div className='hover-animation rounded-2xl bg-black border h-[450px] border-slate-700'>
+      <div className='text-center '>
       <div className='flex'>
         <p className='text-base text-center'>TRANSACTIONS</p>
       </div>
