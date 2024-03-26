@@ -20,6 +20,8 @@ import { MainHeader } from '@components/home/main-header';
 import { MainContainer } from '@components/home/main-container';
 import { Modal } from '@components/modal/modal';
 import { TvPassModal } from '@components/modal/tv/tv-pass';
+
+import { RemoteButton } from '@components/buttons/primary/tv/remote-button';
 import { ActionModal } from '@components/modal/action-modal';
 import { Movie } from '@components/tv/movie';
 import { StatsEmpty } from '@components/tweet/stats-empty';
@@ -52,7 +54,7 @@ export default function TV(): JSX.Element {
         
         <div className=' flex items-end'>
 
-       <TvPassModal  />
+       <RemoteButton  />
           </div>
 
         
