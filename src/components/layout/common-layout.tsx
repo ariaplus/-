@@ -4,6 +4,8 @@ import { AsideRightTrends } from '@components/aside/aside-right-trends';
 import { AsideMessages } from '@components/aside/messages/aside-messages';
 import { Suggestions } from '@components/aside/suggestions';
 import { Placeholder } from '@components/common/placeholder';
+
+import { AsideTransactions } from '@components/aside/primary/pay/aside-transactions';
 import { AsideTv } from '@components/aside/aside-tv';
 import type { ReactNode } from 'react';
 
@@ -70,6 +72,17 @@ export function TvLayout({ children }: LayoutProps): JSX.Element {
       {children}
       <Aside>
         <AsideTv />
+      </Aside>
+    </>
+  );
+}
+
+export function PayPrimaryLayout({ children }: LayoutProps): JSX.Element {
+  return (
+    <>
+      {children}
+      <Aside>
+        <AsideTransactions />
       </Aside>
     </>
   );
