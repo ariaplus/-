@@ -37,11 +37,6 @@ export function AsideTransactions(): JSX.Element {
   return (
     <section className='hover-animation flex  rounded-2xl text-center h-[450px] bg-black border border-gray-800 pt-[10px]'>
 
-      <div className='text-center '>
-      <div className='flex'>
-        <p className='text-base text-center'>TRANSACTIONS</p>
-      </div>
-    </div>
       
       {adminLoading || suggestionsLoading ? (
         <Loading className='flex h-52 items-center justify-center p-4' />
