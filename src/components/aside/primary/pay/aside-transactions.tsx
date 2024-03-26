@@ -46,7 +46,7 @@ export function AsideTransactions(): JSX.Element {
       {adminLoading || suggestionsLoading ? (
         <Loading className='flex h-52 items-center justify-center p-4' />
       ) : suggestionsData ? (
-        <motion.div className='inner:px-4 inner:py-3' {...variants}>
+        <motion.div className='inner:px-4 inner:py-3' >
 
           
         </motion.div>
