@@ -35,12 +35,12 @@ export function AsideTransactions(): JSX.Element {
   );
 
   return (
-    <section className='hover-animation flex  rounded-2xl text-center h-[450px] bg-black border border-gray-800 pt-[10px]'>
+    <section className='hover-animation flex  rounded-2xl text-center h-[450px] bg-black border border-gray-800 '>
 
       
-      {adminLoading || suggestionsLoading ? (
+      
         <Loading className='flex h-52 items-center justify-center p-4' />
-      ) : suggestionsData ? (
+
         <motion.div className='inner:px-4 inner:py-3' >
 
           
