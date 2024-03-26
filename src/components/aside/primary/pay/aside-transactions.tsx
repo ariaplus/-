@@ -1,42 +1,59 @@
 import Link from 'next/link';
-import cn from 'clsx';
 import { motion } from 'framer-motion';
-import { formatNumber } from '@lib/date';
-import { preventBubbling } from '@lib/utils';
-import { useTrends } from '@lib/api/trends';
-import { Error } from '@components/ui/error';
-import { HeroIcon } from '@components/ui/hero-icon';
-import { Button } from '@components/ui/button';
-import { ToolTip } from '@components/ui/tooltip';
+import {
+  doc,
+  limit,
+  query,
+  where,
+  orderBy,
+  documentId
+} from 'firebase/firestore';
+import { useAuth } from '@lib/context/auth-context';
+import { useCollection } from '@lib/hooks/useCollection';
+import { useDocument } from '@lib/hooks/useDocument';
+import { usersCollection } from '@lib/firebase/collections';
+import { UserCard } from '@components/user/user-card';
 import { Loading } from '@components/ui/loading';
-import type { MotionProps } from 'framer-motion';
-import { NextImage } from '@components/ui/next-image';
-import { RightInput } from '@components/input/right-input';
-import { useWindow } from '@lib/context/window-context';
+import { Error } from '@components/ui/error';
+import { variants } from './aside-trends';
 
-export const variants: MotionProps = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { duration: 0.8 }
-};
+export function AsideTransactions(): JSX.Element {
+  const { randomSeed } = useAuth();
 
-type AsideTransactionsProps = {
-  inTrendsPage?: boolean;
-};
+  const { data: adminData, loading: adminLoading } = useDocument(
+    doc(usersCollection, 'Twt0A27bx9YcG4vu3RTsR7ifJzf2'),
+    { allowNull: true }
+  );
 
-export function AsideTransactions({ inTrendsPage }: AsideTransactionsProps): JSX.Element {
-  const { data, loading } = useTrends(1, inTrendsPage ? 100 : 10, {
-    refreshInterval: 30000
-  });
-
-  const { trends, location } = data ?? {};
-  const { isMobile } = useWindow();
+  const { data: suggestionsData, loading: suggestionsLoading } = useCollection(
+    query(
+      usersCollection,
+      where(documentId(), '>=', randomSeed),
+      orderBy(documentId()),
+      limit(2)
+    ),
+    { allowNull: true }
+  );
 
   return (
-    <div className='hover-animation rounded-2xl bg-black border h-[450px] border-slate-700'>
+    <section className='hover-animation flex  rounded-2xl text-center bg-black border border-gray-800 pt-[10px]'>
+
+      <div className='hover-animation rounded-2xl bg-black border h-[450px] border-slate-700'>
       <div className='flex'>
-        <p className='text-base text-center'></p>
+        <p className='text-base text-center'>TRANSACTIONS</p>
       </div>
     </div>
+      
+      {adminLoading || suggestionsLoading ? (
+        <Loading className='flex h-52 items-center justify-center p-4' />
+      ) : suggestionsData ? (
+        <motion.div className='inner:px-4 inner:py-3' {...variants}>
+
+          
+        </motion.div>
+      ) : (
+        <Error />
+      )}
+    </section>
   );
 }
