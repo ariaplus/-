@@ -14,7 +14,6 @@ import { NextImage } from '@components/ui/next-image';
 import { RightInput } from '@components/input/right-input';
 import { useWindow } from '@lib/context/window-context';
 
-
 export const variants: MotionProps = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
@@ -31,17 +30,13 @@ export function AsideTransactions({ inTrendsPage }: AsideTransactionsProps): JSX
   });
 
   const { trends, location } = data ?? {};
-   const { isMobile } = useWindow();
-
+  const { isMobile } = useWindow();
 
   return (
-    
-    <section
-      className='hover-animation rounded-2xl bg-black border border-slate-700'>
-    
-      <p className='text-base text-center '>
-      </p>
-
-    </section>
+    <div className='hover-animation rounded-2xl bg-black border h-[450px] border-slate-700'>
+      <div className='flex'>
+        <p className='text-base text-center'></p>
+      </div>
+    </div>
   );
 }
