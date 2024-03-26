@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useAuth } from '@lib/context/auth-context';
 import {
-  TrendsLayout,
+  PayPrimaryLayout,
   ProtectedLayout
 } from '@components/layout/common-layout';
 import {
@@ -50,7 +50,7 @@ export default function Pay(): JSX.Element {
 Pay.getLayout = (page: ReactElement): ReactNode => (
   <ProtectedLayout>
     <MainLayout>
-      <TrendsLayout>{page}</TrendsLayout>
+      <PayPrimaryLayout>{page}</PayPrimaryLayout>
     </MainLayout>
   </ProtectedLayout>
 );
