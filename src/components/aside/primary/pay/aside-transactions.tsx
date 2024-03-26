@@ -35,7 +35,7 @@ export function AsideTransactions(): JSX.Element {
   );
 
   return (
-    <section className='hover-animation flex  rounded-2xl text-center h-[450px] bg-black border border-gray-800 '>
+    <section className='hover-animation flex items-center rounded-2xl text-center h-[450px] bg-black border border-gray-800 '>
 
       
       
