@@ -24,7 +24,7 @@ import { WalletButton } from '@components/pay/wallet-button';
 import { PaymentCard } from '@components/pay/paymentcard';
 import { PaySettingsButton } from '@components/pay/pay-settings-button';
 import { FlowNav } from '@components/navbar/primary/pay/flow-nav';
-import type { ReactElement, ReactNode } from 'react';
+import type { ReactElement, ReactNode, ChangeEvent } from 'react';
 
 export default function Send(): JSX.Element {
   const { back } = useRouter();
