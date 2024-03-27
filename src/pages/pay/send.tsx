@@ -31,25 +31,7 @@ export default function Send(): JSX.Element {
   const { user } = useAuth();
   const userId = user?.id as string;
 
-  const editImage = (type: 'cover' | 'profile') => ({ target: { files } }: ChangeEvent<HTMLInputElement>) => {
-    // Implement your logic here for editing image
-  };
 
-  const closeModal = () => {
-    // Implement your logic here for closing modal
-  };
-
-  const updateData = async () => {
-    // Implement your logic here for updating data
-  };
-
-  const removeCoverImage = () => {
-    // Implement your logic here for removing cover image
-  };
-
-  const resetUserEditData = () => {
-    // Implement your logic here for resetting user edit data
-  };
 
   return (
     <MainContainer>
@@ -67,18 +49,7 @@ export default function Send(): JSX.Element {
         <PaymentCard />
       </div>
       <Form1235
-        name={/* Provide the value for name */}
-        loading={/* Provide the value for loading */}
-        photoURL={/* Provide the value for photoURL */}
-        children={/* Provide the value for children */}
-        coverPhotoURL={/* Provide the value for coverPhotoURL */}
-        inputNameError={/* Provide the value for inputNameError */}
-        editImage={editImage}
-        closeModal={closeModal}
-        updateData={updateData}
-        removeCoverImage={removeCoverImage}
-        resetUserEditData={resetUserEditData}
-      />
+    />
     </MainContainer>
   );
 }
