@@ -9,8 +9,6 @@ import {
   userBookmarksCollection
 } from '@lib/firebase/collections';
 import { MainLayout } from '@components/layout/main-layout';
-
-import { Form1235 } from '@components/pay/flow/send/send-form';
 import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
 import { MainContainer } from '@components/home/main-container';
@@ -24,32 +22,27 @@ import { WalletButton } from '@components/pay/wallet-button';
 import { PaymentCard } from '@components/pay/paymentcard';
 import { PaySettingsButton } from '@components/pay/pay-settings-button';
 import { FlowNav } from '@components/navbar/primary/pay/flow-nav';
-import type { ReactElement, ReactNode, ChangeEvent } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 
 export default function Send(): JSX.Element {
   const { back } = useRouter();
-  const { user } = useAuth();
+  
+ const { user } = useAuth();
   const userId = user?.id as string;
-
-
-
+  
   return (
     <MainContainer>
       <SEO title='Send | Aria+' />
-      <MainHeader
-        useActionButton
-        action={back}
+      <MainHeader     useActionButton action={back} 
         title='Send'
         className='flex items-center justify-between text-[0px]'
-      >
-        <PaySettingsButton />
+      > 
+       <PaySettingsButton/>
       </MainHeader>
-      <FlowNav />
+      <FlowNav/>
       <div className='self-center'>
-        <PaymentCard />
-      </div>
-      <Form1235
-    />
+      <PaymentCard />
+        </div>
     </MainContainer>
   );
 }
