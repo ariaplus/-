@@ -9,6 +9,8 @@ import {
   userBookmarksCollection
 } from '@lib/firebase/collections';
 import { MainLayout } from '@components/layout/main-layout';
+
+import { Form1235 } from '@components/pay/flow/send/send-form';
 import { SEO } from '@components/common/seo';
 import { MainHeader } from '@components/home/main-header';
 import { MainContainer } from '@components/home/main-container';
@@ -43,6 +45,7 @@ export default function Send(): JSX.Element {
       <div className='self-center'>
       <PaymentCard />
         </div>
+      <Form1235/>
     </MainContainer>
   );
 }
