@@ -29,7 +29,7 @@ export function WalletButton(): JSX.Element {
 
   return (
     <>
-     <Link href={'/pay/wallet'}>
+     <Link href={'/wallet'}>
         <a>
           <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
