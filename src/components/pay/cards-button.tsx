@@ -29,7 +29,7 @@ export function CardsButton(): JSX.Element {
 
   return (
     <>
-     <Link href={'/pay/cards'}>
+     <Link href={'/pay'}>
         <a>
           <Button
             className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
