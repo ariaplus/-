@@ -20,14 +20,14 @@ export default function Form1235(): JSX.Element {
     <form>
       <InputField
         label='Recipient'
-        inputId='recipient'
+        inputId={recipient}
         inputValue={recipient}
         handleChange={(e) => setRecipient(e.target.value)}
         placeholder='Enter recipient'
       />
       <InputField
         label='Amount'
-        inputId='amount'
+        inputId={amount}
         inputValue={amount}
         handleChange={(e) => setAmount(e.target.value)}
         placeholder='Enter amount'
