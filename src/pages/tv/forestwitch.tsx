@@ -39,7 +39,7 @@ export default function Bookmarks(): JSX.Element {
         height={125}  
         className=' mt-56 rounded-lg pt-20'
                />
-      <div className='flex gap-[10px] h-[80px] -mt-[10px] '>
+      <div className='flex gap-[10px] h-[80px] -mt-[25px] '>
         <div className='flex'>  
        <AImage
         src='/main/ui/tertiary/elements/tv/premieroriginals.svg' // Update this with the path to your image
