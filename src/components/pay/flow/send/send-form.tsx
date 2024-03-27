@@ -1,191 +1,370 @@
-import { useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { toast } from 'react-hot-toast';
 import cn from 'clsx';
-import { MainHeader } from '@components/home/main-header';
+import { useUser } from '@lib/context/user-context';
+import { useModal } from '@lib/hooks/useModal';
+import { updateUserData, uploadImages } from '@lib/firebase/utils';
+import { sleep } from '@lib/utils';
+import { getImagesData } from '@lib/validation';
+import { Modal } from '@components/modal/modal';
+import { EditProfileModal } from '@components/modal/edit-profile-modal';
 import { Button } from '@components/ui/button';
-import { HeroIcon } from '@components/ui/hero-icon';
-import { NextImage } from '@components/ui/next-image';
+import { InputField } from '@components/input/input-field';
+import type { ChangeEvent, KeyboardEvent } from 'react';
+import type { FilesWithId } from '@lib/types/file';
+import type { User, EditableData, EditableUserData } from '@lib/types/user';
+import type { InputFieldProps } from '@components/input/input-field';
+import { ArplImage } from '@components/ui/ariaplus';
 import { ToolTip } from '@components/ui/tooltip';
-import type { ReactNode, ChangeEvent } from 'react';
-import type { User } from '@lib/types/user';
 
-type EditProfileModalProps = Pick<
-  User,
-  'name' | 'photoURL' | 'coverPhotoURL'
-> & {
-  loading: boolean;
-  children: ReactNode;
-  inputNameError: string;
-  editImage: (
-    type: 'cover' | 'profile'
-  ) => ({ target: { files } }: ChangeEvent<HTMLInputElement>) => void;
-  closeModal: () => void;
-  updateData: () => Promise<void>;
-  removeCoverImage: () => void;
-  resetUserEditData: () => void;
+type RequiredInputFieldProps = Omit<InputFieldProps, 'handleChange'> & {
+  inputId: EditableData;
 };
 
-export function Form1235({
-  name,
-  loading,
-  photoURL,
-  children,
-  coverPhotoURL,
-  inputNameError,
-  editImage,
-  closeModal,
-  updateData,
-  removeCoverImage,
-  resetUserEditData
-}: EditProfileModalProps): JSX.Element {
-  const coverInputFileRef = useRef<HTMLInputElement>(null);
-  const profileInputFileRef = useRef<HTMLInputElement>(null);
+type UserImages = Record<
+  Extract<EditableData, 'photoURL' | 'coverPhotoURL'>,
+  FilesWithId
+>;
 
-  const handleClick = (type: 'cover' | 'profile') => (): void => {
-    if (type === 'cover') coverInputFileRef.current?.click();
-    else profileInputFileRef.current?.click();
+type TrimmedTexts = Pick<
+  EditableUserData,
+  Exclude<EditableData, 'photoURL' | 'coverPhotoURL'>
+>;
+
+type UserEditProfileProps = {
+  hide?: boolean;
+};
+
+export function Form1235({ hide }: UserEditProfileProps): JSX.Element {
+  const { user } = useUser();
+  const { open, openModal, closeModal } = useModal();
+
+  const [loading, setLoading] = useState(false);
+
+  const { bio, name, website, job, maritalstatus,     category,
+    highschool,
+    college,
+    pronoun,
+    gender,
+    vaccinated,
+    bday, location, photoURL, coverPhotoURL } =
+    user as User;
+
+  const [editUserData, setEditUserData] = useState<EditableUserData>({
+    bio,
+    name,
+    website,
+    maritalstatus,
+    job,
+    category,
+    highschool,
+    college,
+    pronoun,
+    gender,
+    vaccinated,
+    bday,
+    photoURL,
+    location,
+    coverPhotoURL
+  });
+
+  const [userImages, setUserImages] = useState<UserImages>({
+    photoURL: [],
+    coverPhotoURL: []
+  });
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => cleanImage, []);
+
+  const inputNameError = !editUserData.name?.trim()
+    ? "Name can't be blank"
+    : '';
+
+  const updateData = async (): Promise<void> => {
+    setLoading(true);
+
+    const userId = user?.id as string;
+
+    const { photoURL, coverPhotoURL: coverURL } = userImages;
+
+    const [newPhotoURL, newCoverPhotoURL] = await Promise.all(
+      [photoURL, coverURL].map((image) => uploadImages(userId, image))
+    );
+
+    const newImages: Partial<Pick<User, 'photoURL' | 'coverPhotoURL'>> = {
+      coverPhotoURL:
+        coverPhotoURL === editUserData.coverPhotoURL
+          ? coverPhotoURL
+          : newCoverPhotoURL?.[0].src ?? null,
+      ...(newPhotoURL && { photoURL: newPhotoURL[0].src })
+    };
+
+    const trimmedKeys: Readonly<EditableData[]> = [
+      'name',
+      'bio',
+      'location',
+      'website',
+      'maritalstatus',
+      'job',
+      'category',
+      'highschool',
+      'college',
+      'pronoun',
+      'gender',
+      'vaccinated',
+      'bday'
+    ];
+
+    const trimmedTexts = trimmedKeys.reduce(
+      (acc, curr) => ({ ...acc, [curr]: editUserData[curr]?.trim() ?? null }),
+      {} as TrimmedTexts
+    );
+
+    const newUserData: Readonly<EditableUserData> = {
+      ...editUserData,
+      ...trimmedTexts,
+      ...newImages
+    };
+
+    await sleep(500);
+
+    await updateUserData(userId, newUserData);
+
+    closeModal();
+
+    cleanImage();
+
+    setLoading(false);
+    setEditUserData(newUserData);
+
+    toast.success('Profile updated successfully');
   };
 
+  const editImage =
+    (type: 'cover' | 'profile') =>
+    ({ target: { files } }: ChangeEvent<HTMLInputElement>): void => {
+      const imagesData = getImagesData(files);
+
+      if (!imagesData) {
+        toast.error('Please choose a valid GIF or Photo');
+        return;
+      }
+
+      const { imagesPreviewData, selectedImagesData } = imagesData;
+
+      const targetKey = type === 'cover' ? 'coverPhotoURL' : 'photoURL';
+      const newImage = imagesPreviewData[0].src;
+
+      setEditUserData({
+        ...editUserData,
+        [targetKey]: newImage
+      });
+
+      setUserImages({
+        ...userImages,
+        [targetKey]: selectedImagesData
+      });
+    };
+
+  const removeCoverImage = (): void => {
+    setEditUserData({
+      ...editUserData,
+      coverPhotoURL: null
+    });
+
+    setUserImages({
+      ...userImages,
+      coverPhotoURL: []
+    });
+
+    URL.revokeObjectURL(editUserData.coverPhotoURL ?? '');
+  };
+
+  const cleanImage = (): void => {
+    const imagesKey: Readonly<Partial<EditableData>[]> = [
+      'photoURL',
+      'coverPhotoURL'
+    ];
+
+    imagesKey.forEach((image) =>
+      URL.revokeObjectURL(editUserData[image] ?? '')
+    );
+
+    setUserImages({
+      photoURL: [],
+      coverPhotoURL: []
+    });
+  };
+
+  const resetUserEditData = (): void =>
+    setEditUserData({
+      bio,
+      name,
+      website,
+      maritalstatus,
+      job,
+      category,
+      highschool,
+      college,
+      pronoun,
+      gender,
+      vaccinated,
+      bday,
+      photoURL,
+      location,
+      coverPhotoURL
+    });
+
+  const handleChange =
+    (key: EditableData) =>
+    ({
+      target: { value }
+    }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setEditUserData({ ...editUserData, [key]: value });
+
+  const handleKeyboardShortcut = ({
+    key,
+    target,
+    ctrlKey
+  }: KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+    if (ctrlKey && key === 'Enter' && !inputNameError) {
+      target.blur();
+      void updateData();
+    }
+  };
+
+  const inputFields: Readonly<RequiredInputFieldProps[]> = [
+    {
+      label: 'Name',
+      inputId: 'name',
+      inputValue: editUserData.name,
+      inputLimit: 50,
+      errorMessage: inputNameError
+    },
+     {
+      label: 'Category',
+      inputId: 'category',
+      inputValue: editUserData.category,
+      inputLimit: 15
+    },
+    {
+      label: 'Bio',
+      inputId: 'bio',
+      inputValue: editUserData.bio,
+      inputLimit: 160,
+      useTextArea: true
+    },
+    {
+      label: 'Location',
+      inputId: 'location',
+      inputValue: editUserData.location,
+      inputLimit: 30
+    },
+
+     {
+      label: ' High School',
+      inputId: 'highschool',
+      inputValue: editUserData.highschool,
+      inputLimit: 20
+    },
+     {
+      label: 'College',
+      inputId: 'college',
+      inputValue: editUserData.college,
+      inputLimit: 20
+    },
+     {
+      label: ' Pronoun',
+      inputId: 'pronoun',
+      inputValue: editUserData.pronoun,
+      inputLimit: 20
+    },
+     {
+      label: 'Gender',
+      inputId: 'gender',
+      inputValue: editUserData.gender,
+      inputLimit: 10
+    },
+     {
+      label: 'Vaccinated',
+      inputId: 'vaccinated',
+      inputValue: editUserData.vaccinated,
+      inputLimit: 20
+    },
+    
+    {
+      label: 'Occupation',
+      inputId: 'job',
+      inputValue: editUserData.job,
+      inputLimit: 30
+    },
+    
+     {
+      label: 'Marital Status',
+      inputId: 'maritalstatus',
+      inputValue: editUserData.maritalstatus,
+      inputLimit: 20
+    },
+      {
+      label: ' Birthday',
+      inputId: 'bday',
+      inputValue: editUserData.bday,
+      inputLimit: 20
+    },
+    {
+      label: 'Website',
+      inputId: 'website',
+      inputValue: editUserData.website,
+      inputLimit: 100
+    }
+  ];
+
   return (
-    <>
-      <MainHeader
-        useActionButton
-        disableSticky
-        iconName='XMarkIcon'
-        tip='Close'
-        className='absolute flex w-full items-center gap-6 rounded-tl-2xl'
-        title='Edit profile'
-        action={closeModal}
+    <form className={cn(hide && 'hidden md:block')}>
+      <Modal
+        modalClassName='relative bg-main-background rounded-2xl max-w-xl w-full h-[570px] overflow-hidden'
+        open={open}
+        closeModal={closeModal}
       >
-        <div className='ml-auto flex items-center gap-3'>
-          <Button
-            className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
-                       active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
-                       dark:active:bg-dark-primary/10'
-            onClick={resetUserEditData}
-            disabled={loading}
-          >
-            <HeroIcon className='h-5 w-5' iconName={'ArrowPathIcon'} />
-            <ToolTip tip='Reset' />
-          </Button>
-          <Button
-            className='bg-light-primary py-1 px-4 font-bold text-white focus-visible:bg-light-primary/90 
-                       enabled:hover:bg-light-primary/90 enabled:active:bg-light-primary/80 disabled:brightness-75
-                       dark:bg-light-border dark:text-light-primary dark:focus-visible:bg-light-border/90
-                       dark:enabled:hover:bg-light-border/90 dark:enabled:active:bg-light-border/75'
-            onClick={updateData}
-            disabled={!!inputNameError}
-            loading={loading}
-          >
-            Save
-          </Button>
-        </div>
-      </MainHeader>
-      <section
-        className={cn(
-          'h-full overflow-y-auto transition-opacity',
-          loading && 'pointer-events-none opacity-50'
-        )}
+        <EditProfileModal
+          name={name}
+          loading={loading}
+          photoURL={editUserData.photoURL}
+          coverPhotoURL={editUserData.coverPhotoURL}
+          inputNameError={inputNameError}
+          editImage={editImage}
+          closeModal={closeModal}
+          updateData={updateData}
+          removeCoverImage={removeCoverImage}
+          resetUserEditData={resetUserEditData}
+        >
+          {inputFields.map((inputData) => (
+            <InputField
+              {...inputData}
+              handleChange={handleChange(inputData.inputId)}
+              handleKeyboardShortcut={handleKeyboardShortcut}
+              key={inputData.inputId}
+            />
+          ))}
+        </EditProfileModal>
+      </Modal>
+      <Button
+        className='dark-bg-tab group relative p-2 hover:bg-light-primary/10
+                   active:bg-light-primary/20 dark:hover:bg-dark-primary/10 
+                   dark:active:bg-dark-primary/20'
+        onClick={openModal}
       >
-        <div className='group relative mt-[52px] h-36 xs:h-44 sm:h-48'>
-          <input
-            className='hidden'
-            type='file'
-            accept='image/*'
-            ref={coverInputFileRef}
-            onChange={editImage('cover')}
-          />
-          {coverPhotoURL ? (
-            <NextImage
-              useSkeleton
-              className='relative h-full'
-              imgClassName='object-cover transition group-hover:brightness-75 duration-200
-                            group-focus-within:brightness-75'
-              src={coverPhotoURL}
-              alt={name}
-              layout='fill'
-            />
-          ) : (
-            <div className='h-full bg-light-line-reply dark:bg-dark-line-reply' />
-          )}
-          <div className='absolute left-1/2 top-1/2 flex -translate-y-1/2 -translate-x-1/2 gap-4'>
-            <Button
-              className='group/inner relative bg-light-primary/60 p-2 hover:bg-image-preview-hover/50
-                         focus-visible:bg-image-preview-hover/50'
-              onClick={handleClick('cover')}
-            >
-              <HeroIcon
-                className='hover-animation h-6 w-6 text-dark-primary group-hover:text-white'
-                iconName='CameraIcon'
-              />
-              <ToolTip groupInner tip='Add photo' />
-            </Button>
-            {coverPhotoURL && (
-              <Button
-                className='group/inner relative bg-light-primary/60 p-2 hover:bg-image-preview-hover/50
-                           focus-visible:bg-image-preview-hover/50'
-                onClick={removeCoverImage}
-              >
-                <HeroIcon
-                  className='hover-animation h-6 w-6 text-dark-primary group-hover:text-white'
-                  iconName='XMarkIcon'
-                />
-                <ToolTip groupInner tip='Remove photo' />
-              </Button>
-            )}
-          </div>
-        </div>
-        <div className='relative flex flex-col gap-6 px-4 py-3'>
-          <div className='mb-8 xs:mb-12 sm:mb-14'>
-            <input
-              className='hidden'
-              type='file'
-              accept='image/*'
-              ref={profileInputFileRef}
-              onChange={editImage('profile')}
-            />
-            <div
-              className='group absolute aspect-square w-24 -translate-y-1/2
-                         overflow-hidden rounded-full xs:w-32 sm:w-36'
-            >
-              <NextImage
-                useSkeleton
-                className='h-full w-full bg-main-background inner:!m-1 inner:rounded-full'
-                imgClassName='rounded-full transition group-hover:brightness-75 duration-200
-                              group-focus-within:brightness-75'
-                src={photoURL}
-                alt={name}
-                layout='fill'
-              />
-              <Button
-                className='group/inner absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                           bg-light-primary/60 p-2 hover:bg-image-preview-hover/50 
-                           focus-visible:bg-image-preview-hover/50'
-                onClick={handleClick('profile')}
-              >
-                <HeroIcon
-                  className='hover-animation h-6 w-6 text-dark-primary group-hover:text-white'
-                  iconName='CameraIcon'
-                />
-                <ToolTip groupInner tip='Add photo' />
-              </Button>
-            </div>
-          </div>
-          {children}
-          <Button
-            className='accent-tab -mx-4 mb-4 flex cursor-not-allowed items-center justify-between rounded-none
-                       py-2 hover:bg-light-primary/10 active:bg-light-primary/20 disabled:brightness-100
-                       dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20'
-          >
-            <span className='mx-2 text-xl'>Switch to professional</span>
-            <i>
-              <HeroIcon
-                className='h-6 w-6 text-light-secondary dark:text-dark-secondary'
-                iconName='ChevronRightIcon'
-              />
-            </i>
-          </Button>
-        </div>
-      </section>
-    </>
+        <ArplImage 
+          imgClassName='arplicon'
+          blurClassName='none'
+          src='/main/ui/primary/user/ui/edit-profile.svg'
+          alt=''
+          layout='fill'
+          width='20px'
+          height='20px'
+       />
+        <ToolTip tip='Edit Profile' />
+      </Button>
+    </form>
   );
 }
