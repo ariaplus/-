@@ -13,7 +13,7 @@ const userId = user?.id as string;
 
           <div className='flex p-4 items:end content-end justify-between'>
         
-        <p className='pl-2 text-[18px] font-bold text-gray-400    '>
+        <p className='pl-2 text-[18px] ml-auto font-bold text-gray-400    '>
             $0
           </p>
         </div>
