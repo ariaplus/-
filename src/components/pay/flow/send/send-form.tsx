@@ -20,14 +20,14 @@ export default function Form1235(): JSX.Element {
 
   return (
      <form>
-      <InputField
+      <PaySendInputField
         label="Recipient"
         inputId="recipient"
         inputValue={recipient}
         handleChange={handleChange(setRecipient)}
         placeholder="Enter recipient"
       />
-      <InputField
+      <PaySendInputField
         label="Amount"
         inputId="amount"
         inputValue={amount}
