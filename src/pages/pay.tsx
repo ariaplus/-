@@ -37,7 +37,6 @@ export default function Pay(): JSX.Element {
         className='flex items-center justify-between text-[0px]'
       > 
        <div className='flex'>
-       <CardsButton/>
        <WalletButton/>
        </div>
       </MainHeader>
