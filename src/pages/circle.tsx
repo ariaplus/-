@@ -1,3 +1,4 @@
+import React from 'react';
 import { useMemo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { toast } from 'react-hot-toast';
@@ -25,6 +26,7 @@ import { Button } from '@components/ui/button';
 import { ToolTip } from '@components/ui/tooltip';
 import { HeroIcon } from '@components/ui/hero-icon';
 import { Loading } from '@components/ui/loading';
+import RotatingCircle from '@components/charlotte/primary/ui/circle'; // Importing the RotatingCircle component
 import type { ReactElement, ReactNode } from 'react';
 
 export default function Circle(): JSX.Element {
@@ -96,6 +98,8 @@ export default function Circle(): JSX.Element {
         </Button>
       </MainHeader>
       <section className='mt-0.5'>
+        {/* Render the RotatingCircle component */}
+        <RotatingCircle />
         <div className='demo'>
          <div className='cortana-loader'></div>
          </div>
