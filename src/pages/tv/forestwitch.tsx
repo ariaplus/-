@@ -51,8 +51,8 @@ export default function Bookmarks(): JSX.Element {
                />
         </div>
         <div className='flex-col'>
-      <p className='text-gray-600 mt-4 text-[13px] text-center'>Horror | 2024 | 1hr 40min | 4K</p>
-      <p className='text-yellow-600 text-[13px] text-center'>Coming to Aria+ at a Later Date</p>
+      <p className='text-gray-600 mt-4 lg:text-[13px] text-[12px] text-center'>Horror | 2024 | 1hr 40min | 4K</p>
+      <p className='text-yellow-600 lg:text-[13px] text-[12px]  text-center'>Coming to Aria+ at a Later Date</p>
         </div>
       </div>
       <div className='flex pt-[7px] gap-[10px] '>
