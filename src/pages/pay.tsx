@@ -43,19 +43,12 @@ export default function Pay(): JSX.Element {
       <div className='self-center'>
       <PaymentCard />
         </div>
-      <div className='flex'>
-           <div className='flex'>
-                <div className='flex'>
-                    <div className='flex'>
                         <p className='flex text-[12px] text-gray text-center border-b-4 '>Aria+ PAY CENTER</p>
                             <p className='flex text-[11px] text-center '>Use Aria+ Pay Center to Send & Receive Payments</p>
                                   <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75 hover:bg-blue-700 text-white font-bold items-center justify-center self-center py-2 px-4 w-80 rounded-lg'>Set Up Aria+ Pay</Button>
-                     </div>
-               </div>
-           </div>
-      </div>
+
     </MainContainer>
   );
 }
