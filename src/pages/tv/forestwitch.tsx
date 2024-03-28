@@ -55,7 +55,7 @@ export default function Bookmarks(): JSX.Element {
       <p className='text-yellow-600 text-[13px] text-center'>Coming to Aria+ at a Later Date</p>
         </div>
       </div>
-      <div className='flex pt-[7px] gap-[10px] ml-[40px] '>
+      <div className='flex pt-[7px] gap-[10px] '>
       <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
                      enabled:active:bg-main-accent/75 hover:bg-blue-700 text-white font-bold items-center justify-center self-center py-2 px-4 w-80 rounded-lg'>Play</Button>
