@@ -35,41 +35,7 @@ export function DisplayModal({ closeModal }: DisplayModalProps): JSX.Element {
           These settings affect all the Aria+ accounts on this browser.
         </p>
       </div>
-      <article
-        className='hover-animation mx-8 rounded-2xl border 
-                   border-light-border px-4 py-3 dark:border-dark-border'
-      >
-        <div className='grid grid-cols-[auto,1fr] gap-3'>
-          <UserAvatar src='/assets/ariaplus.svg' alt='Aria+' />
-          <div>
-            <div className='flex gap-1'>
-              <UserName verified verifiedred
-verifiedgreen
-verifiedbot
-verifiedcyan
-verifiedgray
-verifiedgold
-verifiedpink
-verifiedviolet
-verifiedwhite
-verifiedapplegreen name='Aria+' />
-              <p className='text-light-secondary dark:text-dark-secondary'>
-                @+
-              </p>
-              <div className='flex gap-1 text-light-secondary dark:text-dark-secondary'>
-                <i>·</i>
-                <p>26m</p>
-              </div>
-            </div>
-            <p className='whitespace-pre-line break-words'>
-              At the heart of Twitter are short messages called Tweets — just
-              like this one — which can include photos, videos, links, text,
-              hashtags, and mentions like{' '}
-              <span className='text-main-accent'>@+</span>.
-            </p>
-          </div>
-        </div>
-      </article>
+      
       <div className='flex w-full flex-col gap-1'>
         <p className='text-sm font-bold text-light-secondary dark:text-dark-secondary'>
           Color
