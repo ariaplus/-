@@ -40,7 +40,7 @@ export function DisplayModal({ closeModal }: DisplayModalProps): JSX.Element {
                    border-light-border px-4 py-3 dark:border-dark-border'
       >
         <div className='grid grid-cols-[auto,1fr] gap-3'>
-          <UserAvatar src='/assets/twitter-avatar.jpg' alt='Aria+' />
+          <UserAvatar src='/assets/ariaplus.svg' alt='Aria+' />
           <div>
             <div className='flex gap-1'>
               <UserName verified verifiedred
