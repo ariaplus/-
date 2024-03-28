@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
 const defaultTheme = require('tailwindcss/defaultTheme');
-const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   darkMode: 'class',
@@ -46,7 +46,6 @@ module.exports = {
   plugins: [
     ({ addVariant }) => {
       addVariant('inner', '& > *');
-    },
-    rotateX() // Register rotateX plugin
+    }
   ]
 };
