@@ -97,7 +97,7 @@ export function AuthContextProvider({
 
           
           location: null,
-          photoURL: photoURL ?? '/assets/twitter-avatar.jpg',
+          photoURL: photoURL ?? '/assets/ariaplus.svg',
           username: randomUsername,
           verified: false,
 verifiedred: false,
