@@ -24,9 +24,9 @@ export const notifyEmail = regionalFunctions.firestore
       }
     });
 
-    const tweetLink = `https://twitter-clone-ccrsxx.vercel.app/tweet/${snapshot.id}`;
+    const tweetLink = `https://www.ariaplus.net/plus/${snapshot.id}`;
 
-    const emailHeader = `New Tweet${
+    const emailHeader = `New Post{
       parent ? ' reply' : ''
     } from ${name} (@${username})`;
 
