@@ -63,16 +63,21 @@ export default function Bookmarks(): JSX.Element {
         
       <p className='text-gray-600 pt-[10px] text-[13px] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus. Nullam scelerisque elementum elit, nec vestibulum augue luctus id. Aliquam et dolor non neque pulvinar sodales a nec mi. Morbi varius a erat in fermentum. Donec sed scelerisque purus. Integer sed libero sit amet erat aliquet facilisis in quis augue. Sed sollicitudin egestas fermentum. Integer sit amet tincidunt velit. Maecenas tincidunt justo at erat luctus feugiat. Pellentesque eget diam vitae elit ultrices ullamcorper. Aliquam tincidunt quam elit, ut interdum nisi maximus in. Donec eget enim feugiat, rutrum turpis sit amet, egestas tortor. Aenean lobortis finibus hendrerit. </p>
      </div>
-     <div className='border-solid border-2 border-white mx-3.5 mb-5 shadow-md rounded-md p-8'>
+     <div className='border-solid border-2 border-white mx-3.5 mb-5 shadow-md rounded-lg p-8'>
       <h2 className='text-2xl font-bold mb-2'>Forest Witch</h2>
-      <p className='text-gray-700 mb-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus.</p>
-      <p className='text-gray-700 mb-1'>
-        Directed by <span className='font-bold'>Radhesh Aria</span>
+      <p className='text-gray-700 mb-1 text-[13px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus mollis ex a sodales. Quisque molestie massa quis dolor elementum rhoncus.</p>
+
+
+      <div className='content gap-[10px] items-center'></div>
+      <p className='text-gray-700 mb-1 text-[13px]'>
+        Directed by <span className='font-bold text-[13px]'>Radhesh Aria</span>
       </p>
-      <p className='text-gray-700 mb-1'>
-        Age Rating: <span className='font-bold'>18+</span>
+      <p className='text-gray-700 mb-1 text-[13px]'>
+        Age Rating: <span className='font-bold text-[13px]'>18+</span>
       </p>
       <p className='text-gray-700'>TV-MA</p>
+
+       </div>
     </div>
    <Movie/>
     </MainContainer>
