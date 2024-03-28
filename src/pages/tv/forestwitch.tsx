@@ -31,7 +31,7 @@ export default function Bookmarks(): JSX.Element {
            <RemoteButton/>
       </MainHeader>
       
-    <div className='flex flex-col items-center p-8 bg-no-repeat bg-top bg-contain -mt-[100px]' style={{ backgroundImage: 'url(/assets/tv/movie/data/forestwitch/cover.jpg)' }}>
+    <div className='flex flex-col items-center p-8 bg-no-repeat bg-top bg-contain  -mt-[150px] md:-mt-[125px] lg:-mt-[100px]' style={{ backgroundImage: 'url(/assets/tv/movie/data/forestwitch/cover.jpg)' }}>
 
        <NextImage
         src='/assets/tv/movie/data/forestwitch/fw.png' // Update this with the path to your image
@@ -58,7 +58,7 @@ export default function Bookmarks(): JSX.Element {
       <div className='flex pt-[7px] gap-[10px] ml-[40px] '>
       <Button
     className='accent-tab bg-main-accent enabled:hover:bg-main-accent/90
-                     enabled:active:bg-main-accent/75 hover:bg-blue-700 text-white font-bold py-2 px-4 w-80 rounded-lg'>Play</Button>
+                     enabled:active:bg-main-accent/75 hover:bg-blue-700 text-white font-bold items-center justify-center self-center py-2 px-4 w-80 rounded-lg'>Play</Button>
      
         </div>         
         
