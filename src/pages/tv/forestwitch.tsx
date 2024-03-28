@@ -27,7 +27,7 @@ export default function Bookmarks(): JSX.Element {
   return (
     <MainContainer>
       <SEO title='Forest Witch | Aria+' />
-      <MainHeader useActionButton className='justify-between' title='Forest Witch' action={back}>
+      <MainHeader useActionButton className='flex justify-between' title='Forest Witch' action={back}>
            <RemoteButton/>
       </MainHeader>
       
