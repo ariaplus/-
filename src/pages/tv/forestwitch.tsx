@@ -38,7 +38,7 @@ export default function Bookmarks(): JSX.Element {
         alt=''
         width={250}
         height={125}  
-        className=' mt-56 rounded-lg pt-20'
+        className=' lg:mt-56 mt-[8rem] rounded-lg pt-20'
                />
       <div className='flex gap-[10px] h-[80px] -mt-[9px] '>
         <div className='flex'>  
